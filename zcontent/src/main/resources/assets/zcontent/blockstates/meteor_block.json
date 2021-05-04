@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "zcontent:meteor_block" }
+    }
+}

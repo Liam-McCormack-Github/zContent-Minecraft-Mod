@@ -1,0 +1,9 @@
+{
+   "parent": "block/orientable",
+   "textures": {
+       "top": "zcontent:blocks/actual/machineframe_top",
+       "front": "zcontent:blocks/actual/machineframe_side",
+       "side": "zcontent:blocks/actual/machineframe_side",
+       "bottom": "zcontent:blocks/actual/machineframe_bottom"
+   }
+}

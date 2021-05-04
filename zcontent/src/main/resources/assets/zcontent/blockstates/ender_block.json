@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "normal": { "model": "zcontent:ender_block" }
+    }
+}

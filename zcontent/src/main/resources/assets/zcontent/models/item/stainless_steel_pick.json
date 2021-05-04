@@ -1,0 +1,6 @@
+{
+   "parent": "item/handheld",
+   "textures": {
+       "layer0": "zcontent:items/tool/stainless_steel_pick"
+   }
+}

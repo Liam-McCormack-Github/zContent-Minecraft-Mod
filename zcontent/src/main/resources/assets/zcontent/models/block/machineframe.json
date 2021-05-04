@@ -1,0 +1,9 @@
+{
+   "parent": "block/orientable",
+   "textures": {
+       "top": "zcontent:blocks/actual/top",
+       "front": "zcontent:blocks/actual/side",
+       "side": "zcontent:blocks/actual/side",
+       "bottom": "zcontent:blocks/actual/bottom"
+   }
+}

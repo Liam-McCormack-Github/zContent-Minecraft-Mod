@@ -1,0 +1,6 @@
+{
+  "parent": "zcontent:custom/master_sword_lvl_2",
+  "textures": {
+    "1": "zcontent:blocks/master_sword"
+  }
+}

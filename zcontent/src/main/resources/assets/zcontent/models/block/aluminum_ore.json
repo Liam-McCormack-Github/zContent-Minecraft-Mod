@@ -1,0 +1,6 @@
+{
+   "parent": "block/cube_all",
+    "textures": {
+       "all": "zcontent:blocks/ore/aluminum_ore"
+    }
+}

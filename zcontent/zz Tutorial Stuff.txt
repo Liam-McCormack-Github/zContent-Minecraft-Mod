@@ -1,0 +1,10 @@
+How to fix your gradle build
+Forge has recently updated maven endpoints, which has caused a bug in Gradle because the old one now redirects. To fix this, follow the steps below.
+
+1. Update all endpoints in your build.gradle
+You should change all references of https://files.minecraftforge.net/maven in your build.gradle to the newer endpoint at https://maven.minecraftforge.net/.
+
+2. Update your ForgeGradle version
+The maven endpoint used in ForgeGradle is hardcoded.
+A fix has been pushed for FG 3 and 4, while FG 1 and 2 are unsupported.
+Please run gradlew --refresh-dependencies in a terminal inside the project to force Gradle to use the latest ForgeGradle version.

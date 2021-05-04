@@ -1,0 +1,6 @@
+{
+  "parent": "zcontent:custom/lightning_sword",
+  "textures": {
+    "3": "zcontent:blocks/fire_sword"
+  }
+}

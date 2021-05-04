@@ -1,0 +1,6 @@
+{
+  "parent": "zcontent:custom/master_sword_(activated)",
+  "textures": {
+    "1": "zcontent:blocks/master_sword_activated"
+  }
+}
