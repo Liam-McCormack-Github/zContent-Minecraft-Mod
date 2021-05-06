@@ -71,9 +71,8 @@ public class EnchantmentWeaken extends Enchantment {
     @Override
     public void onEntityDamaged(EntityLivingBase player, Entity target, int level)  {
 
-        if (EnchantmentHelper.getMaxEnchantmentLevel(ModEnchantments.WEAKEN, player) > 0 && target instanceof EntityLivingBase && player instanceof EntityPlayer){
-            ((EntityLivingBase)target).
-                    addPotionEffect(new PotionEffect(MobEffects.WEAKNESS, 600, 2));
+        if (EnchantmentHelper.getMaxEnchantmentLevel(ModEnchantments.WEAKEN, player) > 0 && target instanceof EntityLivingBase && player instanceof EntityPlayer) {
+            ((EntityLivingBase)target).addPotionEffect(new PotionEffect(MobEffects.WEAKNESS, 600, 2));
 
         }
     }	

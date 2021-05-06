@@ -27,6 +27,9 @@ import com.thewawpro.zcontent.enchantment.EnchantmentStrength;
 import com.thewawpro.zcontent.enchantment.EnchantmentThunder;
 import com.thewawpro.zcontent.enchantment.EnchantmentWaterBreathing;
 import com.thewawpro.zcontent.enchantment.EnchantmentWeaken;
+import com.thewawpro.zcontent.enchantment.EnchantmentFastdraw;
+import com.thewawpro.zcontent.enchantment.EnchantmentFaststrike;
+import com.thewawpro.zcontent.enchantment.EnchantmentFertilizer;
 import com.thewawpro.zcontent.items.ItemWand1;
 import com.thewawpro.zcontent.items.ItemWand2;
 import com.thewawpro.zcontent.items.ItemWand3;
@@ -76,6 +79,9 @@ public class ModEnchantments {
 	public static final Enchantment INSTANTKILL = new EnchantmentInstantKill();
 	public static final Enchantment DISARM = new EnchantmentDisarm();
 	public static final Enchantment WEAKEN = new EnchantmentWeaken();
+	public static final Enchantment FASTDRAW = new EnchantmentFastdraw();
+	public static final Enchantment FASTSTRIKE = new EnchantmentFaststrike();
+	public static final Enchantment FERTILIZER = new EnchantmentFertilizer();
 	
 	@SubscribeEvent
 	public static void effectFunction(PlayerTickEvent event) {

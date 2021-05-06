@@ -84,7 +84,7 @@ public class ModItems {
 		public static final ItemSword mastersword1 = new ToolElementalSword("mastersword1", MATERIAL_MASTER_BASE);
 		public static final ItemSword mastersword2 = new ToolMasterSword("mastersword2", MATERIAL_MASTER);
 		public static final Item excavation_wand = new ItemWand("excavation_wand");
-		public static final Item fertilizer = new ItemFertilizer("fertilizer");
+		public static final Item magic_fertilizer = new ItemFertilizer("magic_fertilizer");
 		public static final Item withered_bone_meal = new ItemFertilizerWithered("withered_bone_meal");
 		public static final Item repairer = new ItemRepair("repairer");
 		public static final Item coal_tiny_small = new ItemFuel("coal_tiny_small");
@@ -220,4 +220,5 @@ public class ModItems {
 		public static final Item instantkill = new ItemGlowing("instantkill");
 		public static final Item disarm = new ItemGlowing("disarm");
 		public static final Item weaken = new ItemGlowing("weaken");
+		public static final Item fertilizer = new ItemGlowing("fertilizer");
 }

@@ -92,7 +92,7 @@ item.slate_chunk.name=§lChunk of Slate§r
 item.soulsand_chunk.name=§lChunk of Soul Sand§r
 item.soulstone_chunk.name=§lChunk of Soul Stone§r
 item.obsidian_chunk.name=§lChunk of Obsidian§r
-item.fertilizer.name=§6Fertilizer
+item.magic_fertilizer.name=§6Magic Fertilizer
 item.withered_bone_meal.name=Wither Bone Meal
 item.mold.name=Metal Press Mold: Compress
 item.mold_proc.name=Metal Press Mold: Printed Base
@@ -274,6 +274,7 @@ item.paralysis.name=§6Paralysis Tome§r
 item.disarm.name=§6Disarm Tome§r
 item.weaken.name=§6Weaken Tome§r
 item.instantkill.name=§6Instant Kill Tome§r
+item.fertilizer.name=§6Fertilizer Tome§r
 
 //Enchantments
 enchantment.JumpBoost=§5Jump Boost§r
@@ -298,7 +299,6 @@ enchantment.Paralysis=§5Paralysis§r
 enchantment.Disarm=§5Disarm§r
 enchantment.Weaken=§5Weaken§r
 enchantment.InstantKill=§5Instant Kill§r
-
-
-
-
+enchantment.Fertilizer=§5Fertilizer§r
+enchantment.Fastdraw=Fast Draw
+enchantment.Faststrike=Fast Strike
