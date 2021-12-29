@@ -6,6 +6,7 @@ import com.thewawpro.zcontent.util.Reference;
 import com.thewawpro.zcontent.util.handlers.OreDictionaryHandlerBlocks;
 import com.thewawpro.zcontent.util.handlers.OreDictionaryHandlerItems;
 
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;

@@ -41,7 +41,7 @@ public class ModItems {
 		//Materials ("material_stainless", 3, 1561, 8.0F, 3.0F, 10);
 		public static final ToolMaterial MATERIAL_STAINLESS = EnumHelper.addToolMaterial("material_stainless", 3, 8192, 18.0F, 7.0F, 75);
 		public static final ToolMaterial MATERIAL_SILVER_OBSIDIAN = EnumHelper.addToolMaterial("material_silver_obsidian", 3, 1561, 8.0F, 3.0F, 75);
-		public static final ToolMaterial MATERIAL_MASTER = EnumHelper.addToolMaterial("material_master", 3, 100, 12.0F, 31.0F, 250);
+		public static final ToolMaterial MATERIAL_MASTER = EnumHelper.addToolMaterial("material_master", 3, 100, 12.0F, 50.0F, 250);
 		public static final ToolMaterial MATERIAL_ELEMENTAL = EnumHelper.addToolMaterial("material_elemental", 3, 1, 12.0F, 7.0F, 25);
 		public static final ToolMaterial MATERIAL_MASTER_BASE = EnumHelper.addToolMaterial("material_master_base", 3, 1, 12.0F, 7.0F, 25);
 
@@ -96,6 +96,7 @@ public class ModItems {
 		public static final Item blue_mat_dust = new ItemBase("blue_mat_dust");
 		public static final Item purple_mat_dust = new ItemBase("purple_mat_dust");
 		public static final Item charged_gunpowder = new ItemGlowing("charged_gunpowder");
+		public static final Item halcyon_shard = new ItemGlowing("halcyon_shard");
 		public static final Item meteor_dust = new ItemBase("meteor_dust");
 		public static final Item et_frag = new ItemBase("et_frag");
 		public static final Item sulfur_crystal = new ItemBase("sulfur_crystal");

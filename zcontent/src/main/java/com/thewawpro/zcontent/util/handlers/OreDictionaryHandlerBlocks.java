@@ -1,10 +1,10 @@
 package com.thewawpro.zcontent.util.handlers;
 
 import com.thewawpro.zcontent.init.ModBlocks;
-import com.thewawpro.zcontent.blocks.BlockBase;
-
-import net.minecraft.block.Block;
+import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.oredict.OreDictionary;
+
+@EventBusSubscriber
 
 public class OreDictionaryHandlerBlocks {
 
@@ -12,8 +12,8 @@ public class OreDictionaryHandlerBlocks {
 		OreDictionary.registerOre("oreMeteor", ModBlocks.meteor_block);
 		OreDictionary.registerOre("blockXp", ModBlocks.xp_block);
 		OreDictionary.registerOre("blockEnder", ModBlocks.ender_block);
-		OreDictionary.registerOre("blockBone", ModBlocks.bone_block);
-		OreDictionary.registerOre("blockBoneWithered", ModBlocks.wither_bone_block);
+		OreDictionary.registerOre("blockOfBones", ModBlocks.bone_block);
+		OreDictionary.registerOre("blockOfBonesWithered", ModBlocks.wither_bone_block);
 		OreDictionary.registerOre("blockFlint", ModBlocks.flint_block);
 		OreDictionary.registerOre("blockGunpowder", ModBlocks.gunpowder_block);
 		OreDictionary.registerOre("blockRottenFlesh", ModBlocks.rotten_flesh_block);

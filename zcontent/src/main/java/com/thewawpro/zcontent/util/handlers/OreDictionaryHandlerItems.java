@@ -1,10 +1,10 @@
 package com.thewawpro.zcontent.util.handlers;
 
 import com.thewawpro.zcontent.init.ModItems;
-import com.thewawpro.zcontent.items.ItemBase;
-
-import net.minecraft.item.Item;
+import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.oredict.OreDictionary;
+
+@EventBusSubscriber
 
 public class OreDictionaryHandlerItems {
 

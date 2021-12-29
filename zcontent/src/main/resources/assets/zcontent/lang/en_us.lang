@@ -118,7 +118,7 @@ item.brass_ingot.name=Brass Ingot
 item.manyullyn_ingot.name=Manyullyn Ingot
 item.dissolver_core.name=Dissolver Core
 item.combiner_core.name=Combiner Core
-item.machineframe.name=Industrial Machine Frame
+item.machineframe.name=Advanced Machine Casing
 item.machineframe_1.name=Virtual Machine Frame (Tier 1)
 item.machineframe_2.name=§eVirtual Machine Frame (Tier 2)
 item.machineframe_3.name=§bVirtual Machine Frame (Tier 3)
@@ -132,6 +132,7 @@ item.rf_fe_flux_power_energy.name=§4Redstone Flux
 item.sulfur_crystal.name=Rich Sulfuric Crystal
 item.repairer.name=§6Repair Crystal
 item.charged_gunpowder.name=§bCharged Gunpowder
+item.halcyon_shard.name=§bHalcyon Shard
 
 item.pill_antidote.name=§5Antidote
 item.collector_star.name=Star Photomatter
