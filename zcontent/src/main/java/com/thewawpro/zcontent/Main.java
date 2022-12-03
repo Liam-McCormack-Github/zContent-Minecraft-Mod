@@ -1,12 +1,11 @@
 package com.thewawpro.zcontent;
 
+import com.thewawpro.zcontent.init.ModOreDictBlocks;
+import com.thewawpro.zcontent.init.ModOreDictItems;
 import com.thewawpro.zcontent.init.ModRecipes;
 import com.thewawpro.zcontent.proxy.CommonProxy;
 import com.thewawpro.zcontent.util.Reference;
-import com.thewawpro.zcontent.util.handlers.OreDictionaryHandlerBlocks;
-import com.thewawpro.zcontent.util.handlers.OreDictionaryHandlerItems;
 
-import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -27,13 +26,14 @@ public class Main {
 	@EventHandler
 	public static void PreInit(FMLPreInitializationEvent event)
 	{
-		OreDictionaryHandlerItems.registerOreDictionary();	
+		// OreDictionaryHandlerItems.registerOreDictionary();
+		ModOreDictItems.init();
 	}
 	
 	@EventHandler
 	public static void init(FMLInitializationEvent event)
 	{
-		OreDictionaryHandlerBlocks.registerOreDictionary();
+		ModOreDictBlocks.init();
 		ModRecipes.init();
 	}
 	

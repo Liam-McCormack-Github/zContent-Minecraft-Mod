@@ -36,7 +36,7 @@ public class ToolMasterSword extends ItemSword implements IHasModel {
 
 		if (equipmentSlot == EntityEquipmentSlot.MAINHAND)
 		{
-			multimap.put(SharedMonsterAttributes.ATTACK_SPEED.getName(), new AttributeModifier(ToolPick.MOD_UUID, "Attack Speed Modifier", 16.4, 0));
+			multimap.put(SharedMonsterAttributes.ATTACK_SPEED.getName(), new AttributeModifier(ToolPick.MOD_UUID, "Attack Speed Modifier", 32.4, 0));
 		}
 
 		return multimap;
