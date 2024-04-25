@@ -1,16 +1,16 @@
 [
-{
-  "modid": "zcontent",
-  "name": "zContent",
-  "description": "zContent, Example placeholder mod.",
-  "version": "1.0",
-  "mcversion": "1.12.2",
-  "url": "",
-  "updateUrl": "",
-  "authorList": ["TheWaWPro"],
-  "credits": "The Forge and FML guys, for making this example",
-  "logoFile": "",
-  "screenshots": [],
-  "dependencies": []
-}
+	{
+		"modid": "zcontent",
+		"name": "zContent",
+		"description": "zContent mod for 1.12.2, using ForgeGradle 5.1.",
+		"version": "${version}",
+		"mcversion": "1.12.2",
+		"url": "",
+		"updateUrl": "",
+		"authorList": ["Liam McCormack"],
+		"credits": "",
+		"logoFile": "",
+		"screenshots": [],
+		"dependencies": []
+	}
 ]
