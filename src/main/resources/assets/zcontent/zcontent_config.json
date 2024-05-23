@@ -1,0 +1,29 @@
+{
+	"main": {
+		"external_config": true,
+		"custom_localization": false
+	},
+	"wands": {
+		"modes": [
+			{
+				"0": {
+					"blockList": ["minecraft:stone", "minecraft:dirt"],
+					"isBlacklist": true
+				}
+			},
+			{
+				"1": {
+					"blockList": ["minecraft:netherrack"],
+					"isBlacklist": true
+				}
+			},
+			{
+				"2": {
+					"blockList": ["minecraft:netherrack"],
+					"isBlacklist": false
+				}
+			}
+		],
+		"notify_cursed": true
+	}
+}

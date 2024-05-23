@@ -1,5 +1,9 @@
 package com.zcontent.util;
 
+import net.minecraftforge.fml.relauncher.FMLInjectionData;
+
+import java.io.File;
+
 public class Reference {
 
     public static final String MOD_ID = "zcontent";
@@ -8,4 +12,11 @@ public class Reference {
     public static final String ACCEPTED_VERSION = "[1.12.2]";
     public static final String CLIENT_PROXY_CLASS = "com.zcontent.proxy.ClientProxy";
     public static final String COMMON_PROXY_CLASS = "com.zcontent.proxy.CommonProxy";
+
+
+    public static String getGameFolder() {
+        return ((File) (FMLInjectionData.data()[6])).getAbsolutePath();
+    }
+
+
 }

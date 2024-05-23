@@ -43,7 +43,7 @@ public class ModOreDictItems {
         OreDictionary.registerOre("dustElectroFlux", new ItemStack(ModItems.purple_mat_dust));
         OreDictionary.registerOre("dustElectrotine", new ItemStack(ModItems.blue_mat_dust));
         OreDictionary.registerOre("plateWood", new ItemStack(ModItems.wood_plate));
-        OreDictionary.registerOre("matChunkAncientdebris", new ItemStack(ModItems.ancientdebris_chunk));
+        OreDictionary.registerOre("matChunkAncientDebris", new ItemStack(ModItems.ancientdebris_chunk));
         OreDictionary.registerOre("matChunkAndesite", new ItemStack(ModItems.andesite_chunk));
         OreDictionary.registerOre("matChunkBasalt", new ItemStack(ModItems.basalt_chunk));
         OreDictionary.registerOre("matChunkClay", new ItemStack(ModItems.clay_chunk));

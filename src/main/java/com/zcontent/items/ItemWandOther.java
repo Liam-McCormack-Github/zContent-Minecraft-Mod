@@ -37,10 +37,6 @@ public class ItemWandOther extends Item implements IHasModel {
             multimap.put(EntityPlayer.REACH_DISTANCE.getName(), new AttributeModifier(MOD_UUID, "Range Modifier", 5, 0));
         }
 
-        if (equipmentSlot == EntityEquipmentSlot.OFFHAND) {
-            multimap.put(EntityPlayer.REACH_DISTANCE.getName(), new AttributeModifier(MOD_UUID, "Range Modifier", 5, 0));
-        }
-
         return multimap;
     }
 

@@ -5,162 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43ac629e-869a-46c5-b1ff-8a235a075bd2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.9/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.9/fileContent/annotation-processors.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.9/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.9/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.9/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.9/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.9/taskHistory/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.9/taskHistory/taskHistory.lock" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/config/ConfigLoader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/config/ConfigUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/config/JsonUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/vcsWorkingDirs/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/zcontent.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/zcontent.test.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/runClient.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/runClient.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/runServer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/runServer.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/.mixin.out/audit/mixin_implementation_report.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/.mixin.out/audit/mixin_implementation_report.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/config/forge.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/config/forgeChunkLoading.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/config/splash.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2022-04-08-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/2022-11-18-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/debug-1.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/logs/debug-2.log.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/mods/Controlling-3.0.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/mods/CraftTweaker2-1.12-4.1.20.644.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/mods/FTBLib-5.4.7.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/mods/FTBUtilities-5.4.1.131.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/mods/MouseTweaks-2.10-mc1.12.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/mods/VanillaFix-1.0.10-99.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/mods/jei_1.12.2-4.16.1.302.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/options.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/DIM-1/data/capabilities.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/DIM-1/data/villages_nether.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/DIM-1/forcedchunks.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/DIM1/data/capabilities.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/DIM1/data/villages_end.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/DIM1/forcedchunks.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/advancements/d60321ce-54ba-31e5-bac3-cbb6a732015a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/data/capabilities.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/data/villages.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/forcedchunks.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/level.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/level.dat_old" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/playerdata/d60321ce-54ba-31e5-bac3-cbb6a732015a.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.-1.-1.mca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.-1.0.mca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.-2.-1.mca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.-2.0.mca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.-2.1.mca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.-3.0.mca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.-3.1.mca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.-4.1.mca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.-4.2.mca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.-4.3.mca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.-5.2.mca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.-5.3.mca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.0.-1.mca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/region/r.0.0.mca" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/session.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/saves/New World/stats/d60321ce-54ba-31e5-bac3-cbb6a732015a.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run/usernamecache.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runClient.launch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/runServer.launch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/Prop_Sector/ArrowPropertiesProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/Prop_Sector/IArrowProperties.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/blocks/BlockBase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/blocks/EnderBlock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/blocks/MeteorBlock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/blocks/OreHeavy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/blocks/OreLight.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/blocks/OreNormal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/blocks/XpBlock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/enchantment/EnchantmentAbsorption.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/enchantment/EnchantmentAntidote.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/enchantment/EnchantmentDisarm.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/enchantment/EnchantmentFastdraw.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/enchantment/EnchantmentFaststrike.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/enchantment/EnchantmentFertilizer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/enchantment/EnchantmentFireResistance.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/enchantment/EnchantmentGlowing.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/enchantment/EnchantmentHaste.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/enchantment/EnchantmentInstantHealth.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/enchantment/EnchantmentInstantKill.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/enchantment/EnchantmentInvisibility.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/enchantment/EnchantmentJumpBoost.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/enchantment/EnchantmentLevitation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/enchantment/EnchantmentLuck.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/enchantment/EnchantmentNightVision.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/enchantment/EnchantmentParalysis.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/enchantment/EnchantmentRegeneration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/enchantment/EnchantmentResistance.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/enchantment/EnchantmentSaturation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/enchantment/EnchantmentSpeed.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/enchantment/EnchantmentStrength.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/enchantment/EnchantmentThunder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/enchantment/EnchantmentWaterBreathing.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/enchantment/EnchantmentWeaken.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/init/ModBlocks.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/init/ModEnchantments.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/init/ModItems.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/init/ModOreDictBlocks.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/init/ModOreDictItems.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/init/ModRecipes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/items/ItemAntidote.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/items/ItemBad.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/items/ItemBase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/items/ItemFertilizer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/items/ItemFertilizerWithered.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/items/ItemFuel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/items/ItemGlowing.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/items/ItemRepair.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/items/ItemWand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/items/ItemWand1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/items/ItemWand2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/items/ItemWand3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/items/ItemWand4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/items/ItemWandOther.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/items/tools/ToolAxe.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/items/tools/ToolAxeBase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/items/tools/ToolElementalSword.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/items/tools/ToolMasterSword.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/items/tools/ToolPick.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/items/tools/ToolPickBase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/items/tools/ToolShovel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/items/tools/ToolShovelBase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/items/tools/ToolSword.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/items/tools/ToolSwordBase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/proxy/ClientProxy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/proxy/CommonProxy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/util/GlobalVars.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/util/IHasModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/util/Reference.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/thewawpro/zcontent/util/handlers/RegistryHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mcmod.info" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mcmod.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pack.mcmeta" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pack.mcmeta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zz Copy to Mods.bat" beforeDir="false" afterPath="$PROJECT_DIR$/zz Copy to Mods.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModOreDictItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModOreDictItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWand1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWand1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWand2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWand2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWand3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWand3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWand4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWand4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWandOther.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWandOther.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/util/Reference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/util/Reference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/util/handlers/RegistryHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/util/handlers/RegistryHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,6 +57,11 @@
                 <item name="zContent-Minecraft-Mod" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="zContent-Minecraft-Mod" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
               </path>
             </expand>
             <select />
@@ -241,29 +105,30 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.C:/GitHub/Minecraft Modding/my-mods/zContent-Minecraft-Mod [:createMcpToSrg :createMcpToSrg :createMcpToSrg].executor": "Run",
-    "Gradle.zContent-Minecraft-Mod [:createMcpToSrg :createMcpToSrg :createMcpToSrg].executor": "Run",
-    "Gradle.zcontent [build].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/GitHub/Minecraft Modding/my-mods/zContent-Minecraft-Mod/build.gradle",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.C:/GitHub/Minecraft Modding/my-mods/zContent-Minecraft-Mod [:createMcpToSrg :createMcpToSrg :createMcpToSrg].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.zContent-Minecraft-Mod [:createMcpToSrg :createMcpToSrg :createMcpToSrg].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.zcontent [build].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/GitHub/Minecraft Modding/my-mods/zContent-Minecraft-Mod/build.gradle&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zcontent.util.handlers" />
       <recent name="com.thewawpro.zcontent.items" />
       <recent name="com.thewawpro.zcontent.init" />
       <recent name="com.thewawpro.zcontent.enchantment" />
@@ -339,6 +204,14 @@
       <updated>1649409021120</updated>
       <workItem from="1714067680889" duration="681000" />
       <workItem from="1714068401569" duration="21000" />
+      <workItem from="1714131533060" duration="14000" />
+      <workItem from="1714161924606" duration="294000" />
+      <workItem from="1714292591918" duration="1902000" />
+      <workItem from="1714318586066" duration="1131000" />
+      <workItem from="1714738505985" duration="1464000" />
+      <workItem from="1715439248069" duration="893000" />
+      <workItem from="1715521935923" duration="143000" />
+      <workItem from="1716486758660" duration="9894000" />
     </task>
     <servers />
   </component>

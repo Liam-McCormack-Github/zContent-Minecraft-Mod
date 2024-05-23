@@ -40,7 +40,7 @@ public class ItemWand2 extends Item implements IHasModel {
         }
 
         if (equipmentSlot == EntityEquipmentSlot.OFFHAND) {
-            multimap.put(EntityPlayer.REACH_DISTANCE.getName(), new AttributeModifier(MOD_UUID, "Range Modifier", 15, 0));
+            multimap.put(EntityPlayer.REACH_DISTANCE.getName(), new AttributeModifier(MOD_UUID, "Range Modifier", 10, 0));
         }
 
         return multimap;
