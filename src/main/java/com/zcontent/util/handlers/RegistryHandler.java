@@ -1,6 +1,7 @@
 package com.zcontent.util.handlers;
 
 import com.zcontent.config.ConfigUtils;
+import com.zcontent.helpers.NBTHelper;
 import com.zcontent.init.ModBlocks;
 import com.zcontent.init.ModEnchantments;
 import com.zcontent.init.ModItems;
@@ -61,7 +62,8 @@ public class RegistryHandler {
 
             if (offhandItem.getItem() == ModItems.excavation_wand) {
 
-                ConfigUtils.Mode currentMode = ConfigUtils.getMode(2);
+                ConfigUtils.Mode currentMode = ConfigUtils.getMode(NBTHelper.getInt(offhandItem, "mode"));
+
                 if (currentMode != null) {
 
                     IBlockState state = event.getState();
@@ -69,10 +71,10 @@ public class RegistryHandler {
 
                     if (currentMode.isBlacklist && currentMode.blockList.contains(block)) {
                         event.setCanceled(true);
-                        event.getPlayer().sendMessage(new TextComponentString("Cannot mine this, due to current wand mode! blacklist: true"));
+                        event.getPlayer().sendMessage(new TextComponentString("Cannot mine this block, due to current wand mode!"));
                     } else if (!currentMode.isBlacklist && !currentMode.blockList.contains(block)) {
                         event.setCanceled(true);
-                        event.getPlayer().sendMessage(new TextComponentString("Cannot mine this, due to current wand mode! blacklist: false"));
+                        event.getPlayer().sendMessage(new TextComponentString("Cannot mine this block, due to current wand mode!"));
                     }
                 }
             }

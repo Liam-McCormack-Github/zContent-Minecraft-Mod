@@ -6,22 +6,16 @@
 	"wands": {
 		"modes": [
 			{
-				"0": {
-					"blockList": ["minecraft:stone", "minecraft:dirt"],
-					"isBlacklist": true
-				}
+				"blockList": ["minecraft:stone", "minecraft:dirt"],
+				"isBlacklist": true
 			},
 			{
-				"1": {
-					"blockList": ["minecraft:netherrack"],
-					"isBlacklist": true
-				}
+				"blockList": ["minecraft:netherrack"],
+				"isBlacklist": true
 			},
 			{
-				"2": {
-					"blockList": ["minecraft:netherrack"],
-					"isBlacklist": false
-				}
+				"blockList": ["minecraft:netherrack"],
+				"isBlacklist": false
 			}
 		],
 		"notify_cursed": true

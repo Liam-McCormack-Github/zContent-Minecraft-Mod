@@ -12,7 +12,6 @@ import java.util.Map;
 
 
 public class ConfigUtils {
-
     private static final Map<Integer, Mode> MODES = new HashMap<>();
 
     static {
@@ -21,8 +20,11 @@ public class ConfigUtils {
             JsonObject wandsConfig = config.getAsJsonObject("wands");
             if (wandsConfig != null) {
                 JsonArray modes = wandsConfig.getAsJsonArray("modes");
+
+
+
                 for (int i = 0; i < modes.size(); i++) {
-                    JsonObject modeObject = modes.get(i).getAsJsonObject().getAsJsonObject(String.valueOf(i));
+                    JsonObject modeObject = modes.get(i).getAsJsonObject();
                     JsonArray blockNames = modeObject.getAsJsonArray("blockList");
                     boolean isBlacklist = modeObject.get("isBlacklist").getAsBoolean();
 

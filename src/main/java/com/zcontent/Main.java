@@ -32,6 +32,7 @@ public class Main {
     @EventHandler
     public static void PreInit(FMLPreInitializationEvent event) {
         ConfigLoader.load();
+        ConfigLoader.init();
         // OreDictionaryHandlerItems.registerOreDictionary();
         ModOreDictItems.init();
     }
