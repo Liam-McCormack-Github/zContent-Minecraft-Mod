@@ -1,9 +1,7 @@
 package com.zcontent;
 
 import com.zcontent.config.ConfigLoader;
-import com.zcontent.init.ModOreDictBlocks;
-import com.zcontent.init.ModOreDictItems;
-import com.zcontent.init.ModRecipes;
+import com.zcontent.init.*;
 import com.zcontent.proxy.CommonProxy;
 import com.zcontent.util.Reference;
 import net.minecraftforge.fml.common.Mod;
@@ -33,13 +31,17 @@ public class Main {
     public static void PreInit(FMLPreInitializationEvent event) {
         ConfigLoader.load();
         ConfigLoader.init();
-        // OreDictionaryHandlerItems.registerOreDictionary();
+
+        ModItems.init();
+        ModBlocks.init();
+
         ModOreDictItems.init();
     }
 
     @EventHandler
     public static void init(FMLInitializationEvent event) {
-        ModOreDictBlocks.init();
+        // ModOreDictBlocks.init();
+
         ModRecipes.init();
     }
 

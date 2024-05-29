@@ -7,7 +7,7 @@ import net.minecraftforge.oredict.OreDictionary;
 public class ModOreDictItems {
 
     public static void init() {
-        // Block
+        // Blocks
         // Items
         OreDictionary.registerOre("gemCrystalBlack", new ItemStack(ModItems.black_gem));
         OreDictionary.registerOre("gemCrystalBlue", new ItemStack(ModItems.blue_gem));

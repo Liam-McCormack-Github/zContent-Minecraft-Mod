@@ -3,6 +3,75 @@
 		"external_config": true,
 		"custom_localization": false
 	},
+	"fuels": {
+		"tinyCoal": {
+			"burnTime": 200
+		},
+		"tinyCharcoal": {
+			"burnTime": 200
+		}
+	},
+	"materials": {
+		"material_stainless": {
+			"harvestLevel": 3,
+			"maxUses": 8192,
+			"efficiency": 18.0,
+			"damage": 11.0,
+			"enchantability": 50
+		},
+		"material_silver_obsidian": {
+			"harvestLevel": 3,
+			"maxUses": 1561,
+			"efficiency": 8.0,
+			"damage": 3.0,
+			"enchantability": 75
+		},
+		"material_master": {
+			"harvestLevel": 3,
+			"maxUses": 100,
+			"efficiency": 12.0,
+			"damage": 96.0,
+			"enchantability": 250
+		},
+		"material_elemental": {
+			"harvestLevel": 3,
+			"maxUses": 10,
+			"efficiency": 12.0,
+			"damage": 7.0,
+			"enchantability": 25
+		},
+		"material_master_base": {
+			"harvestLevel": 3,
+			"maxUses": 10,
+			"efficiency": 12.0,
+			"damage": 7.0,
+			"enchantability": 25
+		}
+	},
+	"tools": {
+		"stainless_steel_sword": {
+			"rangeBoostMainHand": 2,
+			"rangeBoostOffHand": 0
+		},
+		"stainless_steel_pick": {
+			"rangeBoostMainHand": 2,
+			"rangeBoostOffHand": 0
+		},
+		"stainless_steel_shovel": {
+			"rangeBoostMainHand": 2,
+			"rangeBoostOffHand": 0
+		},
+		"stainless_steel_axe": {
+			"damage": 17.0,
+			"speed": -3.0,
+			"rangeBoostMainHand": 2,
+			"rangeBoostOffHand": 0
+		},
+		"silver_obsidian_axe": {
+			"damage": 8.0,
+			"speed": -3.1
+		}
+	},
 	"wands": {
 		"modes": [
 			{

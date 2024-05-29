@@ -5,69 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43ac629e-869a-46c5-b1ff-8a235a075bd2" name="Changes" comment="28th May">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWandEnchantable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/util/NbtHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/config/ConfigLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/config/ConfigLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/config/ConfigUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/config/ConfigUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/config/JsonUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/util/JsonHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentAbsorption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentAbsorption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentAntidote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentAntidote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentDisarm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentDisarm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentFertilizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentFertilizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentFireResistance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentFireResistance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentGlowing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentGlowing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentHaste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentHaste.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentInstantHealth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentInstantHealth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentInstantKill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentInstantKill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentInvisibility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentInvisibility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentJumpBoost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentJumpBoost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentLevitation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentLevitation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentLuck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentLuck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentNightVision.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentNightVision.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentParalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentParalysis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentRegeneration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentRegeneration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentResistance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentResistance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentSaturation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentSaturation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentSpeed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentSpeed.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentStrength.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentStrength.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentThunder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentThunder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentWaterBreathing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentWaterBreathing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentWeaken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentWeaken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/helpers/CompoundTagHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/helpers/NBTHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModEnchantments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModEnchantments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/blocks/BlockBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/blocks/BlockBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModBlocks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModItems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemAntidote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemAntidote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemBad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemBad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemFertilizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemFertilizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemFertilizerWithered.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemFertilizerWithered.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemFuel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemFuel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemGlowing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemGlowing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemRepair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemRepair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWandBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWand1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWand2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWand3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWand4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWandOther.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/tools/ToolAxe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/tools/ToolAxeWithAttributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/tools/ToolAxeBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/tools/ToolAxeBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/tools/ToolElementalSword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/tools/ToolElementalSword.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/tools/ToolMasterSword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/tools/ToolMasterSword.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/tools/ToolPick.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/tools/ToolPickWithAttributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/tools/ToolPickBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/tools/ToolPickBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/tools/ToolShovel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/tools/ToolShovelWithAttributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/tools/ToolShovelBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/tools/ToolShovelBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/tools/ToolSword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/tools/ToolSwordWithAttributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/tools/ToolSwordBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/tools/ToolSwordBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/util/Reference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/util/Reference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModOreDictBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModOreDictBlocks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModOreDictItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModOreDictItems.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/util/handlers/RegistryHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/util/handlers/RegistryHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/models/item/excavation_other_wand.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/models/item/wand_world_edit_pass_tele.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/models/item/wand_world_edit_select.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/zcontent_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/zcontent/zcontent_config.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -178,11 +124,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zcontent.init" />
       <recent name="com.zcontent.items" />
       <recent name="com.zcontent.util.handlers" />
       <recent name="com.thewawpro.zcontent.items" />
       <recent name="com.thewawpro.zcontent.init" />
-      <recent name="com.thewawpro.zcontent.enchantment" />
     </key>
   </component>
   <component name="RunManager" selected="Gradle.zcontent [build]">
@@ -274,6 +220,9 @@
       <workItem from="1716965799709" duration="640000" />
       <workItem from="1716966959565" duration="428000" />
       <workItem from="1716967791183" duration="114000" />
+      <workItem from="1716968948176" duration="1437000" />
+      <workItem from="1716973801416" duration="3137000" />
+      <workItem from="1716990643477" duration="3937000" />
     </task>
     <task id="LOCAL-00001" summary="23rd May">
       <option name="closed" value="true" />

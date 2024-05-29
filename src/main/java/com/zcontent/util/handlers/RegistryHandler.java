@@ -1,9 +1,8 @@
 package com.zcontent.util.handlers;
 
+import com.zcontent.Main;
 import com.zcontent.config.ConfigUtils;
-import com.zcontent.init.ModBlocks;
-import com.zcontent.init.ModEnchantments;
-import com.zcontent.init.ModItems;
+import com.zcontent.init.*;
 import com.zcontent.util.IHasModel;
 import com.zcontent.util.NbtHelper;
 import net.minecraft.block.Block;
@@ -34,11 +33,15 @@ public class RegistryHandler {
     @SubscribeEvent
     public static void onItemRegister(RegistryEvent.Register<Item> event) {
         event.getRegistry().registerAll(ModItems.ITEMS.toArray(new Item[0]));
+        Main.LOGGER.info("Registered items: " + ModItems.ITEMS);
+
     }
 
     @SubscribeEvent
     public static void onBlockRegister(RegistryEvent.Register<Block> event) {
         event.getRegistry().registerAll(ModBlocks.BLOCKS.toArray(new Block[0]));
+        Main.LOGGER.info("Registered blocks: " + ModBlocks.BLOCKS);
+
     }
 
     @SubscribeEvent
@@ -53,12 +56,15 @@ public class RegistryHandler {
                 ((IHasModel) item).registerModels();
             }
         }
+        // TODO: this forces compat with JAOPCA, It creates some error logs but I cannot be bothered to fork JAOPCA for this ATM
+        // ModOreDictItems.init();
 
         for (Block block : ModBlocks.BLOCKS) {
             if (block instanceof IHasModel) {
                 ((IHasModel) block).registerModels();
             }
         }
+        ModOreDictBlocks.init();
     }
 
     @SubscribeEvent

@@ -7,7 +7,7 @@ import net.minecraftforge.oredict.OreDictionary;
 public class ModOreDictBlocks {
 
     public static void init() {
-        // Block
+        // Blocks
         OreDictionary.registerOre("oreMeteor", new ItemStack(ModBlocks.meteor_block));
         OreDictionary.registerOre("blockXp", new ItemStack(ModBlocks.xp_block));
         OreDictionary.registerOre("blockEnder", new ItemStack(ModBlocks.ender_block));
