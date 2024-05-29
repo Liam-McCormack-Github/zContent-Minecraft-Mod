@@ -8,11 +8,11 @@ import net.minecraft.item.ItemSword;
 
 public class ToolSwordBase extends ItemSword implements IHasModel {
 
-    public ToolSwordBase(String name, ToolMaterial material) {
+    public ToolSwordBase(String name, CreativeTabs creativeTab, ToolMaterial material) {
         super(material);
         setTranslationKey(name);
         setRegistryName(name);
-        setCreativeTab(CreativeTabs.COMBAT);
+        setCreativeTab(creativeTab);
         ModItems.ITEMS.add(this);
     }
 

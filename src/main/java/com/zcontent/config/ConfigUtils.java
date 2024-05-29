@@ -22,7 +22,6 @@ public class ConfigUtils {
                 JsonArray modes = wandsConfig.getAsJsonArray("modes");
 
 
-
                 for (int i = 0; i < modes.size(); i++) {
                     JsonObject modeObject = modes.get(i).getAsJsonObject();
                     JsonArray blockNames = modeObject.getAsJsonArray("blockList");
@@ -52,5 +51,6 @@ public class ConfigUtils {
             this.isBlacklist = isBlacklist;
         }
     }
+
 
 }

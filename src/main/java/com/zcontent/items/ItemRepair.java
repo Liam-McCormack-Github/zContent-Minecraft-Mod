@@ -1,31 +1,22 @@
 package com.zcontent.items;
 
-import com.zcontent.Main;
-import com.zcontent.init.ModItems;
 import com.zcontent.util.IHasModel;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 
-public class ItemRepair extends Item implements IHasModel {
+public class ItemRepair extends ItemGlowing implements IHasModel {
 
-    public ItemRepair(String name) {
-        setTranslationKey(name);
-        setRegistryName(name);
-        setCreativeTab(CreativeTabs.MATERIALS);
-        ModItems.ITEMS.add(this);
-    }
+    public ItemRepair(String name, CreativeTabs creativeTab) {
+        super(name, creativeTab);
 
-    @Override
-    public void registerModels() {
-        Main.proxy.registerItemRenderer(this, 0, "inventory");
+        setMaxStackSize(1);
     }
 
     @Override
@@ -65,10 +56,4 @@ public class ItemRepair extends Item implements IHasModel {
             }
         }
     }
-
-
-    public boolean hasEffect(ItemStack stack) {
-        return true;
-    }
-
 }

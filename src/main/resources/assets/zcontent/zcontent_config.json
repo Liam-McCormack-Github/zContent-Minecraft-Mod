@@ -6,18 +6,49 @@
 	"wands": {
 		"modes": [
 			{
-				"blockList": ["minecraft:stone", "minecraft:dirt"],
+				"blockList": [
+					"minecraft:stone",
+					"minecraft:netherrack"
+				],
 				"isBlacklist": true
 			},
 			{
-				"blockList": ["minecraft:netherrack"],
+				"blockList": [
+					"minecraft:dirt",
+					"minecraft:sand"
+				],
 				"isBlacklist": true
 			},
 			{
-				"blockList": ["minecraft:netherrack"],
+				"blockList": [
+					"minecraft:stone",
+					"minecraft:netherrack",
+					"minecraft:dirt",
+					"minecraft:sand"
+				],
 				"isBlacklist": false
 			}
 		],
+		"excavation_wand": {
+			"rangeBoostMainHand": 5,
+			"rangeBoostOffHand": 0
+		},
+		"wand_1": {
+			"rangeBoostMainHand": 10,
+			"rangeBoostOffHand": 5
+		},
+		"wand_2": {
+			"rangeBoostMainHand": 15,
+			"rangeBoostOffHand": 10
+		},
+		"wand_3": {
+			"rangeBoostMainHand": 20,
+			"rangeBoostOffHand": 15
+		},
+		"wand_4": {
+			"rangeBoostMainHand": 25,
+			"rangeBoostOffHand": 20
+		},
 		"notify_cursed": true
 	}
 }

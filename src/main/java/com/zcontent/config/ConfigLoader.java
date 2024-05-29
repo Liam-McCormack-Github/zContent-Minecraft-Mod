@@ -3,6 +3,7 @@ package com.zcontent.config;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import com.zcontent.util.JsonHelper;
 import com.zcontent.util.Reference;
 
 import java.io.FileWriter;
@@ -19,12 +20,12 @@ public class ConfigLoader {
 
     public static void load() {
         try {
-            JsonObject internalConfig = JsonUtils.getInternalJsonData(INTERNAL_CONFIG_PATH).getAsJsonObject();
+            JsonObject internalConfig = JsonHelper.getInternalJsonData(INTERNAL_CONFIG_PATH).getAsJsonObject();
             if (Files.exists(Paths.get(EXTERNAL_CONFIG_PATH))) {
-                configuration = JsonUtils.getExternalJsonData(EXTERNAL_CONFIG_PATH).getAsJsonObject();
+                configuration = JsonHelper.getExternalJsonData(EXTERNAL_CONFIG_PATH).getAsJsonObject();
             } else {
                 configuration = internalConfig;
-                JsonUtils.createExternalJsonFile(EXTERNAL_CONFIG_PATH, internalConfig);
+                JsonHelper.createExternalJsonFile(EXTERNAL_CONFIG_PATH, internalConfig);
             }
         } catch (IOException exception) {
             System.err.println("Failed to load configuration files!");
@@ -65,6 +66,7 @@ public class ConfigLoader {
 
             }
         }
+
     }
 
     public static JsonObject getConfig() {

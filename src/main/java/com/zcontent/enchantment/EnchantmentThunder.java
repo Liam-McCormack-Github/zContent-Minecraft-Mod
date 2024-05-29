@@ -1,10 +1,7 @@
 package com.zcontent.enchantment;
 
 import com.zcontent.init.ModEnchantments;
-import com.zcontent.items.ItemWand1;
-import com.zcontent.items.ItemWand2;
-import com.zcontent.items.ItemWand3;
-import com.zcontent.items.ItemWand4;
+import com.zcontent.items.ItemWandEnchantable;
 import com.zcontent.util.Reference;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.Entity;
@@ -27,7 +24,7 @@ public class EnchantmentThunder extends Enchantment {
     @Override
     public boolean canApply(ItemStack stack) {
         Item item = stack.getItem();
-        return (item instanceof ItemWand1 || item instanceof ItemWand2 || item instanceof ItemWand3 || item instanceof ItemWand4);
+        return item instanceof ItemWandEnchantable;
     }
 
     @Override
@@ -53,7 +50,6 @@ public class EnchantmentThunder extends Enchantment {
 
     @Override
     public boolean isCurse() {
-
         return true;
     }
 

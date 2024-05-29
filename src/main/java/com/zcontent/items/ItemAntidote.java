@@ -12,11 +12,11 @@ import net.minecraft.world.World;
 
 public class ItemAntidote extends ItemFood implements IHasModel {
 
-    public ItemAntidote(String name, int amount, float saturation, boolean isAnimalFood) {
+    public ItemAntidote(String name, CreativeTabs creativeTab, int amount, float saturation, boolean isAnimalFood) {
         super(amount, saturation, isAnimalFood);
         setTranslationKey(name);
         setRegistryName(name);
-        setCreativeTab(CreativeTabs.FOOD);
+        setCreativeTab(creativeTab);
         setAlwaysEdible();
 
         ModItems.ITEMS.add(this);

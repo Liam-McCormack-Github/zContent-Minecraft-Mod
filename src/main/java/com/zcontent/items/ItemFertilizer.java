@@ -1,13 +1,10 @@
 package com.zcontent.items;
 
-import com.zcontent.Main;
-import com.zcontent.init.ModItems;
 import com.zcontent.util.IHasModel;
 import net.minecraft.block.Block;
 import net.minecraft.block.IGrowable;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -15,18 +12,10 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 
-public class ItemFertilizer extends Item implements IHasModel {
+public class ItemFertilizer extends ItemBase implements IHasModel {
 
-    public ItemFertilizer(String name) {
-        setTranslationKey(name);
-        setRegistryName(name);
-        setCreativeTab(CreativeTabs.MATERIALS);
-        ModItems.ITEMS.add(this);
-    }
-
-    @Override
-    public void registerModels() {
-        Main.proxy.registerItemRenderer(this, 0, "inventory");
+    public ItemFertilizer(String name, CreativeTabs creativeTab) {
+        super(name, creativeTab);
     }
 
     @Override

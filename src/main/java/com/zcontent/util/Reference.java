@@ -3,6 +3,7 @@ package com.zcontent.util;
 import net.minecraftforge.fml.relauncher.FMLInjectionData;
 
 import java.io.File;
+import java.util.UUID;
 
 public class Reference {
 
@@ -17,6 +18,5 @@ public class Reference {
     public static String getGameFolder() {
         return ((File) (FMLInjectionData.data()[6])).getAbsolutePath();
     }
-
 
 }

@@ -1,28 +1,19 @@
 package com.zcontent.items.tools;
 
 import com.google.common.collect.Multimap;
-import com.zcontent.Main;
-import com.zcontent.init.ModItems;
 import com.zcontent.util.IHasModel;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.ItemSword;
 
-public class ToolMasterSword extends ItemSword implements IHasModel {
+import java.util.UUID;
 
-    public ToolMasterSword(String name, ToolMaterial material) {
-        super(material);
-        setTranslationKey(name);
-        setRegistryName(name);
-        setCreativeTab(CreativeTabs.COMBAT);
-        ModItems.ITEMS.add(this);
-    }
+public class ToolMasterSword extends ToolSwordBase implements IHasModel {
 
-    @Override
-    public void registerModels() {
-        Main.proxy.registerItemRenderer(this, 0, "inventory");
+    public ToolMasterSword(String name, CreativeTabs creativeTab, ToolMaterial material) {
+        super(name, creativeTab, material);
+
     }
 
     @Override
@@ -30,7 +21,7 @@ public class ToolMasterSword extends ItemSword implements IHasModel {
         Multimap<String, AttributeModifier> multimap = super.getItemAttributeModifiers(equipmentSlot);
 
         if (equipmentSlot == EntityEquipmentSlot.MAINHAND) {
-            multimap.put(SharedMonsterAttributes.ATTACK_SPEED.getName(), new AttributeModifier(ToolPick.MOD_UUID, "Attack Speed Modifier", 14.4, 0));
+            multimap.put(SharedMonsterAttributes.ATTACK_SPEED.getName(), new AttributeModifier(UUID.nameUUIDFromBytes("RangeModifier".getBytes()), "Attack Speed Modifier", 8.4, 0));
         }
 
         return multimap;

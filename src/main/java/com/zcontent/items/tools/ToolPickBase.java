@@ -8,11 +8,11 @@ import net.minecraft.item.ItemPickaxe;
 
 public class ToolPickBase extends ItemPickaxe implements IHasModel {
 
-    public ToolPickBase(String name, ToolMaterial material) {
+    public ToolPickBase(String name, CreativeTabs creativeTab, ToolMaterial material) {
         super(material);
         setTranslationKey(name);
         setRegistryName(name);
-        setCreativeTab(CreativeTabs.TOOLS);
+        setCreativeTab(creativeTab);
         ModItems.ITEMS.add(this);
     }
 

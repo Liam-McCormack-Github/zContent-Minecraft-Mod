@@ -8,11 +8,11 @@ import net.minecraft.item.ItemAxe;
 
 public class ToolAxeBase extends ItemAxe implements IHasModel {
 
-    public ToolAxeBase(String name, ToolMaterial material) {
-        super(material, 8.0F, -3.0F);
+    public ToolAxeBase(String name, CreativeTabs creativeTab, ToolMaterial material, float damage, float speed) {
+        super(material, damage, speed);
         setTranslationKey(name);
         setRegistryName(name);
-        setCreativeTab(CreativeTabs.TOOLS);
+        setCreativeTab(creativeTab);
         ModItems.ITEMS.add(this);
     }
 

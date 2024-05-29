@@ -8,11 +8,11 @@ import net.minecraft.item.ItemSpade;
 
 public class ToolShovelBase extends ItemSpade implements IHasModel {
 
-    public ToolShovelBase(String name, ToolMaterial material) {
+    public ToolShovelBase(String name, CreativeTabs creativeTab, ToolMaterial material) {
         super(material);
         setTranslationKey(name);
         setRegistryName(name);
-        setCreativeTab(CreativeTabs.TOOLS);
+        setCreativeTab(creativeTab);
         ModItems.ITEMS.add(this);
     }
 

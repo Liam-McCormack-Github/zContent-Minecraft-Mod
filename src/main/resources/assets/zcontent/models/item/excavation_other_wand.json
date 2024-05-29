@@ -1,6 +1,0 @@
-{
-  "parent": "zcontent:custom/wand",
-  "textures": {
-    "1": "zcontent:blocks/excavation_other_wand"
-  }
-}
