@@ -18,12 +18,12 @@ public class ToolMasterSword extends ToolSwordBase implements IHasModel {
 
     @Override
     public Multimap<String, AttributeModifier> getItemAttributeModifiers(EntityEquipmentSlot equipmentSlot) {
-        Multimap<String, AttributeModifier> multimap = super.getItemAttributeModifiers(equipmentSlot);
+        Multimap<String, AttributeModifier> modifiers = super.getItemAttributeModifiers(equipmentSlot);
 
         if (equipmentSlot == EntityEquipmentSlot.MAINHAND) {
-            multimap.put(SharedMonsterAttributes.ATTACK_SPEED.getName(), new AttributeModifier(UUID.nameUUIDFromBytes("RangeModifier".getBytes()), "Attack Speed Modifier", 8.4, 0));
+            modifiers.put(SharedMonsterAttributes.ATTACK_SPEED.getName(), new AttributeModifier(UUID.nameUUIDFromBytes("AttackSpeed".getBytes()), "Attack Speed Modifier", 8.4, 0));
         }
 
-        return multimap;
+        return modifiers;
     }
 }

@@ -17,10 +17,10 @@ import net.minecraftforge.event.entity.living.LivingDropsEvent;
 
 public class EnchantmentInstantKill extends Enchantment {
 
-    public EnchantmentInstantKill() {
+    public EnchantmentInstantKill(String name) {
         super(Rarity.VERY_RARE, ModEnchantments.WAND, new EntityEquipmentSlot[]{EntityEquipmentSlot.MAINHAND, EntityEquipmentSlot.OFFHAND});
-        this.setName("InstantKill");
-        this.setRegistryName(new ResourceLocation(Reference.MOD_ID + ":instantkill"));
+        this.setName(name);
+        this.setRegistryName(new ResourceLocation(Reference.MOD_ID + ":" + name.toLowerCase()));
         ModEnchantments.ENCHANTMENTS.add(this);
     }
 

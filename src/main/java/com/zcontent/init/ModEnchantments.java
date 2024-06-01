@@ -15,31 +15,34 @@ public class ModEnchantments {
 
     public static final List<Enchantment> ENCHANTMENTS = new ArrayList<Enchantment>();
 
-    public static final Enchantment LUCK = new EnchantmentLuck();
-    public static final Enchantment NIGHTVISION = new EnchantmentNightVision();
-    public static final Enchantment REGENERATION = new EnchantmentRegeneration();
-    public static final Enchantment RESISTANCE = new EnchantmentResistance();
-    public static final Enchantment SATURATION = new EnchantmentSaturation();
-    public static final Enchantment STRENGTH = new EnchantmentStrength();
-    public static final Enchantment WATERBREATHING = new EnchantmentWaterBreathing();
-    public static final Enchantment ABSORPTION = new EnchantmentAbsorption();
-    public static final Enchantment ANTIDOTE = new EnchantmentAntidote();
-    public static final Enchantment FIRERESISTANCE = new EnchantmentFireResistance();
-    public static final Enchantment GLOWING = new EnchantmentGlowing();
-    public static final Enchantment HASTE = new EnchantmentHaste();
-    public static final Enchantment INSTANTHEALTH = new EnchantmentInstantHealth();
-    public static final Enchantment INVISIBILITY = new EnchantmentInvisibility();
-    public static final Enchantment JUMPBOOST = new EnchantmentJumpBoost();
-    public static final Enchantment LEVITATION = new EnchantmentLevitation();
-    public static final Enchantment SPEED = new EnchantmentSpeed();
-    public static final Enchantment THUNDER = new EnchantmentThunder();
-    public static final Enchantment PARALYSIS = new EnchantmentParalysis();
-    public static final Enchantment INSTANTKILL = new EnchantmentInstantKill();
-    public static final Enchantment DISARM = new EnchantmentDisarm();
-    public static final Enchantment WEAKEN = new EnchantmentWeaken();
-    public static final Enchantment FERTILIZER = new EnchantmentFertilizer();
-    public static final Enchantment FASTDRAW = new EnchantmentFastdraw();
-    public static final Enchantment FASTSTRIKE = new EnchantmentFaststrike();
+    public static Enchantment ABSORPTION, FIRERESISTANCE, LUCK, NIGHTVISION, REGENERATION, RESISTANCE, SATURATION, STRENGTH, WATERBREATHING, ANTIDOTE, GLOWING, HASTE, INSTANTHEALTH, INVISIBILITY, JUMPBOOST, LEVITATION, SPEED;
+    public static Enchantment THUNDER, PARALYSIS, INSTANTKILL, DISARM, WEAKEN, FERTILIZER;
 
+    public static void init() {
+        ABSORPTION = new EnchantmentBaseWandPotionPlayer("Absorption");
+        FIRERESISTANCE = new EnchantmentBaseWandPotionPlayer("FireResistance");
+        LUCK = new EnchantmentBaseWandPotionPlayer("Luck");
+        NIGHTVISION = new EnchantmentBaseWandPotionPlayer("NightVision");
+        REGENERATION = new EnchantmentBaseWandPotionPlayer("Regeneration");
+        RESISTANCE = new EnchantmentBaseWandPotionPlayer("Resistance");
+        SATURATION = new EnchantmentBaseWandPotionPlayer("Saturation");
+        STRENGTH = new EnchantmentBaseWandPotionPlayer("Strength");
+        WATERBREATHING = new EnchantmentBaseWandPotionPlayer("WaterBreathing");
+        ANTIDOTE = new EnchantmentBaseWandPotionPlayer("Antidote");
+        GLOWING = new EnchantmentBaseWandPotionPlayer("Glowing");
+        HASTE = new EnchantmentBaseWandPotionPlayer("Haste");
+        INSTANTHEALTH = new EnchantmentBaseWandPotionPlayer("InstantHealth");
+        INVISIBILITY = new EnchantmentBaseWandPotionPlayer("Invisibility");
+        JUMPBOOST = new EnchantmentBaseWandPotionPlayer("JumpBoost");
+        LEVITATION = new EnchantmentBaseWandPotionPlayer("Levitation");
+        SPEED = new EnchantmentBaseWandPotionPlayer("Speed");
+
+        THUNDER = new EnchantmentThunder("Thunder");
+        PARALYSIS = new EnchantmentParalysis("Paralysis");
+        INSTANTKILL = new EnchantmentInstantKill("InstantKill");
+        DISARM = new EnchantmentDisarm("Disarm");
+        WEAKEN = new EnchantmentWeaken("Weaken");
+        FERTILIZER = new EnchantmentFertilizer("Fertilizer");
+    }
 }
 

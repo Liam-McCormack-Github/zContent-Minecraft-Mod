@@ -1,0 +1,75 @@
+
+    @SubscribeEvent
+    public void onEquippementSwapped(LivingEquipmentChangeEvent event)
+    {
+        AbstractAttributeMap attribute = event.getEntityLiving().getAttributeMap();
+        Multimap<String, AttributeModifier> mods = createModifiersFromStack(event.getFrom(), event.getEntityLiving(), event.getSlot());
+        if(!mods.isEmpty())
+        {
+            attribute.removeAttributeModifiers(mods);
+        }
+        mods = createModifiersFromStack(event.getTo(),event.getEntityLiving(), event.getSlot());
+        if(!mods.isEmpty())
+        {
+            attribute.applyAttributeModifiers(mods);
+        }
+    }
+
+    private Multimap<String, AttributeModifier> createModifiersFromStack(ItemStack stack, EntityLivingBase living, EntityEquipmentSlot slot)
+    {
+        Multimap<String, AttributeModifier> mods = HashMultimap.create();
+
+        //Optimization. After 3 Enchantment's its sure that on average you have more then 1 full iteration. So now we fully iterate once over it since hash-code would be a faster check.
+        Object2IntMap<Enchantment> enchantments = NbtHelper.getEnchantments(stack);
+
+
+
+        // int level = enchantments.getInt(UniqueEnchantments.VITAE);
+        // if(level > 0 && MiscUtil.getSlotsFor(UniqueEnchantments.VITAE).contains(slot))
+        // {
+        //     int xpLevel = living instanceof EntityPlayer ? ((EntityPlayer)living).experienceLevel : 100;
+        //     mods.put(SharedMonsterAttributes.MAX_HEALTH.getName(), new AttributeModifier(Vitae.HEALTH_MOD.getId(slot), "Vitae Boost", Math.log10(100+(Vitae.BASE_BOOST.get(level))+Math.sqrt(Vitae.SCALE_BOOST.get(xpLevel)))-2, 2));
+        // }
+        // level = enchantments.getInt(UniqueEnchantments.SWIFT);
+        // if(level > 0 && MiscUtil.getSlotsFor(UniqueEnchantments.SWIFT).contains(slot))
+        // {
+        //     mods.put(SharedMonsterAttributes.MOVEMENT_SPEED.getName(), new AttributeModifier(Swift.SPEED_MOD, "Swift Boost", Swift.SPEED_BONUS.getAsDouble(level), 2));
+        // }
+
+        int level = enchantments.getInt(ModEnchantments.FASTSTRIKE);
+        if(level > 0 && slot == EntityEquipmentSlot.MAINHAND)
+        {
+            mods.put(SharedMonsterAttributes.ATTACK_SPEED.getName(), new AttributeModifier(UUID.nameUUIDFromBytes("AttackSpeedModifier".getBytes()), "Attack Speed Modifier", (float) level, 0));
+        }
+
+        return mods;
+    }
+
+
+
+
+
+
+    -----------------
+
+        public static Object2IntMap<Enchantment> getEnchantments(ItemStack stack)
+        {
+            if(stack.isEmpty()) return Object2IntMaps.emptyMap();
+            NBTTagList list = stack.getEnchantmentTagList();
+            // Micro Optimization. If the EnchantmentMap is empty then returning a
+            // EmptyMap is faster then creating a new map. More Performance in
+            // checks.
+            if(list.isEmpty()) return Object2IntMaps.emptyMap();
+            Object2IntMap<Enchantment> map = new Object2IntOpenHashMap<Enchantment>();
+            for(int i = 0, m = list.tagCount();i < m;i++)
+            {
+                NBTTagCompound tag = list.getCompoundTagAt(i);
+                Enchantment enchantment = Enchantment.getEnchantmentByID(tag.getShort("id"));
+                if(enchantment != null)
+                {
+                    map.put(enchantment, Math.min(tag.getInteger("lvl"), Integer.MAX_VALUE));
+                }
+            }
+            return map;
+        }
+

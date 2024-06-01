@@ -17,9 +17,7 @@ import org.apache.logging.log4j.Logger;
 @Mod(modid = Reference.MOD_ID, name = Reference.NAME, version = Reference.VERSION)
 public class Main {
 
-
     public static final Logger LOGGER = LogManager.getLogger(Reference.MOD_ID);
-
 
     @Instance
     public static Main instance;
@@ -34,6 +32,8 @@ public class Main {
 
         ModItems.init();
         ModBlocks.init();
+
+        ModEnchantments.init();
 
         ModOreDictItems.init();
     }

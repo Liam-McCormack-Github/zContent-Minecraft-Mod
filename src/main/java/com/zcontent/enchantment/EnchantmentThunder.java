@@ -14,10 +14,10 @@ import net.minecraft.util.ResourceLocation;
 
 public class EnchantmentThunder extends Enchantment {
 
-    public EnchantmentThunder() {
+    public EnchantmentThunder(String name) {
         super(Rarity.VERY_RARE, ModEnchantments.WAND, new EntityEquipmentSlot[]{EntityEquipmentSlot.MAINHAND, EntityEquipmentSlot.OFFHAND});
-        this.setName("Thunder");
-        this.setRegistryName(new ResourceLocation(Reference.MOD_ID + ":thunder"));
+        this.setName(name);
+        this.setRegistryName(new ResourceLocation(Reference.MOD_ID + ":" + name.toLowerCase()));
         ModEnchantments.ENCHANTMENTS.add(this);
     }
 

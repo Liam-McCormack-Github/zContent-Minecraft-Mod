@@ -17,10 +17,10 @@ import net.minecraft.world.World;
 
 public class EnchantmentDisarm extends Enchantment {
 
-    public EnchantmentDisarm() {
+    public EnchantmentDisarm(String name) {
         super(Rarity.VERY_RARE, ModEnchantments.WAND, new EntityEquipmentSlot[]{EntityEquipmentSlot.MAINHAND, EntityEquipmentSlot.OFFHAND});
-        this.setName("Disarm");
-        this.setRegistryName(new ResourceLocation(Reference.MOD_ID + ":disarm"));
+        this.setName(name);
+        this.setRegistryName(new ResourceLocation(Reference.MOD_ID + ":" + name.toLowerCase()));
         ModEnchantments.ENCHANTMENTS.add(this);
     }
 

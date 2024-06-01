@@ -17,10 +17,10 @@ import net.minecraft.util.ResourceLocation;
 
 public class EnchantmentWeaken extends Enchantment {
 
-    public EnchantmentWeaken() {
+    public EnchantmentWeaken(String name) {
         super(Rarity.VERY_RARE, ModEnchantments.WAND, new EntityEquipmentSlot[]{EntityEquipmentSlot.MAINHAND, EntityEquipmentSlot.OFFHAND});
-        this.setName("Weaken");
-        this.setRegistryName(new ResourceLocation(Reference.MOD_ID + ":weaken"));
+        this.setName(name);
+        this.setRegistryName(new ResourceLocation(Reference.MOD_ID + ":" + name.toLowerCase()));
         ModEnchantments.ENCHANTMENTS.add(this);
     }
 

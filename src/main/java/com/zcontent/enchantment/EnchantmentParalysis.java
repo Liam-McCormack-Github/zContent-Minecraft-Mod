@@ -17,10 +17,10 @@ import net.minecraft.util.ResourceLocation;
 
 public class EnchantmentParalysis extends Enchantment {
 
-    public EnchantmentParalysis() {
+    public EnchantmentParalysis(String name) {
         super(Rarity.VERY_RARE, ModEnchantments.WAND, new EntityEquipmentSlot[]{EntityEquipmentSlot.MAINHAND, EntityEquipmentSlot.OFFHAND});
-        this.setName("Paralysis");
-        this.setRegistryName(new ResourceLocation(Reference.MOD_ID + ":paralysis"));
+        this.setName(name);
+        this.setRegistryName(new ResourceLocation(Reference.MOD_ID + ":" + name.toLowerCase()));
         ModEnchantments.ENCHANTMENTS.add(this);
     }
 

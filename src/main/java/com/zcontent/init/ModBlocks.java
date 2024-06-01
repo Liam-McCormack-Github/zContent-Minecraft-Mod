@@ -11,29 +11,7 @@ public class ModBlocks {
 
     public static final List<Block> BLOCKS = new ArrayList<Block>();
 
-    public static Block xp_block;
-    public static Block meteor_block;
-    public static Block ender_block;
-    public static Block iron_stone;
-    public static Block flint_block;
-    public static Block wither_bone_block;
-    public static Block bone_block;
-    public static Block gunpowder_block;
-    public static Block rotten_flesh_block;
-    public static Block ardite_ore;
-    public static Block cobalt_ore;
-    public static Block aluminum_ore;
-    public static Block copper_ore;
-    public static Block tin_ore;
-    public static Block lead_ore;
-    public static Block silver_ore;
-    public static Block nickel_ore;
-    public static Block uranium_ore;
-    public static Block titanium_ore;
-    public static Block platinum_ore;
-    public static Block iridium_ore;
-    public static Block mithril_ore;
-
+    public static Block xp_block, meteor_block, ender_block, iron_stone, flint_block, wither_bone_block, bone_block, gunpowder_block, rotten_flesh_block, ardite_ore, cobalt_ore, aluminum_ore, copper_ore, tin_ore, lead_ore, silver_ore, nickel_ore, uranium_ore, titanium_ore, platinum_ore, iridium_ore, mithril_ore;
 
     public static void init() {
         xp_block = new XpBlock("xp_block", Material.SPONGE);
@@ -58,6 +36,6 @@ public class ModBlocks {
         platinum_ore = new OreHeavy("platinum_ore", Material.ROCK);
         iridium_ore = new OreHeavy("iridium_ore", Material.ROCK);
         mithril_ore = new OreHeavy("mithril_ore", Material.ROCK);
-        
+
     }
 }

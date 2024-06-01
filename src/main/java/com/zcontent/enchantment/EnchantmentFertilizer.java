@@ -4,36 +4,18 @@ import com.zcontent.init.ModEnchantments;
 import com.zcontent.items.ItemWandEnchantable;
 import com.zcontent.util.Reference;
 import net.minecraft.enchantment.Enchantment;
-import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemDye;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-@Mod.EventBusSubscriber(modid = Reference.MOD_ID)
 public class EnchantmentFertilizer extends Enchantment {
 
-    public EnchantmentFertilizer() {
+    public EnchantmentFertilizer(String name) {
         super(Rarity.VERY_RARE, ModEnchantments.WAND, new EntityEquipmentSlot[]{EntityEquipmentSlot.MAINHAND, EntityEquipmentSlot.OFFHAND});
-        this.setName("Fertilizer");
-        this.setRegistryName(new ResourceLocation(Reference.MOD_ID + ":fertilizer"));
+        this.setName(name);
+        this.setRegistryName(new ResourceLocation(Reference.MOD_ID + ":" + name.toLowerCase()));
         ModEnchantments.ENCHANTMENTS.add(this);
-    }
-
-    @SubscribeEvent
-    public static void rightClick(PlayerInteractEvent.RightClickBlock e) {
-        ItemStack s = e.getItemStack();
-        int nbLevel = EnchantmentHelper.getEnchantmentLevel(ModEnchantments.FERTILIZER, s);
-        if (!e.getEntityPlayer().isSneaking() && nbLevel > 0 && ItemDye.applyBonemeal(s.copy(), e.getWorld(), e.getPos(), e.getEntityPlayer(), e.getHand())) {
-            s.damageItem(6 - nbLevel, e.getEntityPlayer());
-            e.setCanceled(true);
-            e.setCancellationResult(EnumActionResult.SUCCESS);
-        }
     }
 
     @Override

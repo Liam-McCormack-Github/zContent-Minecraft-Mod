@@ -131,6 +131,9 @@ item.machineframe_1.name=Virtual Machine Frame (Tier 1)
 item.machineframe_2.name=§eVirtual Machine Frame (Tier 2)
 item.machineframe_3.name=§bVirtual Machine Frame (Tier 3)
 item.enderio_speed_upgrade_base.name=Blank Iron Upgrade
+item.coal_ball.name=Coal Ball
+item.compact_coal_ball.name=Compact Coal Ball
+item.coal_chunk.name=Coal Chunk
 item.carbon_fragment.name=Carbon Fragment
 item.carbon_panel.name=Carbon Panel
 item.carbon_mesh.name=Carbon Mesh
@@ -310,5 +313,15 @@ enchantment.Disarm=§5Disarm§r
 enchantment.Weaken=§5Weaken§r
 enchantment.InstantKill=§5Instant Kill§r
 enchantment.Fertilizer=§5Fertilizer§r
-enchantment.Fastdraw=Fast Draw
-enchantment.Faststrike=Fast Strike
+
+// Armour
+item.nano_helmet.name=Nano Helmet
+item.nano_chestplate.name=Nano Chestplate
+item.nano_leggings.name=Nano Leggings
+item.nano_boots.name=Nano Boots
+item.quantum_helmet.name=Quantum Helmet
+item.quantum_chestplate.name=Quantum Chestplate
+item.quantum_leggings.name=Quantum Leggings
+item.quantum_boots.name=Quantum Boots
+
+
