@@ -60,9 +60,7 @@ item.extended_tier1.name=Basic Crafting Circuit
 item.extended_tier2.name=Advanced Crafting Circuit
 item.extended_tier3.name=Elite Crafting Circuit
 item.extended_tier4.name=Ultimate Crafting Circuit
-item.coal_ball.name=Coal Ball
 item.coal_block.name=Compressed Coal Ball
-item.coal_chunk.name=Coal Chunk
 item.industrial_diamond.name=Industrial Diamond
 item.evil_terraglaz_ingot.name=§6Evil Terraglaz Ingot
 item.terraglaz_ingot.name=Terraglaz Ingot
@@ -258,8 +256,6 @@ item.magic.name=§dMagic Remnant
 item.enricheduranium.name=§2Enriched Uranium
 
 
-
-//Items
 //item.wand_1.name=§7Iron§r §6Wand§r
 //item.wand_2.name=§eGold§r §6Wand§r
 //item.wand_3.name=§bDiamond§r §6Wand§r
@@ -289,7 +285,6 @@ item.weaken.name=§6Weaken Tome§r
 item.instantkill.name=§6Instant Kill Tome§r
 item.fertilizer.name=§6Fertilizer Tome§r
 
-//Enchantments
 enchantment.JumpBoost=§5Jump Boost§r
 enchantment.Levitation=§5Levitation§r
 enchantment.Luck=§5Luck§r
@@ -314,7 +309,6 @@ enchantment.Weaken=§5Weaken§r
 enchantment.InstantKill=§5Instant Kill§r
 enchantment.Fertilizer=§5Fertilizer§r
 
-// Armour
 item.nano_helmet.name=Nano Helmet
 item.nano_chestplate.name=Nano Chestplate
 item.nano_leggings.name=Nano Leggings
@@ -323,5 +317,3 @@ item.quantum_helmet.name=Quantum Helmet
 item.quantum_chestplate.name=Quantum Chestplate
 item.quantum_leggings.name=Quantum Leggings
 item.quantum_boots.name=Quantum Boots
-
-

@@ -4,55 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43ac629e-869a-46c5-b1ff-8a235a075bd2" name="Changes" comment="29th May">
-      <change afterPath="$PROJECT_DIR$/dump/dump_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/capability/EnergyCapabilityItemStack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/capability/EnergyStore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/armor/ArmorBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/armor/ArmorNano.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/armor/ArmorQuantum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/util/handlers/EventHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/zcontent/models/item/coal_ball.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/zcontent/models/item/coal_chunk.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/zcontent/models/item/compact_coal_ball.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/Prop_Sector/ArrowPropertiesProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/Prop_Sector/IArrowProperties.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentAbsorption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentBaseWandPotionPlayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentAntidote.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentDisarm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentDisarm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentFastdraw.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentFaststrike.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentFertilizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentFertilizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentFireResistance.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentGlowing.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentHaste.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentInstantHealth.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentInstantKill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentInstantKill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentInvisibility.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentJumpBoost.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentLevitation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentLuck.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentNightVision.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentParalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentParalysis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentRegeneration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentResistance.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentSaturation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentSpeed.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentStrength.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentThunder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentThunder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentWaterBreathing.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentWeaken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentWeaken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModBlocks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModEnchantments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModEnchantments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModItems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWandBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWandBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/tools/ToolMasterSword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/tools/ToolMasterSword.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/util/GlobalVars.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/util/Reference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/util/Reference.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/util/handlers/RegistryHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/util/handlers/RegistryHandler.java" afterDir="false" />
+    <list default="true" id="43ac629e-869a-46c5-b1ff-8a235a075bd2" name="Changes" comment="1st June">
       <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/lang/en_us.lang" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/zcontent/lang/en_us.lang" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -276,6 +228,7 @@
       <workItem from="1717232959877" duration="5011000" />
       <workItem from="1717239661505" duration="13624000" />
       <workItem from="1717258608660" duration="665000" />
+      <workItem from="1717260027690" duration="1675000" />
     </task>
     <task id="LOCAL-00001" summary="23rd May">
       <option name="closed" value="true" />
@@ -301,7 +254,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716994691121</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="1st June">
+      <option name="closed" value="true" />
+      <created>1717261884079</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1717261884079</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,7 +283,8 @@
     <MESSAGE value="23rd May" />
     <MESSAGE value="28th May" />
     <MESSAGE value="29th May" />
-    <option name="LAST_COMMIT_MESSAGE" value="29th May" />
+    <MESSAGE value="1st June" />
+    <option name="LAST_COMMIT_MESSAGE" value="1st June" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
