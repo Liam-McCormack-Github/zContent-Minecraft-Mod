@@ -5,7 +5,6 @@ import com.zcontent.items.ItemWandEnchantable;
 import com.zcontent.util.Reference;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 
@@ -20,14 +19,7 @@ public class EnchantmentFertilizer extends Enchantment {
 
     @Override
     public boolean canApply(ItemStack stack) {
-        Item item = stack.getItem();
-        return item instanceof ItemWandEnchantable;
-    }
-
-    @Override
-    public boolean isAllowedOnBooks() {
-
-        return true;
+        return stack.getItem() instanceof ItemWandEnchantable;
     }
 
     @Override
@@ -48,10 +40,5 @@ public class EnchantmentFertilizer extends Enchantment {
     @Override
     public boolean isCurse() {
         return true;
-    }
-
-    @Override
-    protected boolean canApplyTogether(Enchantment ench) {
-        return this != ench;
     }
 }

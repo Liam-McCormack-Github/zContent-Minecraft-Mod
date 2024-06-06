@@ -5,14 +5,13 @@ import com.zcontent.items.ItemWandEnchantable;
 import com.zcontent.util.Reference;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 
 
-public class EnchantmentBaseWandPotionPlayer extends Enchantment {
+public class EnchantmentBaseWand extends Enchantment {
 
-    public EnchantmentBaseWandPotionPlayer(String name) {
+    public EnchantmentBaseWand(String name) {
         super(Rarity.VERY_RARE, ModEnchantments.WAND, new EntityEquipmentSlot[]{});
         this.setName(name);
         this.setRegistryName(new ResourceLocation(Reference.MOD_ID + ":" + name.toLowerCase()));
@@ -21,13 +20,7 @@ public class EnchantmentBaseWandPotionPlayer extends Enchantment {
 
     @Override
     public boolean canApply(ItemStack stack) {
-        Item item = stack.getItem();
-        return item instanceof ItemWandEnchantable;
-    }
-
-    @Override
-    public boolean isAllowedOnBooks() {
-        return true;
+        return stack.getItem() instanceof ItemWandEnchantable;
     }
 
     @Override
@@ -49,11 +42,4 @@ public class EnchantmentBaseWandPotionPlayer extends Enchantment {
     public boolean isCurse() {
         return true;
     }
-
-    @Override
-    protected boolean canApplyTogether(Enchantment ench) {
-        return this != ench;
-    }
-
-
 }

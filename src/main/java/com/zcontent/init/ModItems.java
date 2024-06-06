@@ -1,7 +1,6 @@
 package com.zcontent.init;
 
-import com.google.gson.JsonObject;
-import com.zcontent.config.ConfigLoader;
+import com.zcontent.config.Config;
 import com.zcontent.items.*;
 import com.zcontent.items.armor.ArmorNano;
 import com.zcontent.items.armor.ArmorQuantum;
@@ -25,27 +24,6 @@ public class ModItems {
     public static final List<Item> ITEMS = new ArrayList<Item>();
 
     // Materials ("material_stainless", 3, 1561, 8.0F, 3.0F, 10);
-    private static final JsonObject configMaterials = JsonHelper.getJsonObject(ConfigLoader.getConfig(), "materials");
-    private static final JsonObject configMaterial_stainless = JsonHelper.getJsonObject(configMaterials, "material_stainless");
-    private static final JsonObject configMaterial_silver_obsidian = JsonHelper.getJsonObject(configMaterials, "material_silver_obsidian");
-    private static final JsonObject configMaterial_master = JsonHelper.getJsonObject(configMaterials, "material_master");
-    private static final JsonObject configMaterial_elemental = JsonHelper.getJsonObject(configMaterials, "material_elemental");
-    private static final JsonObject configMaterial_master_base = JsonHelper.getJsonObject(configMaterials, "material_master_base");
-    private static final JsonObject configFuels = JsonHelper.getJsonObject(ConfigLoader.getConfig(), "fuels");
-    private static final JsonObject configTinyCoal = JsonHelper.getJsonObject(configFuels, "tinyCoal");
-    private static final JsonObject configTinyCharcoal = JsonHelper.getJsonObject(configFuels, "tinyCharcoal");
-    private static final JsonObject configTools = JsonHelper.getJsonObject(ConfigLoader.getConfig(), "tools");
-    private static final JsonObject configStainless_steel_sword = JsonHelper.getJsonObject(configTools, "stainless_steel_sword");
-    private static final JsonObject configStainless_steel_pick = JsonHelper.getJsonObject(configTools, "stainless_steel_pick");
-    private static final JsonObject configStainless_steel_shovel = JsonHelper.getJsonObject(configTools, "stainless_steel_shovel");
-    private static final JsonObject configStainless_steel_axe = JsonHelper.getJsonObject(configTools, "stainless_steel_axe");
-    private static final JsonObject configSilver_obsidian_axe = JsonHelper.getJsonObject(configTools, "silver_obsidian_axe");
-    private static final JsonObject configWands = JsonHelper.getJsonObject(ConfigLoader.getConfig(), "wands");
-    private static final JsonObject configExcavation_wand = JsonHelper.getJsonObject(configWands, "excavation_wand");
-    private static final JsonObject configWand_1 = JsonHelper.getJsonObject(configWands, "wand_1");
-    private static final JsonObject configWand_2 = JsonHelper.getJsonObject(configWands, "wand_2");
-    private static final JsonObject configWand_3 = JsonHelper.getJsonObject(configWands, "wand_3");
-    private static final JsonObject configWand_4 = JsonHelper.getJsonObject(configWands, "wand_4");
 
     public static ToolMaterial MATERIAL_STAINLESS, MATERIAL_SILVER_OBSIDIAN, MATERIAL_MASTER, MATERIAL_ELEMENTAL, MATERIAL_MASTER_BASE;
 
@@ -66,15 +44,15 @@ public class ModItems {
 
     public static void init() {
         // Tools
-        MATERIAL_STAINLESS = EnumHelper.addToolMaterial("material_stainless", JsonHelper.getJsonPrimitiveAsInt(configMaterial_stainless, "harvestLevel"), JsonHelper.getJsonPrimitiveAsInt(configMaterial_stainless, "maxUses"), JsonHelper.getJsonPrimitiveAsFloat(configMaterial_stainless, "efficiency"), JsonHelper.getJsonPrimitiveAsFloat(configMaterial_stainless, "damage"), JsonHelper.getJsonPrimitiveAsInt(configMaterial_stainless, "enchantability"));
-        MATERIAL_SILVER_OBSIDIAN = EnumHelper.addToolMaterial("material_silver_obsidian", JsonHelper.getJsonPrimitiveAsInt(configMaterial_silver_obsidian, "harvestLevel"), JsonHelper.getJsonPrimitiveAsInt(configMaterial_silver_obsidian, "maxUses"), JsonHelper.getJsonPrimitiveAsFloat(configMaterial_silver_obsidian, "efficiency"), JsonHelper.getJsonPrimitiveAsFloat(configMaterial_silver_obsidian, "damage"), JsonHelper.getJsonPrimitiveAsInt(configMaterial_silver_obsidian, "enchantability"));
-        MATERIAL_MASTER = EnumHelper.addToolMaterial("material_master", JsonHelper.getJsonPrimitiveAsInt(configMaterial_master, "harvestLevel"), JsonHelper.getJsonPrimitiveAsInt(configMaterial_master, "maxUses"), JsonHelper.getJsonPrimitiveAsFloat(configMaterial_master, "efficiency"), JsonHelper.getJsonPrimitiveAsFloat(configMaterial_master, "damage"), JsonHelper.getJsonPrimitiveAsInt(configMaterial_master, "enchantability"));
-        MATERIAL_ELEMENTAL = EnumHelper.addToolMaterial("material_elemental", JsonHelper.getJsonPrimitiveAsInt(configMaterial_elemental, "harvestLevel"), JsonHelper.getJsonPrimitiveAsInt(configMaterial_elemental, "maxUses"), JsonHelper.getJsonPrimitiveAsFloat(configMaterial_elemental, "efficiency"), JsonHelper.getJsonPrimitiveAsFloat(configMaterial_elemental, "damage"), JsonHelper.getJsonPrimitiveAsInt(configMaterial_elemental, "enchantability"));
-        MATERIAL_MASTER_BASE = EnumHelper.addToolMaterial("material_master_base", JsonHelper.getJsonPrimitiveAsInt(configMaterial_master_base, "harvestLevel"), JsonHelper.getJsonPrimitiveAsInt(configMaterial_master_base, "maxUses"), JsonHelper.getJsonPrimitiveAsFloat(configMaterial_master_base, "efficiency"), JsonHelper.getJsonPrimitiveAsFloat(configMaterial_master_base, "damage"), JsonHelper.getJsonPrimitiveAsInt(configMaterial_master_base, "enchantability"));
-        // Armour
-        MATERIAL_NANO_ARMOR = EnumHelper.addArmorMaterial("material_nano_armour", Reference.MOD_ID + ":nano", 2000, new int[]{12, 24, 32, 12}, 20, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 8.0F);
-        MATERIAL_QUANTUM_ARMOR = EnumHelper.addArmorMaterial("material_quantum_armour", Reference.MOD_ID + ":quantum", 100, new int[]{3, 6, 8, 3}, 20, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 3.0f);
+        MATERIAL_STAINLESS = EnumHelper.addToolMaterial("material_stainless", Config.MaterialStainlessHarvestLevel, Config.MaterialStainlessMaxUses, Config.MaterialStainlessEfficiency, Config.MaterialStainlessDamage, Config.MaterialStainlessEnchantability);
+        MATERIAL_SILVER_OBSIDIAN = EnumHelper.addToolMaterial("material_silver_obsidian", Config.MaterialSilverObsidianHarvestLevel, Config.MaterialSilverObsidianMaxUses, Config.MaterialSilverObsidianEfficiency, Config.MaterialSilverObsidianDamage, Config.MaterialSilverObsidianEnchantability);
+        MATERIAL_MASTER = EnumHelper.addToolMaterial("material_master", Config.MaterialMasterHarvestLevel, Config.MaterialMasterMaxUses, Config.MaterialMasterEfficiency, Config.MaterialMasterDamage, Config.MaterialMasterEnchantability);
+        MATERIAL_ELEMENTAL = EnumHelper.addToolMaterial("material_elemental", Config.MaterialElementalHarvestLevel, Config.MaterialElementalMaxUses, Config.MaterialElementalEfficiency, Config.MaterialElementalDamage, Config.MaterialElementalEnchantability);
+        MATERIAL_MASTER_BASE = EnumHelper.addToolMaterial("material_master_base", Config.MaterialMasterBaseHarvestLevel, Config.MaterialMasterBaseMaxUses, Config.MaterialMasterBaseEfficiency, Config.MaterialMasterBaseDamage, Config.MaterialMasterBaseEnchantability);
 
+        // Armour
+        MATERIAL_NANO_ARMOR = EnumHelper.addArmorMaterial("material_nano_armour", Reference.MOD_ID + ":nano", Config.MaterialNanoArmorDurability, Config.MaterialNanoArmorReductionAmounts, Config.MaterialNanoArmorEnchantability, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, Config.MaterialNanoArmorToughness);
+        MATERIAL_QUANTUM_ARMOR = EnumHelper.addArmorMaterial("material_quantum_armour", Reference.MOD_ID + ":quantum", Config.MaterialQuantumArmorDurability, Config.MaterialQuantumArmorReductionAmounts, Config.MaterialQuantumArmorEnchantability, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, Config.MaterialQuantumArmorToughness);
         MATERIAL_NANO_ARMOR.setRepairItem(new ItemStack(ModItems.carbon_panel, 1));
 
         // Items
@@ -217,8 +195,8 @@ public class ModItems {
         magic = new ItemBad("magic", CreativeTabs.MATERIALS);
         enricheduranium = new ItemBad("enricheduranium", CreativeTabs.MATERIALS);
         // Fuels
-        coal_tiny_small = new ItemFuel("coal_tiny_small", CreativeTabs.MATERIALS, JsonHelper.getJsonPrimitiveAsInt(configTinyCoal, "burnTime"));
-        charcoal_tiny_small = new ItemFuel("charcoal_tiny_small", CreativeTabs.MATERIALS, JsonHelper.getJsonPrimitiveAsInt(configTinyCharcoal, "burnTime"));
+        coal_tiny_small = new ItemFuel("coal_tiny_small", CreativeTabs.MATERIALS, Config.TinyCoalBurnTime);
+        charcoal_tiny_small = new ItemFuel("charcoal_tiny_small", CreativeTabs.MATERIALS, Config.TinyCharcoalBurnTime);
         // Food
         pill_antidote = new ItemAntidote("pill_antidote", CreativeTabs.FOOD, 0, 0.0f, false);
         // Fertilizer
@@ -254,14 +232,14 @@ public class ModItems {
         // Repair gem
         repairer = new ItemRepair("repairer", CreativeTabs.MATERIALS);
         // Tools
-        stainless_steel_sword = new ToolSwordWithAttributes("stainless_steel_sword", CreativeTabs.COMBAT, MATERIAL_STAINLESS, JsonHelper.getJsonPrimitiveAsInt(configStainless_steel_sword, "rangeBoostMainHand"), JsonHelper.getJsonPrimitiveAsInt(configStainless_steel_sword, "rangeBoostOffHand"));
-        stainless_steel_pick = new ToolPickWithAttributes("stainless_steel_pick", CreativeTabs.TOOLS, MATERIAL_STAINLESS, JsonHelper.getJsonPrimitiveAsInt(configStainless_steel_pick, "rangeBoostMainHand"), JsonHelper.getJsonPrimitiveAsInt(configStainless_steel_pick, "rangeBoostOffHand"));
-        stainless_steel_shovel = new ToolShovelWithAttributes("stainless_steel_shovel", CreativeTabs.TOOLS, MATERIAL_STAINLESS, JsonHelper.getJsonPrimitiveAsInt(configStainless_steel_shovel, "rangeBoostMainHand"), JsonHelper.getJsonPrimitiveAsInt(configStainless_steel_shovel, "rangeBoostOffHand"));
-        stainless_steel_axe = new ToolAxeWithAttributes("stainless_steel_axe", CreativeTabs.TOOLS, MATERIAL_STAINLESS, JsonHelper.getJsonPrimitiveAsFloat(configStainless_steel_axe, "damage"), JsonHelper.getJsonPrimitiveAsFloat(configStainless_steel_axe, "speed"), JsonHelper.getJsonPrimitiveAsInt(configStainless_steel_axe, "rangeBoostMainHand"), JsonHelper.getJsonPrimitiveAsInt(configStainless_steel_axe, "rangeBoostOffHand"));
+        stainless_steel_sword = new ToolSwordWithAttributes("stainless_steel_sword", CreativeTabs.COMBAT, MATERIAL_STAINLESS, Config.StainlessSteelSwordRangeBoostMainHand, Config.StainlessSteelSwordRangeBoostOffHand);
+        stainless_steel_pick = new ToolPickWithAttributes("stainless_steel_pick", CreativeTabs.TOOLS, MATERIAL_STAINLESS, Config.StainlessSteelPickRangeBoostMainHand,  Config.StainlessSteelPickRangeBoostOffHand);
+        stainless_steel_shovel = new ToolShovelWithAttributes("stainless_steel_shovel", CreativeTabs.TOOLS, MATERIAL_STAINLESS, Config.StainlessSteelShovelRangeBoostMainHand,  Config.StainlessSteelShovelRangeBoostOffHand);
+        stainless_steel_axe = new ToolAxeWithAttributes("stainless_steel_axe", CreativeTabs.TOOLS, MATERIAL_STAINLESS, Config.StainlessSteelAxeRangeBoostMainHand,  Config.StainlessSteelAxeRangeBoostOffHand,  Config.StainlessSteelAxeDamage, Config.StainlessSteelAxeSpeed);
         silver_obsidian_sword = new ToolSwordBase("silver_obsidian_sword", CreativeTabs.COMBAT, MATERIAL_SILVER_OBSIDIAN);
         silver_obsidian_pick = new ToolPickBase("silver_obsidian_pick", CreativeTabs.TOOLS, MATERIAL_SILVER_OBSIDIAN);
         silver_obsidian_shovel = new ToolShovelBase("silver_obsidian_shovel", CreativeTabs.TOOLS, MATERIAL_SILVER_OBSIDIAN);
-        silver_obsidian_axe = new ToolAxeBase("silver_obsidian_axe", CreativeTabs.TOOLS, MATERIAL_SILVER_OBSIDIAN, JsonHelper.getJsonPrimitiveAsFloat(configSilver_obsidian_axe, "damage"), JsonHelper.getJsonPrimitiveAsFloat(configSilver_obsidian_axe, "speed"));
+        silver_obsidian_axe = new ToolAxeBase("silver_obsidian_axe", CreativeTabs.TOOLS, MATERIAL_SILVER_OBSIDIAN, Config.SilverObsidianAxeDamage, Config.SilverObsidianAxeSpeed);
         firesword = new ToolElementalSword("firesword", CreativeTabs.COMBAT, MATERIAL_ELEMENTAL);
         icesword = new ToolElementalSword("icesword", CreativeTabs.COMBAT, MATERIAL_ELEMENTAL);
         mastersword1 = new ToolSwordBase("mastersword1", CreativeTabs.COMBAT, MATERIAL_MASTER_BASE);
@@ -271,15 +249,15 @@ public class ModItems {
         nano_chestplate = new ArmorNano("nano_chestplate", CreativeTabs.COMBAT, MATERIAL_NANO_ARMOR, 1, EntityEquipmentSlot.CHEST);
         nano_leggings = new ArmorNano("nano_leggings", CreativeTabs.COMBAT, MATERIAL_NANO_ARMOR, 2, EntityEquipmentSlot.LEGS);
         nano_boots = new ArmorNano("nano_boots", CreativeTabs.COMBAT, MATERIAL_NANO_ARMOR, 1, EntityEquipmentSlot.FEET);
-        quantum_helmet = new ArmorQuantum("quantum_helmet", CreativeTabs.COMBAT, MATERIAL_QUANTUM_ARMOR, 1, EntityEquipmentSlot.HEAD, 2500000, 10000);
-        quantum_chestplate = new ArmorQuantum("quantum_chestplate", CreativeTabs.COMBAT, MATERIAL_QUANTUM_ARMOR, 1, EntityEquipmentSlot.CHEST, 2500000, 10000);
-        quantum_leggings = new ArmorQuantum("quantum_leggings", CreativeTabs.COMBAT, MATERIAL_QUANTUM_ARMOR, 2, EntityEquipmentSlot.LEGS, 2500000, 10000);
-        quantum_boots = new ArmorQuantum("quantum_boots", CreativeTabs.COMBAT, MATERIAL_QUANTUM_ARMOR, 1, EntityEquipmentSlot.FEET, 2500000, 10000);
+        quantum_helmet = new ArmorQuantum("quantum_helmet", CreativeTabs.COMBAT, MATERIAL_QUANTUM_ARMOR, 1, EntityEquipmentSlot.HEAD, Config.QuantumHelmetEnergyCapacity, Config.QuantumHelmetEnergyCost);
+        quantum_chestplate = new ArmorQuantum("quantum_chestplate", CreativeTabs.COMBAT, MATERIAL_QUANTUM_ARMOR, 1, EntityEquipmentSlot.CHEST, Config.QuantumChestplateEnergyCapacity, Config.QuantumChestplateEnergyCost);       
+        quantum_leggings = new ArmorQuantum("quantum_leggings", CreativeTabs.COMBAT, MATERIAL_QUANTUM_ARMOR, 2, EntityEquipmentSlot.LEGS, Config.QuantumLeggingsEnergyCapacity, Config.QuantumLeggingsEnergyCost);       
+        quantum_boots = new ArmorQuantum("quantum_boots", CreativeTabs.COMBAT, MATERIAL_QUANTUM_ARMOR, 1, EntityEquipmentSlot.FEET, Config.QuantumBootsEnergyCapacity, Config.QuantumBootsEnergyCost);
         // Wands
-        excavation_wand = new ItemWandBase("excavation_wand", CreativeTabs.MATERIALS, JsonHelper.getJsonPrimitiveAsInt(configExcavation_wand, "rangeBoostMainHand"), JsonHelper.getJsonPrimitiveAsInt(configExcavation_wand, "rangeBoostOffHand"));
-        wand_1 = new ItemWandBase("wand_1", CreativeTabs.MATERIALS, JsonHelper.getJsonPrimitiveAsInt(configWand_1, "rangeBoostMainHand"), JsonHelper.getJsonPrimitiveAsInt(configWand_1, "rangeBoostOffHand"));
-        wand_2 = new ItemWandBase("wand_2", CreativeTabs.MATERIALS, JsonHelper.getJsonPrimitiveAsInt(configWand_2, "rangeBoostMainHand"), JsonHelper.getJsonPrimitiveAsInt(configWand_2, "rangeBoostOffHand"));
-        wand_3 = new ItemWandBase("wand_3", CreativeTabs.MATERIALS, JsonHelper.getJsonPrimitiveAsInt(configWand_3, "rangeBoostMainHand"), JsonHelper.getJsonPrimitiveAsInt(configWand_3, "rangeBoostOffHand"));
-        wand_4 = new ItemWandBase("wand_4", CreativeTabs.MATERIALS, JsonHelper.getJsonPrimitiveAsInt(configWand_4, "rangeBoostMainHand"), JsonHelper.getJsonPrimitiveAsInt(configWand_4, "rangeBoostOffHand"));
+        excavation_wand = new ItemWandBase("excavation_wand", CreativeTabs.TOOLS, Config.WandExcavationRangeBoostMainHand, Config.WandExcavationRangeBoostOffHand);
+        wand_1 = new ItemWandBase("wand_1", CreativeTabs.TOOLS, Config.Wand1RangeBoostMainHand, Config.Wand1RangeBoostOffHand);
+        wand_2 = new ItemWandBase("wand_2", CreativeTabs.TOOLS, Config.Wand2RangeBoostMainHand, Config.Wand2RangeBoostOffHand);
+        wand_3 = new ItemWandBase("wand_3", CreativeTabs.TOOLS, Config.Wand3RangeBoostMainHand, Config.Wand3RangeBoostOffHand);
+        wand_4 = new ItemWandBase("wand_4", CreativeTabs.TOOLS, Config.Wand4RangeBoostMainHand, Config.Wand4RangeBoostOffHand);
     }
 }

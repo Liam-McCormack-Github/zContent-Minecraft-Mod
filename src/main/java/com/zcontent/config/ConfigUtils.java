@@ -15,26 +15,16 @@ public class ConfigUtils {
     private static final Map<Integer, Mode> MODES = new HashMap<>();
 
     static {
-        JsonObject config = ConfigLoader.getConfig();
-        if (config != null) {
-            JsonObject wandsConfig = config.getAsJsonObject("wands");
-            if (wandsConfig != null) {
-                JsonArray modes = wandsConfig.getAsJsonArray("modes");
-
-
-                for (int i = 0; i < modes.size(); i++) {
-                    JsonObject modeObject = modes.get(i).getAsJsonObject();
-                    JsonArray blockNames = modeObject.getAsJsonArray("blockList");
-                    boolean isBlacklist = modeObject.get("isBlacklist").getAsBoolean();
-
-                    List<Block> blockList = new ArrayList<>();
-                    for (JsonElement blockName : blockNames) {
-                        blockList.add(Block.getBlockFromName(blockName.getAsString()));
-                    }
-
-                    MODES.put(i, new Mode(blockList, isBlacklist));
-                }
+        JsonArray modes = Config.WandModes;
+        for (int i = 0; i < modes.size(); i++) {
+            JsonObject modeObject = modes.get(i).getAsJsonObject();
+            JsonArray blockNames = modeObject.getAsJsonArray("blockList");
+            boolean isBlacklist = modeObject.get("isBlacklist").getAsBoolean();
+            List<Block> blockList = new ArrayList<>();
+            for (JsonElement blockName : blockNames) {
+                blockList.add(Block.getBlockFromName(blockName.getAsString()));
             }
+            MODES.put(i, new Mode(blockList, isBlacklist));
         }
     }
 

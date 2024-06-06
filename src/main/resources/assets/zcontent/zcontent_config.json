@@ -1,123 +1,300 @@
 {
-	"main": {
-		"external_config": true,
-		"custom_localization": false
-	},
-	"fuels": {
-		"tinyCoal": {
-			"burnTime": 200
-		},
-		"tinyCharcoal": {
-			"burnTime": 200
-		}
-	},
-	"materials": {
-		"material_stainless": {
-			"harvestLevel": 3,
-			"maxUses": 8192,
-			"efficiency": 18.0,
-			"damage": 11.0,
-			"enchantability": 50
-		},
-		"material_silver_obsidian": {
-			"harvestLevel": 3,
-			"maxUses": 1561,
-			"efficiency": 8.0,
-			"damage": 3.0,
-			"enchantability": 75
-		},
-		"material_master": {
-			"harvestLevel": 3,
-			"maxUses": 100,
-			"efficiency": 12.0,
-			"damage": 96.0,
-			"enchantability": 250
-		},
-		"material_elemental": {
-			"harvestLevel": 3,
-			"maxUses": 10,
-			"efficiency": 12.0,
-			"damage": 7.0,
-			"enchantability": 25
-		},
-		"material_master_base": {
-			"harvestLevel": 3,
-			"maxUses": 10,
-			"efficiency": 12.0,
-			"damage": 7.0,
-			"enchantability": 25
-		}
-	},
-	"tools": {
-		"stainless_steel_sword": {
-			"rangeBoostMainHand": 2,
-			"rangeBoostOffHand": 0
-		},
-		"stainless_steel_pick": {
-			"rangeBoostMainHand": 2,
-			"rangeBoostOffHand": 0
-		},
-		"stainless_steel_shovel": {
-			"rangeBoostMainHand": 2,
-			"rangeBoostOffHand": 0
-		},
-		"stainless_steel_axe": {
-			"damage": 17.0,
-			"speed": -3.0,
-			"rangeBoostMainHand": 2,
-			"rangeBoostOffHand": 0
-		},
-		"silver_obsidian_axe": {
-			"damage": 8.0,
-			"speed": -3.1
-		}
-	},
-	"wands": {
-		"modes": [
-			{
-				"blockList": [
-					"minecraft:stone",
-					"minecraft:netherrack"
-				],
-				"isBlacklist": true
-			},
-			{
-				"blockList": [
-					"minecraft:dirt",
-					"minecraft:sand"
-				],
-				"isBlacklist": true
-			},
-			{
-				"blockList": [
-					"minecraft:stone",
-					"minecraft:netherrack",
-					"minecraft:dirt",
-					"minecraft:sand"
-				],
-				"isBlacklist": false
-			}
-		],
-		"excavation_wand": {
-			"rangeBoostMainHand": 5,
-			"rangeBoostOffHand": 0
-		},
-		"wand_1": {
-			"rangeBoostMainHand": 10,
-			"rangeBoostOffHand": 5
-		},
-		"wand_2": {
-			"rangeBoostMainHand": 15,
-			"rangeBoostOffHand": 10
-		},
-		"wand_3": {
-			"rangeBoostMainHand": 20,
-			"rangeBoostOffHand": 15
-		},
-		"wand_4": {
-			"rangeBoostMainHand": 25,
-			"rangeBoostOffHand": 20
-		},
-		"notify_cursed": true
-	}
+  "main": {
+    "external_config": true,
+    "custom_localization": false
+  },
+  "fuels": {
+    "tinyCoal": {
+      "burnTime": 20
+    },
+    "tinyCharcoal": {
+      "burnTime": 20
+    }
+  },
+  "materials": {
+    "material_stainless": {
+      "harvestLevel": 3,
+      "maxUses": 8192,
+      "efficiency": 18.0,
+      "damage": 11.0,
+      "enchantability": 50
+    },
+    "material_silver_obsidian": {
+      "harvestLevel": 3,
+      "maxUses": 1561,
+      "efficiency": 8.0,
+      "damage": 3.0,
+      "enchantability": 75
+    },
+    "material_master": {
+      "harvestLevel": 3,
+      "maxUses": 10,
+      "efficiency": 12.0,
+      "damage": 96.0,
+      "enchantability": 250
+    },
+    "material_elemental": {
+      "harvestLevel": 3,
+      "maxUses": 10,
+      "efficiency": 12.0,
+      "damage": 7.0,
+      "enchantability": 25
+    },
+    "material_master_base": {
+      "harvestLevel": 3,
+      "maxUses": 10,
+      "efficiency": 12.0,
+      "damage": 7.0,
+      "enchantability": 25
+    },
+    "material_nano_armor": {
+      "durability": 200,
+      "reductionAmounts": [
+        12,
+        24,
+        32,
+        12
+      ],
+      "enchantability": 20,
+      "toughness": 8.0
+    },
+    "material_quantum_armor": {
+      "durability": 10,
+      "reductionAmounts": [
+        3,
+        6,
+        8,
+        3
+      ],
+      "enchantability": 20,
+      "toughness": 3.0
+    }
+  },
+  "armor": {
+    "quantum_helmet": {
+      "energyCapacity": 25000,
+      "energyCost": 100
+    },
+    "quantum_chestplate": {
+      "energyCapacity": 25000,
+      "energyCost": 100
+    },
+    "quantum_leggings": {
+      "energyCapacity": 25000,
+      "energyCost": 100
+    },
+    "quantum_boots": {
+      "energyCapacity": 25000,
+      "energyCost": 100
+    }
+  },
+  "tools": {
+    "stainless_steel_sword": {
+      "rangeBoostMainHand": 2,
+      "rangeBoostOffHand": 0
+    },
+    "stainless_steel_pick": {
+      "rangeBoostMainHand": 2,
+      "rangeBoostOffHand": 0
+    },
+    "stainless_steel_shovel": {
+      "rangeBoostMainHand": 2,
+      "rangeBoostOffHand": 0
+    },
+    "stainless_steel_axe": {
+      "damage": 17.0,
+      "speed": -3.0,
+      "rangeBoostMainHand": 2,
+      "rangeBoostOffHand": 0
+    },
+    "silver_obsidian_axe": {
+      "damage": 8.0,
+      "speed": -3.1
+    }
+  },
+  "wands": {
+    "modes": [
+      {
+        "blockList": [
+          "minecraft:stone",
+          "minecraft:netherrack"
+        ],
+        "isBlacklist": true
+      },
+      {
+        "blockList": [
+          "minecraft:dirt",
+          "minecraft:sand"
+        ],
+        "isBlacklist": true
+      },
+      {
+        "blockList": [
+          "minecraft:stone",
+          "minecraft:netherrack",
+          "minecraft:dirt",
+          "minecraft:sand"
+        ],
+        "isBlacklist": false
+      }
+    ],
+    "excavation_wand": {
+      "rangeBoostMainHand": 5,
+      "rangeBoostOffHand": 0
+    },
+    "wand_1": {
+      "rangeBoostMainHand": 10,
+      "rangeBoostOffHand": 5
+    },
+    "wand_2": {
+      "rangeBoostMainHand": 15,
+      "rangeBoostOffHand": 10
+    },
+    "wand_3": {
+      "rangeBoostMainHand": 20,
+      "rangeBoostOffHand": 15
+    },
+    "wand_4": {
+      "rangeBoostMainHand": 25,
+      "rangeBoostOffHand": 20
+    },
+    "notify_cursed": true
+  },
+  "enchantments": {
+    "Levitation": {
+      "base": 0,
+      "multiplier": 10,
+      "duration": 2
+    },
+    "Speed": {
+      "base": 0,
+      "multiplier": 1,
+      "duration": 180
+    },
+    "JumpBoost": {
+      "base": 2,
+      "multiplier": 1,
+      "duration": 180
+    },
+    "Invisibility": {
+      "base": 0,
+      "multiplier": 1,
+      "duration": 180
+    },
+    "InstantHealth": {
+      "base": 0,
+      "multiplier": 10,
+      "duration": 180
+    },
+    "Haste": {
+      "base": 0,
+      "multiplier": 10,
+      "duration": 180
+    },
+    "Glowing": {
+      "base": 0,
+      "multiplier": 1,
+      "duration": 180
+    },
+    "Absorption": {
+      "base": 10,
+      "multiplier": 1,
+      "duration": 180
+    },
+    "Strength": {
+      "base": 10,
+      "multiplier": 1,
+      "duration": 180
+    },
+    "Saturation": {
+      "base": 0,
+      "multiplier": 1,
+      "duration": 180
+    },
+    "Luck": {
+      "base": 0,
+      "multiplier": 1,
+      "duration": 180
+    },
+    "FireResistance": {
+      "base": 0,
+      "multiplier": 1,
+      "duration": 180
+    },
+    "WaterBreathing": {
+      "base": 0,
+      "multiplier": 1,
+      "duration": 180
+    },
+    "NightVision": {
+      "base": 0,
+      "multiplier": 1,
+      "duration": 60
+    },
+    "Regeneration": {
+      "base": 0,
+      "multiplier": 1,
+      "duration": 180
+    },
+    "Resistance": {
+      "base": 10,
+      "multiplier": 1,
+      "duration": 180
+    },
+    "AttributeAttackSpeed": {
+      "base": 0,
+      "modifier": 0.5,
+      "operator": 0
+    },
+    "AttributeAttackDamage": {
+      "base": 0,
+      "modifier": 1,
+      "operator": 0
+    },
+    "AttributeArmor": {
+      "base": 0,
+      "modifier": 1,
+      "operator": 0
+    },
+    "AttributeArmorToughness": {
+      "base": 0,
+      "modifier": 1,
+      "operator": 0
+    },
+    "AttributeFlySpeed": {
+      "base": 0,
+      "modifier": 10,
+      "operator": 0
+    },
+    "AttributeKnockbackResist": {
+      "base": 0,
+      "modifier": 1,
+      "operator": 0
+    },
+    "AttributeLuck": {
+      "base": 0,
+      "modifier": 1,
+      "operator": 0
+    },
+    "AttributeMaxHealth": {
+      "base": 0,
+      "modifier": 1,
+      "operator": 0
+    },
+    "AttributeMovementSpeed": {
+      "base": 0,
+      "modifier": 1,
+      "operator": 0
+    },
+    "AttributeSwimSpeed": {
+      "base": 0,
+      "modifier": 1,
+      "operator": 0
+    },
+    "AttributeRange": {
+      "base": 0,
+      "modifier": 1,
+      "operator": 0
+    }
+  }
 }

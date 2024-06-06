@@ -10,7 +10,6 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
@@ -26,14 +25,7 @@ public class EnchantmentInstantKill extends Enchantment {
 
     @Override
     public boolean canApply(ItemStack stack) {
-        Item item = stack.getItem();
-        return item instanceof ItemWandEnchantable;
-    }
-
-    @Override
-    public boolean isAllowedOnBooks() {
-
-        return true;
+        return stack.getItem() instanceof ItemWandEnchantable;
     }
 
     @Override
@@ -54,11 +46,6 @@ public class EnchantmentInstantKill extends Enchantment {
     @Override
     public boolean isCurse() {
         return true;
-    }
-
-    @Override
-    protected boolean canApplyTogether(Enchantment ench) {
-        return this != ench;
     }
 
     @Override

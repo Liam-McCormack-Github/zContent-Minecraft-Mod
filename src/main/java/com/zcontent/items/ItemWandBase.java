@@ -3,6 +3,7 @@ package com.zcontent.items;
 import com.google.common.collect.Multimap;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import com.zcontent.config.Config;
 import com.zcontent.config.ConfigLoader;
 import com.zcontent.util.IHasModel;
 import com.zcontent.util.NbtHelper;
@@ -41,16 +42,7 @@ public class ItemWandBase extends ItemBase implements IHasModel {
 
     private static void changeMode(ItemStack stack, String key) {
         int currentMode = NbtHelper.getInt(stack, key);
-        int numOfModes = 1;
-        JsonObject config = ConfigLoader.getConfig();
-        if (config != null) {
-            JsonObject wandsConfig = config.getAsJsonObject("wands");
-            if (wandsConfig != null) {
-                JsonArray modes = wandsConfig.getAsJsonArray("modes");
-                numOfModes = modes.size();
-            }
-        }
-        int nextMode = (currentMode + 1) % numOfModes;
+        int nextMode = (currentMode + 1) % Config.NumberOfModes;
         NbtHelper.setInt(stack, key, nextMode);
     }
 
@@ -82,21 +74,13 @@ public class ItemWandBase extends ItemBase implements IHasModel {
             changeMode(stack, "mode");
             int currentMode = NbtHelper.getInt(stack, "mode");
             if (world.isRemote) {
-                JsonObject config = ConfigLoader.getConfig();
-                if (config != null) {
-                    JsonObject wandsConfig = config.getAsJsonObject("wands");
-                    if (wandsConfig != null) {
-                        JsonArray modes = wandsConfig.getAsJsonArray("modes");
+                StringBuilder modesInfo = new StringBuilder("Changed Wand Mode to: \n");
+                JsonObject modeObject = Config.WandModes.get(currentMode).getAsJsonObject();
+                modesInfo.append(currentMode).append("\n");
+                modesInfo.append("    Block List: ").append(modeObject.getAsJsonArray("blockList").toString()).append("\n");
+                modesInfo.append("    Is Blacklist: ").append(modeObject.get("isBlacklist").getAsBoolean()).append("\n");
 
-                        StringBuilder modesInfo = new StringBuilder("Changed Wand Mode to: \n");
-                        JsonObject modeObject = modes.get(currentMode).getAsJsonObject();
-                        modesInfo.append(currentMode).append("\n");
-                        modesInfo.append("    Block List: ").append(modeObject.getAsJsonArray("blockList").toString()).append("\n");
-                        modesInfo.append("    Is Blacklist: ").append(modeObject.get("isBlacklist").getAsBoolean()).append("\n");
-
-                        player.sendMessage(new TextComponentString(modesInfo.toString()));
-                    }
-                }
+                player.sendMessage(new TextComponentString(modesInfo.toString()));
             }
             return new ActionResult<>(EnumActionResult.PASS, stack);
         }

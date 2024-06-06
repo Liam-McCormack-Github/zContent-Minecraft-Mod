@@ -1,9 +1,11 @@
 package com.zcontent.util;
 
 import com.google.gson.*;
+import com.zcontent.Main;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.util.stream.IntStream;
 
 public class JsonHelper {
     public static JsonElement getInternalJsonData(String path) throws IOException {
@@ -78,5 +80,14 @@ public class JsonHelper {
             throw new JsonSyntaxException("Expected " + memberName + " to be a double, was " + element);
         }
         return element.getAsDouble();
+    }
+
+    public static int[] getJsonIntArray(JsonObject json, String memberName) {
+        JsonArray jsonArray = json.getAsJsonArray(memberName);
+        int[] intArray = new int[jsonArray.size()];
+        for (int i = 0; i < jsonArray.size(); i++) {
+            intArray[i] = jsonArray.get(i).getAsInt();
+        }
+        return intArray;
     }
 }

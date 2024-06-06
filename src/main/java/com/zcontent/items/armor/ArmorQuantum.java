@@ -35,24 +35,21 @@ import java.util.UUID;
 public class ArmorQuantum extends ArmorBase implements IHasModel, ISpecialArmor {
 
     public static final ISpecialArmor.ArmorProperties QUANTUM = new ArmorProperties(0, 0.20D, Integer.MAX_VALUE);
-    public final int energyCost;
+    private final int energyCost;
     private final int energyCapacity;
     public double absorbRatio = 1.0E7D;
-    public int energyPerDamage = 20000;
 
     public ArmorQuantum(String name, CreativeTabs creativeTab, ArmorMaterial material, int renderIndex, EntityEquipmentSlot slot, int energyCapacity, int energyCost) {
         super(name, creativeTab, material, renderIndex, slot);
 
         this.energyCapacity = energyCapacity;
         this.energyCost = energyCost;
-
-
     }
 
-    protected int getEnergyPerDamage(ItemStack stack) {
+    protected int getenergyCost(ItemStack stack) {
 
         int unbreakingLevel = MathHelper.clamp(EnchantmentHelper.getEnchantmentLevel(Enchantments.UNBREAKING, stack), 0, 256);
-        return energyPerDamage * (5 - unbreakingLevel) / 5;
+        return energyCost * (5 - unbreakingLevel) / 5;
     }
 
     protected int getBaseAbsorption() {
@@ -88,7 +85,7 @@ public class ArmorQuantum extends ArmorBase implements IHasModel, ISpecialArmor 
         Multimap<String, AttributeModifier> modifiers = super.getAttributeModifiers(equipmentSlot, stack);
 
         IEnergyStorage energy = stack.getCapability(CapabilityEnergy.ENERGY, null);
-        if (energy.getEnergyStored() >= getEnergyPerDamage(stack)) {
+        if (energy.getEnergyStored() >= getenergyCost(stack)) {
             //  (equipmentSlot == EntityEquipmentSlot.LEGS && stack.getItem() instanceof ArmorQuantum)
             if (stack.getItem() == ModItems.quantum_leggings && equipmentSlot == EntityEquipmentSlot.LEGS) {
                 modifiers.put(SharedMonsterAttributes.MOVEMENT_SPEED.getName(), new AttributeModifier(UUID.nameUUIDFromBytes("QuantumMovementSpeed".getBytes()), "Speed boost", 0.8, 1));
@@ -105,7 +102,7 @@ public class ArmorQuantum extends ArmorBase implements IHasModel, ISpecialArmor 
     public void onArmorTick(World world, EntityPlayer player, ItemStack stack) {
         if (world.isRemote) return;
         IEnergyStorage energy = stack.getCapability(CapabilityEnergy.ENERGY, null);
-        if (energy.getEnergyStored() >= getEnergyPerDamage(stack)) {
+        if (energy.getEnergyStored() >= getenergyCost(stack)) {
             if (stack.getItem() == ModItems.quantum_boots) {
                 player.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, 260, 3, true, false));
             }
@@ -162,10 +159,10 @@ public class ArmorQuantum extends ArmorBase implements IHasModel, ISpecialArmor 
         if ("quantum".equals(source.damageType)) {
             return QUANTUM;
         } else if (source.isUnblockable()) {
-            int absorbMax = getEnergyPerDamage(stack) > 0 ? 25 * energy.getEnergyStored() / getEnergyPerDamage(stack) : 0;
+            int absorbMax = getenergyCost(stack) > 0 ? 25 * energy.getEnergyStored() / getenergyCost(stack) : 0;
             return new ArmorProperties(0, absorbRatio * 3 * 0.025, absorbMax);
         }
-        int absorbMax = getEnergyPerDamage(stack) > 0 ? 25 * energy.getEnergyStored() / getEnergyPerDamage(stack) : 0;
+        int absorbMax = getenergyCost(stack) > 0 ? 25 * energy.getEnergyStored() / getenergyCost(stack) : 0;
         return new ArmorProperties(0, absorbRatio * 3 * 0.05, absorbMax);
     }
 
@@ -173,7 +170,7 @@ public class ArmorQuantum extends ArmorBase implements IHasModel, ISpecialArmor 
     public int getArmorDisplay(EntityPlayer player, @Nonnull ItemStack stack, int slot) {
         IEnergyStorage energy = stack.getCapability(CapabilityEnergy.ENERGY, null);
 
-        if (energy.getEnergyStored() >= getEnergyPerDamage(stack)) {
+        if (energy.getEnergyStored() >= getenergyCost(stack)) {
             return Math.min(getBaseAbsorption(), 20) * getAbsorptionRatio() / 100;
         }
         return 0;
@@ -192,10 +189,10 @@ public class ArmorQuantum extends ArmorBase implements IHasModel, ISpecialArmor 
         if (source.damageType.equals("quantum")) {
             boolean p = source.getTrueSource() == null;
 
-            energy.receiveEnergy(damage * (p ? energyPerDamage / 2 : getEnergyPerDamage(stack)), false);
+            energy.receiveEnergy(damage * (p ? energyCost / 2 : getenergyCost(stack)), false);
 
         } else {
-            energy.extractEnergy(damage * getEnergyPerDamage(stack), false);
+            energy.extractEnergy(damage * getenergyCost(stack), false);
         }
     }
 }
