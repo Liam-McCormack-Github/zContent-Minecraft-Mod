@@ -16,6 +16,7 @@ public class EnchantmentBaseWand extends Enchantment {
         this.setName(name);
         this.setRegistryName(new ResourceLocation(Reference.MOD_ID + ":" + name.toLowerCase()));
         ModEnchantments.ENCHANTMENTS.add(this);
+        ModEnchantments.enchantmentMap.put(name, this);
     }
 
     @Override

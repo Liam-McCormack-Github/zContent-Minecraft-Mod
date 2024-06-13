@@ -1,14 +1,42 @@
 package com.zcontent.init;
 
+import com.zcontent.recipes.*;
+import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import static com.zcontent.util.Reference.MOD_ID;
+
 public class ModRecipes {
 
+    public static final List<IRecipe> RECIPES = new ArrayList<>();
+
     public static void init() {
-        //GameRegistry.addSmelting(ModBlocks.ardite_ore, new ItemStack(ModItems.ardite_ingot, 1), 1.0F);
-        //GameRegistry.addSmelting(ModBlocks.cobalt_ore, new ItemStack(ModItems.cobalt_ingot, 1), 1.0F);
+        IRecipe magic_to_tome = new RecipeMagicToTome().setRegistryName(new ResourceLocation(MOD_ID, "magic_to_tome_out_with_modified_nbt"));
+        RECIPES.add(magic_to_tome);
+
+        IRecipe tome_to_wand1 = new RecipeTomeToWand1().setRegistryName(new ResourceLocation(MOD_ID, "tome_to_wand1_out_with_modified_nbt"));
+        RECIPES.add(tome_to_wand1);
+
+        IRecipe tome_to_wand2 = new RecipeTomeToWand2().setRegistryName(new ResourceLocation(MOD_ID, "tome_to_wand2_out_with_modified_nbt"));
+        RECIPES.add(tome_to_wand2);
+
+        IRecipe tome_to_wand3 = new RecipeTomeToWand3().setRegistryName(new ResourceLocation(MOD_ID, "tome_to_wand3_out_with_modified_nbt"));
+        RECIPES.add(tome_to_wand3);
+
+        IRecipe tome_to_wand4 = new RecipeTomeToWand4().setRegistryName(new ResourceLocation(MOD_ID, "tome_to_wand4_out_with_modified_nbt"));
+        RECIPES.add(tome_to_wand4);
+
+    }
+
+    public static void initSmelting(){
+        /*
         for (ItemStack ore : OreDictionary.getOres("ingotArdite")) {
             if (ore != null) {
                 if (ore.getItemDamage() != -1 || ore.getItemDamage() != OreDictionary.WILDCARD_VALUE) {
@@ -16,88 +44,27 @@ public class ModRecipes {
                 }
             }
         }
-        for (ItemStack ore : OreDictionary.getOres("ingotCobalt")) {
-            if (ore != null) {
-                if (ore.getItemDamage() != -1 || ore.getItemDamage() != OreDictionary.WILDCARD_VALUE) {
-                    GameRegistry.addSmelting(ModBlocks.cobalt_ore, ore, 1.0F);
-                }
-            }
-        }
-        for (ItemStack ore : OreDictionary.getOres("ingotCopper")) {
-            if (ore != null) {
-                if (ore.getItemDamage() != -1 || ore.getItemDamage() != OreDictionary.WILDCARD_VALUE) {
-                    GameRegistry.addSmelting(ModBlocks.copper_ore, ore, 1.0F);
-                }
-            }
-        }
-        for (ItemStack ore : OreDictionary.getOres("ingotTin")) {
-            if (ore != null) {
-                if (ore.getItemDamage() != -1 || ore.getItemDamage() != OreDictionary.WILDCARD_VALUE) {
-                    GameRegistry.addSmelting(ModBlocks.tin_ore, ore, 1.0F);
-                }
-            }
-        }
-        for (ItemStack ore : OreDictionary.getOres("ingotAluminum")) {
-            if (ore != null) {
-                if (ore.getItemDamage() != -1 || ore.getItemDamage() != OreDictionary.WILDCARD_VALUE) {
-                    GameRegistry.addSmelting(ModBlocks.aluminum_ore, ore, 1.0F);
-                }
-            }
-        }
-        for (ItemStack ore : OreDictionary.getOres("ingotLead")) {
-            if (ore != null) {
-                if (ore.getItemDamage() != -1 || ore.getItemDamage() != OreDictionary.WILDCARD_VALUE) {
-                    GameRegistry.addSmelting(ModBlocks.lead_ore, ore, 1.0F);
-                }
-            }
-        }
-        for (ItemStack ore : OreDictionary.getOres("ingotSilver")) {
-            if (ore != null) {
-                if (ore.getItemDamage() != -1 || ore.getItemDamage() != OreDictionary.WILDCARD_VALUE) {
-                    GameRegistry.addSmelting(ModBlocks.silver_ore, ore, 1.0F);
-                }
-            }
-        }
-        for (ItemStack ore : OreDictionary.getOres("ingotNickel")) {
-            if (ore != null) {
-                if (ore.getItemDamage() != -1 || ore.getItemDamage() != OreDictionary.WILDCARD_VALUE) {
-                    GameRegistry.addSmelting(ModBlocks.nickel_ore, ore, 1.0F);
-                }
-            }
-        }
-        for (ItemStack ore : OreDictionary.getOres("ingotTitanium")) {
-            if (ore != null) {
-                if (ore.getItemDamage() != -1 || ore.getItemDamage() != OreDictionary.WILDCARD_VALUE) {
-                    GameRegistry.addSmelting(ModBlocks.titanium_ore, ore, 1.0F);
-                }
-            }
-        }
-        for (ItemStack ore : OreDictionary.getOres("ingotUranium")) {
-            if (ore != null) {
-                if (ore.getItemDamage() != -1 || ore.getItemDamage() != OreDictionary.WILDCARD_VALUE) {
-                    GameRegistry.addSmelting(ModBlocks.uranium_ore, ore, 1.0F);
-                }
-            }
-        }
-        for (ItemStack ore : OreDictionary.getOres("ingotPlatinum")) {
-            if (ore != null) {
-                if (ore.getItemDamage() != -1 || ore.getItemDamage() != OreDictionary.WILDCARD_VALUE) {
-                    GameRegistry.addSmelting(ModBlocks.platinum_ore, ore, 1.0F);
-                }
-            }
-        }
-        for (ItemStack ore : OreDictionary.getOres("ingotIridium")) {
-            if (ore != null) {
-                if (ore.getItemDamage() != -1 || ore.getItemDamage() != OreDictionary.WILDCARD_VALUE) {
-                    GameRegistry.addSmelting(ModBlocks.iridium_ore, ore, 1.0F);
-                }
-            }
-        }
-        for (ItemStack ore : OreDictionary.getOres("ingotMithril")) {
-            if (ore != null) {
-                if (ore.getItemDamage() != -1 || ore.getItemDamage() != OreDictionary.WILDCARD_VALUE) {
-                    GameRegistry.addSmelting(ModBlocks.mithril_ore, ore, 1.0F);
-                }
+        */
+        addSmeltingRecipe("ingotArdite", ModBlocks.ardite_ore);
+        addSmeltingRecipe("ingotCobalt", ModBlocks.cobalt_ore);
+        addSmeltingRecipe("ingotCopper", ModBlocks.copper_ore);
+        addSmeltingRecipe("ingotTin", ModBlocks.tin_ore);
+        addSmeltingRecipe("ingotAluminum", ModBlocks.aluminum_ore);
+        addSmeltingRecipe("ingotLead", ModBlocks.lead_ore);
+        addSmeltingRecipe("ingotSilver", ModBlocks.silver_ore);
+        addSmeltingRecipe("ingotNickel", ModBlocks.nickel_ore);
+        addSmeltingRecipe("ingotTitanium", ModBlocks.titanium_ore);
+        addSmeltingRecipe("ingotUranium", ModBlocks.uranium_ore);
+        addSmeltingRecipe("ingotPlatinum", ModBlocks.platinum_ore);
+        addSmeltingRecipe("ingotIridium", ModBlocks.iridium_ore);
+        addSmeltingRecipe("ingotMithril", ModBlocks.mithril_ore);
+    }
+
+
+    private static void addSmeltingRecipe(String oreName, Block oreBlock) {
+        for (ItemStack ore : OreDictionary.getOres(oreName)) {
+            if (ore != null && (ore.getItemDamage() != -1 || ore.getItemDamage() != OreDictionary.WILDCARD_VALUE)) {
+                GameRegistry.addSmelting(oreBlock, ore, 1.0F);
             }
         }
     }

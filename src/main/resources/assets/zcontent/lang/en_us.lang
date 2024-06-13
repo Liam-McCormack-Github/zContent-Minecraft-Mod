@@ -261,6 +261,9 @@ item.enricheduranium.name=§2Enriched Uranium
 //item.wand_3.name=§bDiamond§r §6Wand§r
 //item.wand_4.name=§aEmerald§r §6Wand§r
 
+
+item.wand_tome.name=§6Wand Tome§r
+
 item.jumpboost.name=§6Jump Boost Tome§r
 item.levitation.name=§6Levitation Tome§r
 item.luck.name=§6Luck Tome§r

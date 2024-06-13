@@ -34,15 +34,17 @@ public class Main {
         ModBlocks.init();
 
         ModEnchantments.init();
-
         ModOreDictItems.init();
+
+        ModRecipes.init();
     }
 
     @EventHandler
     public static void init(FMLInitializationEvent event) {
         // ModOreDictBlocks.init();
 
-        ModRecipes.init();
+        ModRecipes.initSmelting();
+        // ModRecipes.init();
     }
 
     @EventHandler

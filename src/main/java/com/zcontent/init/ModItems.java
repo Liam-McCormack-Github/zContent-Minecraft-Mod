@@ -5,7 +5,6 @@ import com.zcontent.items.*;
 import com.zcontent.items.armor.ArmorNano;
 import com.zcontent.items.armor.ArmorQuantum;
 import com.zcontent.items.tools.*;
-import com.zcontent.util.JsonHelper;
 import com.zcontent.util.Reference;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.SoundEvents;
@@ -29,7 +28,7 @@ public class ModItems {
 
     public static ArmorMaterial MATERIAL_NANO_ARMOR, MATERIAL_QUANTUM_ARMOR;
 
-    public static Item machineframe_1, machineframe_2, machineframe_3, machineframe, red_compound, blue_compound, red_alloy_ingot, blue_alloy_ingot, purple_alloy_ingot, graphite_ingot, zinc_ingot, manganese_ingot, chrome_ingot, brass_ingot, nichrome_ingot, galvanized_steel_ingot, stainless_steel_ingot, carbon_ingot, hot_iron_ingot, cold_iron_ingot, ardite_ingot, cobalt_ingot, manyullyn_ingot, terraglaz_ingot, evil_terraglaz_ingot, redstone_ball, substrate, polyethylene, biofuel, blue_mat_dust, purple_mat_dust, meteor_dust, et_frag, shaped_emerald, sulfur_crystal, animal_bones, vial, angel_wing, bat_wing, gold_feather, wither_bone, collector_star, collector_dark, collector_red, black_gem, blue_gem, green_gem, indigo_gem, orange_gem, red_gem, violet_gem, white_gem, yellow_gem, wood_plate, extended_tier1, extended_tier2, extended_tier3, extended_tier4, mold, mold_proc, coal_ball, compact_coal_ball, coal_chunk, carbon_fragment, carbon_mesh, carbon_panel, ancientdebris_chunk, andesite_chunk, basalt_chunk, clay_chunk, dirt_chunk, diorite_chunk, end_chunk, granite_chunk, gravel_chunk, jasper_chunk, limestone_chunk, marble_chunk, nether_chunk, obsidian_chunk, sand_chunk, slate_chunk, soulsand_chunk, soulstone_chunk, meteor_chunk, stone_chunk, combiner_core, dissolver_core, enderio_speed_upgrade_base, silicon_boule, silicon_wafer, transistor, alu, cu, rawcircuitboard, circuitboard, printedcircuitboard, card, proc_base, proc_raw_1, proc_raw_2, proc_raw_3, proc_1, proc_2, proc_3, chip1, chip2, chip3, componentbus1, componentbus2, componentbus3, cpu1, cpu2, cpu3, datacard1, datacard2, datacard3, graphicscard1, graphicscard2, graphicscard3, hdd1, hdd2, hdd3, ram1, ram2, ram3, server1, server2, server3, terminalserver, rf_fe_flux_power_energy, masterswordblade, masterswordcore, masterswordgrip, magic, enricheduranium, coal_tiny_small, charcoal_tiny_small, pill_antidote, magic_fertilizer, withered_bone_meal, charged_gunpowder, halcyon_shard, luck, nightvision, regeneration, resistance, saturation, strength, waterbreathing, absorption, antidote, fireresistance, glowing, haste, instanthealth, invisibility, jumpboost, levitation, speed, thunder, paralysis, instantkill, disarm, weaken, fertilizer, repairer, excavation_wand, wand_1, wand_2, wand_3, wand_4;
+    public static Item machineframe_1, machineframe_2, machineframe_3, machineframe, red_compound, blue_compound, red_alloy_ingot, blue_alloy_ingot, purple_alloy_ingot, graphite_ingot, zinc_ingot, manganese_ingot, chrome_ingot, brass_ingot, nichrome_ingot, galvanized_steel_ingot, stainless_steel_ingot, carbon_ingot, hot_iron_ingot, cold_iron_ingot, ardite_ingot, cobalt_ingot, manyullyn_ingot, terraglaz_ingot, evil_terraglaz_ingot, redstone_ball, substrate, polyethylene, biofuel, blue_mat_dust, purple_mat_dust, meteor_dust, et_frag, shaped_emerald, sulfur_crystal, animal_bones, vial, angel_wing, bat_wing, gold_feather, wither_bone, collector_star, collector_dark, collector_red, black_gem, blue_gem, green_gem, indigo_gem, orange_gem, red_gem, violet_gem, white_gem, yellow_gem, wood_plate, extended_tier1, extended_tier2, extended_tier3, extended_tier4, mold, mold_proc, coal_ball, compact_coal_ball, coal_chunk, carbon_fragment, carbon_mesh, carbon_panel, ancientdebris_chunk, andesite_chunk, basalt_chunk, clay_chunk, dirt_chunk, diorite_chunk, end_chunk, granite_chunk, gravel_chunk, jasper_chunk, limestone_chunk, marble_chunk, nether_chunk, obsidian_chunk, sand_chunk, slate_chunk, soulsand_chunk, soulstone_chunk, meteor_chunk, stone_chunk, combiner_core, dissolver_core, enderio_speed_upgrade_base, silicon_boule, silicon_wafer, transistor, alu, cu, rawcircuitboard, circuitboard, printedcircuitboard, card, proc_base, proc_raw_1, proc_raw_2, proc_raw_3, proc_1, proc_2, proc_3, chip1, chip2, chip3, componentbus1, componentbus2, componentbus3, cpu1, cpu2, cpu3, datacard1, datacard2, datacard3, graphicscard1, graphicscard2, graphicscard3, hdd1, hdd2, hdd3, ram1, ram2, ram3, server1, server2, server3, terminalserver, rf_fe_flux_power_energy, masterswordblade, masterswordcore, masterswordgrip, magic, enricheduranium, coal_tiny_small, charcoal_tiny_small, pill_antidote, magic_fertilizer, withered_bone_meal, charged_gunpowder, halcyon_shard, wand_tome, luck, nightvision, regeneration, resistance, saturation, strength, waterbreathing, absorption, antidote, fireresistance, glowing, haste, instanthealth, invisibility, jumpboost, levitation, speed, thunder, paralysis, instantkill, disarm, weaken, fertilizer, repairer, excavation_wand, wand_1, wand_2, wand_3, wand_4;
 
     public static ItemSword stainless_steel_sword, firesword, icesword, mastersword1, mastersword2, silver_obsidian_sword;
 
@@ -192,8 +191,8 @@ public class ModItems {
         masterswordcore = new ItemBase("masterswordcore", CreativeTabs.MATERIALS).setMaxStackSize(1);
         masterswordgrip = new ItemBase("masterswordgrip", CreativeTabs.MATERIALS).setMaxStackSize(1);
         // Bad
-        magic = new ItemBad("magic", CreativeTabs.MATERIALS);
-        enricheduranium = new ItemBad("enricheduranium", CreativeTabs.MATERIALS);
+        magic = new ItemBad("magic", CreativeTabs.MATERIALS, "Rename this in an Anvil, to the name of a Magic Enchant.\nCombine with a Wand Tome in a Crafting Table.\nThis will add that Magic Enchant the Wand Tome.\nFinally Combine the Wand Tome with a Wand in a Crafting Table.\nThe Wand will now have that Magic Enchantment applied.").setMaxStackSize(1);
+        enricheduranium = new ItemBad("enricheduranium", CreativeTabs.MATERIALS, "Radioactive");
         // Fuels
         coal_tiny_small = new ItemFuel("coal_tiny_small", CreativeTabs.MATERIALS, Config.TinyCoalBurnTime);
         charcoal_tiny_small = new ItemFuel("charcoal_tiny_small", CreativeTabs.MATERIALS, Config.TinyCharcoalBurnTime);
@@ -206,29 +205,30 @@ public class ModItems {
         charged_gunpowder = new ItemGlowing("charged_gunpowder", CreativeTabs.MATERIALS);
         halcyon_shard = new ItemGlowing("halcyon_shard", CreativeTabs.MATERIALS);
         // Shiny enchant tomes
-        luck = new ItemGlowing("luck", CreativeTabs.MATERIALS);
-        nightvision = new ItemGlowing("nightvision", CreativeTabs.MATERIALS);
-        regeneration = new ItemGlowing("regeneration", CreativeTabs.MATERIALS);
-        resistance = new ItemGlowing("resistance", CreativeTabs.MATERIALS);
-        saturation = new ItemGlowing("saturation", CreativeTabs.MATERIALS);
-        strength = new ItemGlowing("strength", CreativeTabs.MATERIALS);
-        waterbreathing = new ItemGlowing("waterbreathing", CreativeTabs.MATERIALS);
-        absorption = new ItemGlowing("absorption", CreativeTabs.MATERIALS);
-        antidote = new ItemGlowing("antidote", CreativeTabs.MATERIALS);
-        fireresistance = new ItemGlowing("fireresistance", CreativeTabs.MATERIALS);
-        glowing = new ItemGlowing("glowing", CreativeTabs.MATERIALS);
-        haste = new ItemGlowing("haste", CreativeTabs.MATERIALS);
-        instanthealth = new ItemGlowing("instanthealth", CreativeTabs.MATERIALS);
-        invisibility = new ItemGlowing("invisibility", CreativeTabs.MATERIALS);
-        jumpboost = new ItemGlowing("jumpboost", CreativeTabs.MATERIALS);
-        levitation = new ItemGlowing("levitation", CreativeTabs.MATERIALS);
-        speed = new ItemGlowing("speed", CreativeTabs.MATERIALS);
-        thunder = new ItemGlowing("thunder", CreativeTabs.MATERIALS);
-        paralysis = new ItemGlowing("paralysis", CreativeTabs.MATERIALS);
-        instantkill = new ItemGlowing("instantkill", CreativeTabs.MATERIALS);
-        disarm = new ItemGlowing("disarm", CreativeTabs.MATERIALS);
-        weaken = new ItemGlowing("weaken", CreativeTabs.MATERIALS);
-        fertilizer = new ItemGlowing("fertilizer", CreativeTabs.MATERIALS);
+        wand_tome = new ItemWandTome("wand_tome", CreativeTabs.MATERIALS).setMaxStackSize(1);
+        // luck = new ItemGlowing("luck", CreativeTabs.MATERIALS);
+        // nightvision = new ItemGlowing("nightvision", CreativeTabs.MATERIALS);
+        // regeneration = new ItemGlowing("regeneration", CreativeTabs.MATERIALS);
+        // resistance = new ItemGlowing("resistance", CreativeTabs.MATERIALS);
+        // saturation = new ItemGlowing("saturation", CreativeTabs.MATERIALS);
+        // strength = new ItemGlowing("strength", CreativeTabs.MATERIALS);
+        // waterbreathing = new ItemGlowing("waterbreathing", CreativeTabs.MATERIALS);
+        // absorption = new ItemGlowing("absorption", CreativeTabs.MATERIALS);
+        // antidote = new ItemGlowing("antidote", CreativeTabs.MATERIALS);
+        // fireresistance = new ItemGlowing("fireresistance", CreativeTabs.MATERIALS);
+        // glowing = new ItemGlowing("glowing", CreativeTabs.MATERIALS);
+        // haste = new ItemGlowing("haste", CreativeTabs.MATERIALS);
+        // instanthealth = new ItemGlowing("instanthealth", CreativeTabs.MATERIALS);
+        // invisibility = new ItemGlowing("invisibility", CreativeTabs.MATERIALS);
+        // jumpboost = new ItemGlowing("jumpboost", CreativeTabs.MATERIALS);
+        // levitation = new ItemGlowing("levitation", CreativeTabs.MATERIALS);
+        // speed = new ItemGlowing("speed", CreativeTabs.MATERIALS);
+        // thunder = new ItemGlowing("thunder", CreativeTabs.MATERIALS);
+        // paralysis = new ItemGlowing("paralysis", CreativeTabs.MATERIALS);
+        // instantkill = new ItemGlowing("instantkill", CreativeTabs.MATERIALS);
+        // disarm = new ItemGlowing("disarm", CreativeTabs.MATERIALS);
+        // weaken = new ItemGlowing("weaken", CreativeTabs.MATERIALS);
+        // fertilizer = new ItemGlowing("fertilizer", CreativeTabs.MATERIALS);
         // Repair gem
         repairer = new ItemRepair("repairer", CreativeTabs.MATERIALS);
         // Tools

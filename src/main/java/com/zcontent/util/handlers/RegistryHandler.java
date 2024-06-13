@@ -2,14 +2,12 @@ package com.zcontent.util.handlers;
 
 
 import com.zcontent.Main;
-import com.zcontent.init.ModBlocks;
-import com.zcontent.init.ModEnchantments;
-import com.zcontent.init.ModItems;
-import com.zcontent.init.ModOreDictBlocks;
+import com.zcontent.init.*;
 import com.zcontent.util.IHasModel;
 import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.item.Item;
+import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -36,6 +34,11 @@ public class RegistryHandler {
     @SubscribeEvent
     public static void onEnchantmentRegister(RegistryEvent.Register<Enchantment> event) {
         event.getRegistry().registerAll(ModEnchantments.ENCHANTMENTS.toArray(new Enchantment[0]));
+    }
+
+    @SubscribeEvent
+    public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
+        event.getRegistry().registerAll(ModRecipes.RECIPES.toArray(new IRecipe[0]));
     }
 
     @SubscribeEvent

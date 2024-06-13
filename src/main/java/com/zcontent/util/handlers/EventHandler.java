@@ -37,14 +37,7 @@ import static com.zcontent.capability.EnergyCapabilityItemStack.NBTENERGY;
 import com.zcontent.config.Config;
 
 @EventBusSubscriber
-
 public class EventHandler {
-
-
-
-
-
-
     @SubscribeEvent
     public static void onBlockBreak(BlockEvent.BreakEvent event) {
         // Check if the player has an item in their offhand
