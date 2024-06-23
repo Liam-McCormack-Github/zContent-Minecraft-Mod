@@ -5,35 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43ac629e-869a-46c5-b1ff-8a235a075bd2" name="Changes" comment="8th June">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWandTome.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/recipes/RecipeMagicToTome.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/recipes/RecipeTomeToWand1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/recipes/RecipeTomeToWand2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/recipes/RecipeTomeToWand3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/recipes/RecipeTomeToWand4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/zcontent/models/item/wand_tome.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/runClient.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/runClient.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/runServer.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/runServer.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentBaseWand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentBaseWand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentDisarm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentDisarm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentFertilizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentFertilizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentInstantKill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentInstantKill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentParalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentParalysis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentThunder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentThunder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentWeaken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentWeaken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModEnchantments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModEnchantments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModItems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModRecipes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModRecipes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemBad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemBad.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/util/NbtHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/util/NbtHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/util/handlers/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/util/handlers/EventHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/util/handlers/RegistryHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/util/handlers/RegistryHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/lang/en_us.lang" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/zcontent/lang/en_us.lang" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,41 +109,41 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.C:/GitHub/Minecraft Modding/my-mods/zContent-Minecraft-Mod [:createMcpToSrg :createMcpToSrg :createMcpToSrg].executor": "Run",
-    "Gradle.Download Sources.executor": "Run",
-    "Gradle.zContent-Minecraft-Mod [:createMcpToSrg :createMcpToSrg :createMcpToSrg].executor": "Run",
-    "Gradle.zContent-Minecraft-Mod [build].executor": "Run",
-    "Gradle.zContent-Minecraft-Mod [prepareRunClient].executor": "Run",
-    "Gradle.zContent-Minecraft-Mod [prepareRunServer].executor": "Run",
-    "Gradle.zContent-Minecraft-Mod [prepareRuns].executor": "Run",
-    "Gradle.zContent-Minecraft-Mod [runClient].executor": "Run",
-    "Gradle.zcontent [build].executor": "Run",
-    "Gradle.zcontent [genIntellijRuns].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "extract.method.default.visibility": "private",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Coding/GitHub/zContent-Minecraft-Mod/src/main/resources/assets/zcontent/models/item",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.C:/GitHub/Minecraft Modding/my-mods/zContent-Minecraft-Mod [:createMcpToSrg :createMcpToSrg :createMcpToSrg].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.zContent-Minecraft-Mod [:createMcpToSrg :createMcpToSrg :createMcpToSrg].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.zContent-Minecraft-Mod [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.zContent-Minecraft-Mod [prepareRunClient].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.zContent-Minecraft-Mod [prepareRunServer].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.zContent-Minecraft-Mod [prepareRuns].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.zContent-Minecraft-Mod [runClient].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.zcontent [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.zcontent [genIntellijRuns].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Coding/GitHub/zContent-Minecraft-Mod/src/main/resources/assets/zcontent/models/item&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "JAVA"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JAVA&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Coding\GitHub\zContent-Minecraft-Mod\src\main\resources\assets\zcontent\models\item" />
@@ -383,6 +355,7 @@
       <workItem from="1717761341820" duration="7540000" />
       <workItem from="1717776027792" duration="178000" />
       <workItem from="1717782608113" duration="5473000" />
+      <workItem from="1719063692628" duration="96000" />
     </task>
     <task id="LOCAL-00001" summary="23rd May">
       <option name="closed" value="true" />
