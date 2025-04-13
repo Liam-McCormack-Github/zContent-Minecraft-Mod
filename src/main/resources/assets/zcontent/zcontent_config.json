@@ -1,14 +1,10 @@
 {
-  "main": {
-    "external_config": true,
-    "custom_localization": false
-  },
   "fuels": {
     "tinyCoal": {
-      "burnTime": 20
+      "burnTime": 200
     },
     "tinyCharcoal": {
-      "burnTime": 20
+      "burnTime": 200
     }
   },
   "materials": {
@@ -157,8 +153,7 @@
     "wand_4": {
       "rangeBoostMainHand": 25,
       "rangeBoostOffHand": 20
-    },
-    "notify_cursed": true
+    }
   },
   "enchantments": {
     "Levitation": {

@@ -1,8 +1,5 @@
 package com.zcontent.util.handlers;
 
-
-import com.google.gson.JsonObject;
-import com.zcontent.config.ConfigLoader;
 import com.zcontent.config.ConfigUtils;
 import com.zcontent.init.ModEnchantments;
 import com.zcontent.init.ModItems;
@@ -18,6 +15,7 @@ import net.minecraft.entity.ai.attributes.IAttributeInstance;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemDye;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
@@ -30,49 +28,56 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 import static com.zcontent.capability.EnergyCapabilityItemStack.NBTENERGY;
+
 import com.zcontent.config.Config;
+
 
 @EventBusSubscriber
 public class EventHandler {
     @SubscribeEvent
     public static void onBlockBreak(BlockEvent.BreakEvent event) {
-        // Check if the player has an item in their offhand
-        if (!event.getPlayer().getHeldItemOffhand().isEmpty()) {
+        final Set<Item> VALID_WANDS = new HashSet<>(Arrays.asList(ModItems.excavation_wand, ModItems.wand_1, ModItems.wand_2, ModItems.wand_3, ModItems.wand_4));
 
-            ItemStack offhandItem = event.getPlayer().getHeldItemOffhand();
+        if (event.getPlayer().getHeldItemMainhand().isEmpty() && event.getPlayer().getHeldItemOffhand().isEmpty()) {
+            return;
+        }
 
-            if (offhandItem.getItem() == ModItems.excavation_wand || offhandItem.getItem() == ModItems.wand_1 || offhandItem.getItem() == ModItems.wand_2 || offhandItem.getItem() == ModItems.wand_3 || offhandItem.getItem() == ModItems.wand_4) {
+        ItemStack heldItem = event.getPlayer().getHeldItemMainhand();
+        ItemStack offhandItem = event.getPlayer().getHeldItemOffhand();
 
-                ConfigUtils.Mode currentMode = ConfigUtils.getMode(NbtHelper.getInt(offhandItem, "mode"));
+        ConfigUtils.Mode currentMode;
 
-                if (currentMode != null) {
+        if (VALID_WANDS.contains(heldItem.getItem())) {
+            currentMode = ConfigUtils.getMode(NbtHelper.getInt(heldItem, "mode"));
+        } else if (VALID_WANDS.contains(offhandItem.getItem())) {
+            currentMode = ConfigUtils.getMode(NbtHelper.getInt(offhandItem, "mode"));
+        } else {
+            return;
+        }
 
-                    IBlockState state = event.getState();
-                    Block block = state.getBlock();
+        if (currentMode == null) {
+            return;
+        }
 
-                    if (currentMode.isBlacklist && currentMode.blockList.contains(block)) {
-                        event.setCanceled(true);
-                        event.getPlayer().sendMessage(new TextComponentString("Cannot mine this block, 				due to current wand mode!"));
-                    } else if (!currentMode.isBlacklist && !currentMode.blockList.contains(block)) {
-                        event.setCanceled(true);
-                        event.getPlayer().sendMessage(new TextComponentString("Cannot mine this block, 				due to current wand mode!"));
-                    }
-                }
-            }
+        IBlockState state = event.getState();
+        Block block = state.getBlock();
+
+        if (currentMode.isBlacklist && currentMode.blockList.contains(block)) {
+            event.setCanceled(true);
+            event.getPlayer().sendMessage(new TextComponentString("Cannot mine this block, due to current wand mode!"));
+        } else if (!currentMode.isBlacklist && !currentMode.blockList.contains(block)) {
+            event.setCanceled(true);
+            event.getPlayer().sendMessage(new TextComponentString("Cannot mine this block, due to current wand mode!"));
         }
     }
 
+
     /*
-
-                player.getAttributeMap().getAttributeInstance(modifier.affectedAttribute).applyModifier(new AttributeModifier(modifier.id, 				modifier.name, 				modifier.getValue() * amount, 				modifier.getOperation()));
-
+    player.getAttributeMap().getAttributeInstance(modifier.affectedAttribute).applyModifier(new AttributeModifier(modifier.id, 				modifier.name, 				modifier.getValue() * amount, 				modifier.getOperation()));
     */
-
-
     @SubscribeEvent
     public static void onLivingAttack(LivingAttackEvent event) {
         if (!(event.getEntityLiving() instanceof EntityPlayer) || event.isCanceled() || event.getAmount() <= 0) {
@@ -165,7 +170,10 @@ public class EventHandler {
                         if (enchantment == ModEnchantments.LEVITATION && slot == EntityEquipmentSlot.MAINHAND) {
                             enchLevitationHelper.has = true;
                             enchLevitationHelper.level = level;
-                        } else if (enchantment == ModEnchantments.SPEED) {
+                        } else if (enchantment == ModEnchantments.ANTIDOTE) {
+                            enchAntidoteHelper.has = true;
+                            enchAntidoteHelper.level = level;
+                        }  else if (enchantment == ModEnchantments.SPEED) {
                             enchSpeedHelper.has = true;
                             enchSpeedHelper.level = level;
                         } else if (enchantment == ModEnchantments.JUMPBOOST) {
@@ -250,52 +258,52 @@ public class EventHandler {
         }
 
         if (enchLevitationHelper.has) {
-            player.addPotionEffect(new PotionEffect(MobEffects.LEVITATION, Config.EnchLevitationDuration, ((Config.EnchLevitationMultiplier *enchLevitationHelper.level) - 1) + Config.EnchLevitationBase, false, false));
+            player.addPotionEffect(new PotionEffect(MobEffects.LEVITATION, Config.EnchLevitationDuration, ((Config.EnchLevitationMultiplier * enchLevitationHelper.level) - 1) + Config.EnchLevitationBase, false, false));
         }
         if (enchSpeedHelper.has) {
-            player.addPotionEffect(new PotionEffect(MobEffects.SPEED, Config.EnchSpeedDuration, ((Config.EnchSpeedMultiplier *enchSpeedHelper.level) - 1) + Config.EnchSpeedBase, false, false));
+            player.addPotionEffect(new PotionEffect(MobEffects.SPEED, Config.EnchSpeedDuration, ((Config.EnchSpeedMultiplier * enchSpeedHelper.level) - 1) + Config.EnchSpeedBase, false, false));
         }
         if (enchJumpBoostHelper.has) {
-            player.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, Config.EnchJumpBoostDuration, ((Config.EnchJumpBoostMultiplier *enchJumpBoostHelper.level) - 1) + Config.EnchJumpBoostBase, false, false));
+            player.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, Config.EnchJumpBoostDuration, ((Config.EnchJumpBoostMultiplier * enchJumpBoostHelper.level) - 1) + Config.EnchJumpBoostBase, false, false));
         }
         if (enchInvisibilityHelper.has) {
-            player.addPotionEffect(new PotionEffect(MobEffects.INVISIBILITY, Config.EnchInvisibilityDuration, ((Config.EnchInvisibilityMultiplier *enchInvisibilityHelper.level) - 1) + Config.EnchInvisibilityBase, false, false));
+            player.addPotionEffect(new PotionEffect(MobEffects.INVISIBILITY, Config.EnchInvisibilityDuration, ((Config.EnchInvisibilityMultiplier * enchInvisibilityHelper.level) - 1) + Config.EnchInvisibilityBase, false, false));
         }
         if (enchInstantHealthHelper.has) {
-            player.addPotionEffect(new PotionEffect(MobEffects.INSTANT_HEALTH, Config.EnchInstantHealthDuration, ((Config.EnchInstantHealthMultiplier *enchInstantHealthHelper.level) - 1) + Config.EnchInstantHealthBase, false, false));
+            player.addPotionEffect(new PotionEffect(MobEffects.INSTANT_HEALTH, Config.EnchInstantHealthDuration, ((Config.EnchInstantHealthMultiplier * enchInstantHealthHelper.level) - 1) + Config.EnchInstantHealthBase, false, false));
         }
         if (enchHasteHelper.has) {
-            player.addPotionEffect(new PotionEffect(MobEffects.HASTE, Config.EnchHasteDuration, ((Config.EnchHasteMultiplier *enchHasteHelper.level) - 1) + Config.EnchHasteBase, false, false));
+            player.addPotionEffect(new PotionEffect(MobEffects.HASTE, Config.EnchHasteDuration, ((Config.EnchHasteMultiplier * enchHasteHelper.level) - 1) + Config.EnchHasteBase, false, false));
         }
         if (enchGlowingHelper.has) {
-            player.addPotionEffect(new PotionEffect(MobEffects.GLOWING, Config.EnchGlowingDuration, ((Config.EnchGlowingMultiplier *enchGlowingHelper.level) - 1) + Config.EnchGlowingBase, false, false));
+            player.addPotionEffect(new PotionEffect(MobEffects.GLOWING, Config.EnchGlowingDuration, ((Config.EnchGlowingMultiplier * enchGlowingHelper.level) - 1) + Config.EnchGlowingBase, false, false));
         }
         if (enchAbsorptionHelper.has) {
-            player.addPotionEffect(new PotionEffect(MobEffects.ABSORPTION, Config.EnchAbsorptionDuration, ((Config.EnchAbsorptionMultiplier *enchAbsorptionHelper.level) - 1) + Config.EnchAbsorptionBase, false, false));
+            player.addPotionEffect(new PotionEffect(MobEffects.ABSORPTION, Config.EnchAbsorptionDuration, ((Config.EnchAbsorptionMultiplier * enchAbsorptionHelper.level) - 1) + Config.EnchAbsorptionBase, false, false));
         }
         if (enchStrengthHelper.has) {
-            player.addPotionEffect(new PotionEffect(MobEffects.STRENGTH, Config.EnchStrengthDuration, ((Config.EnchStrengthMultiplier *enchStrengthHelper.level) - 1) + Config.EnchStrengthBase, false, false));
+            player.addPotionEffect(new PotionEffect(MobEffects.STRENGTH, Config.EnchStrengthDuration, ((Config.EnchStrengthMultiplier * enchStrengthHelper.level) - 1) + Config.EnchStrengthBase, false, false));
         }
         if (enchSaturationHelper.has) {
-            player.addPotionEffect(new PotionEffect(MobEffects.SATURATION, Config.EnchSaturationDuration, ((Config.EnchSaturationMultiplier *enchSaturationHelper.level) - 1) + Config.EnchSaturationBase, false, false));
+            player.addPotionEffect(new PotionEffect(MobEffects.SATURATION, Config.EnchSaturationDuration, ((Config.EnchSaturationMultiplier * enchSaturationHelper.level) - 1) + Config.EnchSaturationBase, false, false));
         }
         if (enchLuckHelper.has) {
-            player.addPotionEffect(new PotionEffect(MobEffects.LUCK, Config.EnchLuckDuration, ((Config.EnchLuckMultiplier *enchLuckHelper.level) - 1) + Config.EnchLuckBase, false, false));
+            player.addPotionEffect(new PotionEffect(MobEffects.LUCK, Config.EnchLuckDuration, ((Config.EnchLuckMultiplier * enchLuckHelper.level) - 1) + Config.EnchLuckBase, false, false));
         }
         if (enchFireResistanceHelper.has) {
-            player.addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, Config.EnchFireResistanceDuration, ((Config.EnchFireResistanceMultiplier *enchFireResistanceHelper.level) - 1) + Config.EnchFireResistanceBase, false, false));
+            player.addPotionEffect(new PotionEffect(MobEffects.FIRE_RESISTANCE, Config.EnchFireResistanceDuration, ((Config.EnchFireResistanceMultiplier * enchFireResistanceHelper.level) - 1) + Config.EnchFireResistanceBase, false, false));
         }
         if (enchWaterBreathingHelper.has) {
-            player.addPotionEffect(new PotionEffect(MobEffects.WATER_BREATHING, Config.EnchWaterBreathingDuration, ((Config.EnchWaterBreathingMultiplier *enchWaterBreathingHelper.level) - 1) + Config.EnchWaterBreathingBase, false, false));
+            player.addPotionEffect(new PotionEffect(MobEffects.WATER_BREATHING, Config.EnchWaterBreathingDuration, ((Config.EnchWaterBreathingMultiplier * enchWaterBreathingHelper.level) - 1) + Config.EnchWaterBreathingBase, false, false));
         }
         if (enchNightVisionHelper.has) {
-            player.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, Config.EnchNightVisionDuration, ((Config.EnchNightVisionMultiplier *enchNightVisionHelper.level) - 1) + Config.EnchNightVisionBase, false, false));
+            player.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, Config.EnchNightVisionDuration, ((Config.EnchNightVisionMultiplier * enchNightVisionHelper.level) - 1) + Config.EnchNightVisionBase, false, false));
         }
         if (enchRegenerationHelper.has) {
-            player.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, Config.EnchRegenerationDuration, ((Config.EnchRegenerationMultiplier *enchRegenerationHelper.level) - 1) + Config.EnchRegenerationBase, false, false));
+            player.addPotionEffect(new PotionEffect(MobEffects.REGENERATION, Config.EnchRegenerationDuration, ((Config.EnchRegenerationMultiplier * enchRegenerationHelper.level) - 1) + Config.EnchRegenerationBase, false, false));
         }
         if (enchResistanceHelper.has) {
-            player.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, Config.EnchResistanceDuration, ((Config.EnchResistanceMultiplier *enchResistanceHelper.level) - 1) + Config.EnchResistanceBase, false, false));
+            player.addPotionEffect(new PotionEffect(MobEffects.RESISTANCE, Config.EnchResistanceDuration, ((Config.EnchResistanceMultiplier * enchResistanceHelper.level) - 1) + Config.EnchResistanceBase, false, false));
         }
         if (enchAntidoteHelper.has) {
             player.removeActivePotionEffect(MobEffects.POISON);
