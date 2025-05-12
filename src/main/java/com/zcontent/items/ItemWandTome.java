@@ -14,6 +14,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nullable;
 import java.util.List;
+import java.util.Map;
 
 public class ItemWandTome extends ItemBase implements IHasModel {
 
@@ -24,12 +25,13 @@ public class ItemWandTome extends ItemBase implements IHasModel {
     @SideOnly(Side.CLIENT)
     @Override
     public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
-        // Check if the stack has a tag compound and if it contains the ModEnchantments.key tag
-        if (stack.hasTagCompound() && stack.getTagCompound().hasKey(ModEnchantments.key, 9)) { // 9 is the NBT type for lists
-            NBTTagList wandMagics = stack.getTagCompound().getTagList(ModEnchantments.key, 8); // 8 is the NBT type for strings
-            // tooltip.add(TextFormatting.GREEN + "Combine With a Wand");
-            for (int i = 0; i < wandMagics.tagCount(); i++) {
-                tooltip.add(TextFormatting.AQUA + "- " + wandMagics.getStringTagAt(i));
+        Map<String, Integer> magicCounts = NbtHelper.getMagicCounts(stack);
+
+        if (!magicCounts.isEmpty()) {
+            for (Map.Entry<String, Integer> entry : magicCounts.entrySet()) {
+                String magicName = entry.getKey();
+                int count = entry.getValue();
+                tooltip.add(TextFormatting.AQUA + "- " + magicName + (count > 1 ? " x" + count : ""));
             }
         }
     }

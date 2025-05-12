@@ -1,7 +1,5 @@
 package com.zcontent.recipes;
 
-
-import com.zcontent.Main;
 import com.zcontent.init.ModEnchantments;
 import com.zcontent.init.ModItems;
 import com.zcontent.util.NbtHelper;
@@ -10,91 +8,95 @@ import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.nbt.NBTTagList;
-import net.minecraft.nbt.NBTTagString;
 import net.minecraft.world.World;
 import net.minecraftforge.registries.IForgeRegistryEntry;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class RecipeTomeToWand1 extends IForgeRegistryEntry.Impl<IRecipe> implements IRecipe {
 
     private static final Item thisWand = ModItems.wand_1;
-    
-    
+
     @Override
     public boolean matches(InventoryCrafting inv, World worldIn) {
         boolean hasTome = false;
         boolean hasWand = false;
+        int itemCount = 0;
 
         for (int i = 0; i < inv.getSizeInventory(); i++) {
             ItemStack stack = inv.getStackInSlot(i);
             if (!stack.isEmpty()) {
-                if (stack.getItem().equals(ModItems.wand_tome) && !hasTome) {
-                    ArrayList<String> magicsOnStacks = new ArrayList<>();
-                    NbtHelper.getStringsFromCustomNbtArray(magicsOnStacks, stack);
-                    for (String nameOfMagic : magicsOnStacks) {
-                        if (ModEnchantments.enchantmentMap.containsKey(nameOfMagic)) {
-                            hasTome = true;
+                itemCount++;
+                if (stack.getItem().equals(ModItems.wand_tome)) {
+                    if (!hasTome) {
+                        Map<String, Integer> tomeMagics = NbtHelper.getMagicCounts(stack);
+                        if (!tomeMagics.isEmpty()) { // Or check specifically for the NBT tag existence
+                           hasTome = true;
                         } else {
-                            hasTome = false;
-                            break;
+                           return false; // Tome doesn't have expected NBT
                         }
+                    } else {
+                        return false; // Found a second tome
                     }
-                } else if (stack.getItem().equals(thisWand) && !hasWand) {
-                    hasWand = true;
+                } else if (stack.getItem().equals(thisWand)) {
+                    if (!hasWand) {
+                        hasWand = true;
+                    } else {
+                        return false; // Found a second wand
+                    }
                 } else {
-                    return false;
+                    return false; // Found an invalid item
                 }
             }
         }
-        return hasTome && hasWand;
+        return hasTome && hasWand && itemCount == 2;
     }
 
     @Override
     public ItemStack getCraftingResult(InventoryCrafting inv) {
         ItemStack output = ItemStack.EMPTY;
+        Map<String, Integer> combinedMagics = new HashMap<>();
 
-        ArrayList<String> magicsOnStacks = new ArrayList<>();
+        ItemStack wandInput = ItemStack.EMPTY;
 
         for (int i = 0; i < inv.getSizeInventory(); i++) {
             ItemStack stack = inv.getStackInSlot(i);
             if (!stack.isEmpty()) {
-                if (stack.getItem().equals(ModItems.wand_tome)) {
-                    NbtHelper.getStringsFromCustomNbtArray(magicsOnStacks, stack);
-                } else if (stack.getItem().equals(thisWand)) {
-                    NbtHelper.getStringsFromCustomNbtArray(magicsOnStacks, stack);
+                Map<String, Integer> itemMagics = NbtHelper.getMagicCounts(stack);
+
+                for (Map.Entry<String, Integer> entry : itemMagics.entrySet()) {
+                    combinedMagics.merge(entry.getKey(), entry.getValue(), Integer::sum);
+                }
+
+                if(stack.getItem().equals(thisWand)) {
+                    wandInput = stack;
                 }
             }
         }
 
-
-
-        if (!magicsOnStacks.isEmpty()) {
+        if (!combinedMagics.isEmpty()) {
             output = thisWand.getDefaultInstance();
-            NBTTagCompound nbt = new NBTTagCompound();
-            NBTTagList wandMagics = new NBTTagList();
-            for (String magic : magicsOnStacks) {
-                if (ModEnchantments.enchantmentMap.containsKey(magic)) {
-                    wandMagics.appendTag(new NBTTagString(magic));
+            /*
+            if (wandInput.hasTagCompound()) {
+                NBTTagCompound existingNbt = wandInput.getTagCompound().copy();
+                existingNbt.removeTag(ModEnchantments.key); // Remove old/conflicting magic tag before merging
+                if (!existingNbt.isEmpty()) {
+                    output.setTagCompound(existingNbt);
                 }
             }
-            nbt.setTag(ModEnchantments.key, wandMagics);
-            output.setTagCompound(nbt);
-
-            // Add Enchants
-            Map<String, Integer> magics = new HashMap<>();
-            for (String element : magicsOnStacks) {
-                magics.merge(element, 1, Integer::sum);
-            }
-            for (Map.Entry<String, Integer> entry : magics.entrySet()) {
+            */
+            NbtHelper.setMagicCounts(output, combinedMagics);
+            for (Map.Entry<String, Integer> entry : combinedMagics.entrySet()) {
                 Enchantment enchantment = ModEnchantments.enchantmentMap.get(entry.getKey());
-                output.addEnchantment(enchantment, entry.getValue());
+                int level = entry.getValue();
+                if (enchantment != null && level > 0) {
+                    output.addEnchantment(enchantment, level);
+                }
             }
-
         }
-        return output;
+
+        return output; // Return the new wand or ItemStack.EMPTY
     }
 
     @Override
@@ -104,7 +106,7 @@ public class RecipeTomeToWand1 extends IForgeRegistryEntry.Impl<IRecipe> impleme
 
     @Override
     public ItemStack getRecipeOutput() {
+        // Placeholder output
         return thisWand.getDefaultInstance();
     }
 }
-
