@@ -50,6 +50,11 @@ public class EnchantmentInstantKill extends Enchantment {
     }
 
     @Override
+    public boolean canApplyAtEnchantingTable(ItemStack stack) {
+        return false;
+    }
+
+    @Override
     public void onEntityDamaged(EntityLivingBase user, Entity target, int level) {
         if (EnchantmentHelper.getMaxEnchantmentLevel(ModEnchantments.INSTANTKILL, user) > 0 && target instanceof EntityLivingBase) {
 

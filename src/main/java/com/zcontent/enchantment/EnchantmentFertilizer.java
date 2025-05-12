@@ -42,4 +42,9 @@ public class EnchantmentFertilizer extends Enchantment {
     public boolean isCurse() {
         return true;
     }
+
+    @Override
+    public boolean canApplyAtEnchantingTable(ItemStack stack) {
+        return false;
+    }
 }

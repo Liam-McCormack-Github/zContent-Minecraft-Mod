@@ -50,6 +50,11 @@ public class EnchantmentParalysis extends Enchantment {
     }
 
     @Override
+    public boolean canApplyAtEnchantingTable(ItemStack stack) {
+        return false;
+    }
+
+    @Override
     public void onEntityDamaged(EntityLivingBase player, Entity target, int level) {
 
         if (EnchantmentHelper.getMaxEnchantmentLevel(ModEnchantments.PARALYSIS, player) > 0 && target instanceof EntityLivingBase && player instanceof EntityPlayer) {

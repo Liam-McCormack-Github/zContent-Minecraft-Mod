@@ -11,12 +11,12 @@ public class ItemWandEnchantable extends ItemWandBase implements IHasModel {
 
     @Override
     public boolean isEnchantable(ItemStack stack) {
-        return true;
+        return false;
     }
 
     @Override
     public int getItemEnchantability() {
-        return 750;
+        return 0;
     }
 }
 

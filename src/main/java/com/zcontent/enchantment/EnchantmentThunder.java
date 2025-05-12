@@ -46,6 +46,11 @@ public class EnchantmentThunder extends Enchantment {
         return true;
     }
 
+    @Override
+    public boolean canApplyAtEnchantingTable(ItemStack stack) {
+        return false;
+    }
+
     public void onEntityDamaged(EntityLivingBase user, Entity target, int level) {
         user.world.addWeatherEffect(new EntityLightningBolt(user.world, target.posX, target.posY, target.posZ, false));
     }

@@ -255,9 +255,9 @@ public class ModItems {
         quantum_boots = new ArmorQuantum("quantum_boots", CreativeTabs.COMBAT, MATERIAL_QUANTUM_ARMOR, 1, EntityEquipmentSlot.FEET, Config.QuantumBootsEnergyCapacity, Config.QuantumBootsEnergyCost);
         // Wands
         excavation_wand = new ItemWandBase("excavation_wand", CreativeTabs.TOOLS, Config.WandExcavationRangeBoostMainHand, Config.WandExcavationRangeBoostOffHand);
-        wand_1 = new ItemWandBase("wand_1", CreativeTabs.TOOLS, Config.Wand1RangeBoostMainHand, Config.Wand1RangeBoostOffHand);
-        wand_2 = new ItemWandBase("wand_2", CreativeTabs.TOOLS, Config.Wand2RangeBoostMainHand, Config.Wand2RangeBoostOffHand);
-        wand_3 = new ItemWandBase("wand_3", CreativeTabs.TOOLS, Config.Wand3RangeBoostMainHand, Config.Wand3RangeBoostOffHand);
-        wand_4 = new ItemWandBase("wand_4", CreativeTabs.TOOLS, Config.Wand4RangeBoostMainHand, Config.Wand4RangeBoostOffHand);
+        wand_1 = new ItemWandEnchantable("wand_1", CreativeTabs.TOOLS, Config.Wand1RangeBoostMainHand, Config.Wand1RangeBoostOffHand);
+        wand_2 = new ItemWandEnchantable("wand_2", CreativeTabs.TOOLS, Config.Wand2RangeBoostMainHand, Config.Wand2RangeBoostOffHand);
+        wand_3 = new ItemWandEnchantable("wand_3", CreativeTabs.TOOLS, Config.Wand3RangeBoostMainHand, Config.Wand3RangeBoostOffHand);
+        wand_4 = new ItemWandEnchantable("wand_4", CreativeTabs.TOOLS, Config.Wand4RangeBoostMainHand, Config.Wand4RangeBoostOffHand);
     }
 }

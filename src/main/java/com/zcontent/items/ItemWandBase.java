@@ -70,7 +70,7 @@ public class ItemWandBase extends ItemBase implements IHasModel {
     @Override
     public ActionResult<ItemStack> onItemRightClick(World world, EntityPlayer player, EnumHand hand) {
         ItemStack stack = player.getHeldItem(hand);
-        if (player.isSneaking()) {
+        if (player.isSneaking() && stack == player.getHeldItemMainhand()) {
             changeMode(stack, "mode");
             int currentMode = NbtHelper.getInt(stack, "mode");
             if (world.isRemote) {
