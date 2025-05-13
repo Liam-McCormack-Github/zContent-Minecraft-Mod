@@ -128,7 +128,7 @@ public class Config {
     private static final JsonObject SilverObsidianAxe = JsonHelper.getJsonObject(Tools, "silver_obsidian_axe");
     public static final int SilverObsidianAxeDamage = JsonHelper.getJsonPrimitiveAsInt(SilverObsidianAxe, "damage");
     public static final int SilverObsidianAxeSpeed = JsonHelper.getJsonPrimitiveAsInt(SilverObsidianAxe, "speed");
-    
+
     private static final JsonObject EnchLevitation = JsonHelper.getJsonObject(Enchantments, "Levitation");
     private static final JsonObject EnchSpeed = JsonHelper.getJsonObject(Enchantments, "Speed");
     private static final JsonObject EnchJumpBoost = JsonHelper.getJsonObject(Enchantments, "JumpBoost");
@@ -156,6 +156,7 @@ public class Config {
     private static final JsonObject EnchAttributeMovementSpeed = JsonHelper.getJsonObject(Enchantments, "AttributeMovementSpeed");
     private static final JsonObject EnchAttributeSwimSpeed = JsonHelper.getJsonObject(Enchantments, "AttributeSwimSpeed");
     private static final JsonObject EnchAttributeRange = JsonHelper.getJsonObject(Enchantments, "AttributeRange");
+    private static final JsonObject EnchResurrection = JsonHelper.getJsonObject(Enchantments, "Resurrection");
 
     public static final int EnchLevitationDuration = JsonHelper.getJsonPrimitiveAsInt(EnchLevitation, "duration");
     public static final int EnchSpeedDuration = JsonHelper.getJsonPrimitiveAsInt(EnchSpeed, "duration");
@@ -243,4 +244,6 @@ public class Config {
     public static final int EnchAttributeMovementSpeedOperator = JsonHelper.getJsonPrimitiveAsInt(EnchAttributeMovementSpeed, "operator");
     public static final int EnchAttributeSwimSpeedOperator = JsonHelper.getJsonPrimitiveAsInt(EnchAttributeSwimSpeed, "operator");
     public static final int EnchAttributeRangeOperator = JsonHelper.getJsonPrimitiveAsInt(EnchAttributeRange, "operator");
+
+    public static final long EnchResurrectionCooldown = JsonHelper.getJsonPrimitiveAsLong(EnchResurrection, "cooldown");
 }

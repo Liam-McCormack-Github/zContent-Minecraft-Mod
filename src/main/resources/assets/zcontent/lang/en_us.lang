@@ -320,6 +320,7 @@ enchantment.Disarm=§5Disarm§r
 enchantment.Weaken=§5Weaken§r
 enchantment.InstantKill=§5Instant Kill§r
 enchantment.Fertilizer=§5Fertilizer§r
+enchantment.Resurrection=§5Resurrection§r
 
 enchantment.AttributeAttackSpeed=§5Attack Speed Modifier§r
 enchantment.AttributeAttackDamage=§5Attack Damage Modifier§r

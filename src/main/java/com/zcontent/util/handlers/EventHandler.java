@@ -9,6 +9,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.IAttribute;
 import net.minecraft.entity.ai.attributes.IAttributeInstance;
@@ -18,10 +19,13 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemDye;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.text.TextComponentString;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
+import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -31,6 +35,7 @@ import net.minecraftforge.fml.common.gameevent.TickEvent;
 import java.util.*;
 
 import static com.zcontent.capability.EnergyCapabilityItemStack.NBTENERGY;
+import static com.zcontent.init.ModEnchantments.resurrectionCooldownKey;
 
 import com.zcontent.config.Config;
 
@@ -118,6 +123,95 @@ public class EventHandler {
             stack.damageItem(6 - level, event.getEntityPlayer());
             event.setCanceled(true);
             event.setCancellationResult(EnumActionResult.SUCCESS);
+        }
+    }
+
+    @SubscribeEvent
+    public static void onPlayerDeathAttempt(LivingDeathEvent event) {
+        if (!(event.getEntityLiving() instanceof EntityPlayer)) {
+            return;
+        }
+
+        EntityLivingBase entity = event.getEntityLiving();
+
+        if (entity.world.isRemote) {
+            return;
+        }
+
+        EntityPlayer player = (EntityPlayer) entity;
+
+        NBTTagCompound playerData = player.getEntityData();
+        long currentTime = player.world.getTotalWorldTime();
+
+        if (playerData.hasKey(resurrectionCooldownKey)) {
+            long cooldownEndTime = playerData.getLong(resurrectionCooldownKey);
+            if (currentTime < cooldownEndTime) {
+                long remainingTicks = cooldownEndTime - currentTime;
+                double remainingSeconds = remainingTicks / 20.0;
+                player.sendMessage(new TextComponentString(TextFormatting.YELLOW + "Resurrection enchantment is on cooldown for " +
+                        String.format("%.1f", remainingSeconds) + " seconds."));
+                return; // Exit, protection cannot be used yet
+            } else {
+                // Cooldown has expired, remove the tag to keep NBT clean (optional but good practice)
+                playerData.removeTag(resurrectionCooldownKey);
+            }
+        }
+
+        if (event.getSource().canHarmInCreative()) {
+            return;
+        }
+
+        boolean hasResurrectionEnchantment = false;
+        int enchantmentLevel = 0;
+
+        ItemStack itemMainHand = player.getHeldItemMainhand();
+        if (!itemMainHand.isEmpty()) {
+            int level = EnchantmentHelper.getEnchantmentLevel(ModEnchantments.RESURRECTION, itemMainHand);
+            if (level > 0) {
+                hasResurrectionEnchantment = true;
+                enchantmentLevel = level;
+            }
+        }
+
+        ItemStack itemOffHand = player.getHeldItemOffhand();
+        if (!itemOffHand.isEmpty() && !hasResurrectionEnchantment) {
+            int level = EnchantmentHelper.getEnchantmentLevel(ModEnchantments.RESURRECTION, itemOffHand);
+            if (level > 0) {
+                hasResurrectionEnchantment = true;
+                enchantmentLevel = level;
+            }
+        }
+
+        if (!hasResurrectionEnchantment) {
+            for (ItemStack armorStack : player.inventory.armorInventory) {
+                if (!armorStack.isEmpty()) {
+                    int level = EnchantmentHelper.getEnchantmentLevel(ModEnchantments.RESISTANCE, armorStack);
+                    if (level > 0) {
+                        hasResurrectionEnchantment = true;
+                        enchantmentLevel = level;
+                        break;
+                    }
+                }
+            }
+        }
+
+        if (hasResurrectionEnchantment) {
+            event.setCanceled(true);
+
+            float maxPlayerHealth = player.getMaxHealth();
+            // Calculate health percentage (level 10 = 100%, level 1 = 10%, etc.)
+            float healthPercentage = Math.min(enchantmentLevel, 10) / 10.0f;
+            float newHealth = maxPlayerHealth * healthPercentage;
+            player.setHealth(newHealth);
+            player.clearActivePotions();
+
+            player.world.setEntityState(player, (byte) 35);
+            playerData.setLong(resurrectionCooldownKey, currentTime + Config.EnchResurrectionCooldown);
+
+            double cooldownSeconds = Config.EnchResurrectionCooldown / 20.0;
+            player.sendMessage(new TextComponentString(TextFormatting.GREEN + "Your Resurrection enchantment protected you! It is now on cooldown for " +
+                    String.format("%.1f", cooldownSeconds) + " seconds."));
+
         }
     }
 

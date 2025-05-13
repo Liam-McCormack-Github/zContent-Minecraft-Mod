@@ -290,6 +290,9 @@
       "base": 0,
       "modifier": 1,
       "operator": 0
+    },
+    "Resurrection": {
+      "cooldown": 800
     }
   }
 }

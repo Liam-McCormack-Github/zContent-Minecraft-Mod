@@ -29,7 +29,7 @@ public class JsonHelper {
     public static JsonObject getJsonObject(JsonObject json, String memberName) {
         JsonElement element = json.get(memberName);
         if (element == null) {
-            throw new JsonSyntaxException("Missing " + memberName + ", expected to find a JsonObject");
+            throw new JsonSyntaxException("Missing config entry for " + memberName + ", expected to find a JsonObject");
         }
         if (element.isJsonObject()) {
             return element.getAsJsonObject();
@@ -80,6 +80,14 @@ public class JsonHelper {
             throw new JsonSyntaxException("Expected " + memberName + " to be a double, was " + element);
         }
         return element.getAsDouble();
+    }
+
+    public static long getJsonPrimitiveAsLong(JsonObject json, String memberName) {
+        JsonElement element = json.get(memberName);
+        if (element == null || !element.isJsonPrimitive() || !element.getAsJsonPrimitive().isNumber()) {
+            throw new JsonSyntaxException("Expected " + memberName + " to be a long, was " + element);
+        }
+        return element.getAsLong();
     }
 
     public static int[] getJsonIntArray(JsonObject json, String memberName) {

@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43ac629e-869a-46c5-b1ff-8a235a075bd2" name="Changes" comment="Updated to use object rather than list">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentResurrection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWandTome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWandTome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/recipes/RecipeMagicToTome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/recipes/RecipeMagicToTome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/recipes/RecipeTomeToWand1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/recipes/RecipeTomeToWand1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/recipes/RecipeTomeToWand2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/recipes/RecipeTomeToWand2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/recipes/RecipeTomeToWand3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/recipes/RecipeTomeToWand3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/recipes/RecipeTomeToWand4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/recipes/RecipeTomeToWand4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/util/NbtHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/util/NbtHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/config/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModEnchantments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModEnchantments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/util/JsonHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/util/JsonHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/util/handlers/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/util/handlers/EventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/lang/en_us.lang" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/zcontent/lang/en_us.lang" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/zcontent_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/zcontent/zcontent_config.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,9 +159,9 @@
       <recent name="C:\GitHub\Minecraft Modding\my-mods\zContent-Minecraft-Mod\src\main\resources\assets\zcontent\models\item" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zcontent.enchantment" />
       <recent name="com.zcontent.recipes" />
       <recent name="com.zcontent.items" />
-      <recent name="com.zcontent.enchantment" />
       <recent name="com.zcontent.util" />
       <recent name="com.zcontent.items.armor" />
     </key>
@@ -376,7 +375,9 @@
       <workItem from="1746352468792" duration="3167000" />
       <workItem from="1746887957050" duration="697000" />
       <workItem from="1747041145124" duration="6562000" />
-      <workItem from="1747067224061" duration="3650000" />
+      <workItem from="1747067224061" duration="3780000" />
+      <workItem from="1747071281635" duration="69000" />
+      <workItem from="1747159470551" duration="4540000" />
     </task>
     <task id="LOCAL-00001" summary="23rd May">
       <option name="closed" value="true" />
@@ -434,7 +435,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747043123642</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Updated to use object rather than list">
+      <option name="closed" value="true" />
+      <created>1747071098460</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1747071098460</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
