@@ -1,10 +1,8 @@
 package com.zcontent.items;
 
 import com.google.common.collect.Multimap;
-import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.zcontent.config.Config;
-import com.zcontent.config.ConfigLoader;
 import com.zcontent.util.IHasModel;
 import com.zcontent.util.NbtHelper;
 import net.minecraft.client.util.ITooltipFlag;

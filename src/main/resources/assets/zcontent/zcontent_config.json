@@ -293,6 +293,9 @@
     },
     "Resurrection": {
       "cooldown": 800
+    },
+    "InstantKill": {
+      "noDrops": true
     }
   }
 }

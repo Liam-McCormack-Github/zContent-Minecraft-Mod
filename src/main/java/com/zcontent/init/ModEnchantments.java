@@ -21,7 +21,7 @@ public class ModEnchantments {
     public static final String resurrectionCooldownKey = "resurrectionCooldown";
 
     public static Enchantment ABSORPTION, FIRERESISTANCE, LUCK, NIGHTVISION, REGENERATION, RESISTANCE, SATURATION, STRENGTH, WATERBREATHING, ANTIDOTE, GLOWING, HASTE, INSTANTHEALTH, INVISIBILITY, JUMPBOOST, LEVITATION, SPEED;
-    public static Enchantment THUNDER, PARALYSIS, INSTANTKILL, DISARM, WEAKEN, FERTILIZER, RESURRECTION;
+    public static Enchantment THUNDER, PARALYSIS, INSTANTKILL, DISARM, WEAKEN, FERTILIZER, RESURRECTION, FLIGHT;
     public static Enchantment ATTRIBUTE_ATTACK_SPEED, ATTRIBUTE_ATTACK_DAMAGE, ATTRIBUTE_ARMOR, ATTRIBUTE_ARMOR_TOUGHNESS, ATTRIBUTE_FLY_SPEED, ATTRIBUTE_KNOCKBACK_RESIST, ATTRIBUTE_LUCK, ATTRIBUTE_MAX_HEALTH, ATTRIBUTE_MOVEMENT_SPEED, ATTRIBUTE_SWIM_SPEED, ATTRIBUTE_RANGE;
 
     public static void init() {
@@ -50,6 +50,7 @@ public class ModEnchantments {
         WEAKEN = new EnchantmentWeaken("Weaken");
         FERTILIZER = new EnchantmentFertilizer("Fertilizer");
         RESURRECTION = new EnchantmentResurrection("Resurrection");
+        FLIGHT = new EnchantmentFlight("Flight");
 
         ATTRIBUTE_ATTACK_SPEED = new EnchantmentBaseWand("AttributeAttackSpeed");
         ATTRIBUTE_ATTACK_DAMAGE = new EnchantmentBaseWand("AttributeAttackDamage");

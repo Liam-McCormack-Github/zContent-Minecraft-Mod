@@ -9,10 +9,12 @@ import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.IAttribute;
 import net.minecraft.entity.ai.attributes.IAttributeInstance;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
@@ -26,6 +28,8 @@ import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
+import net.minecraftforge.event.entity.living.LivingDropsEvent;
+import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -34,6 +38,7 @@ import net.minecraftforge.fml.common.gameevent.TickEvent;
 
 import java.util.*;
 
+import static com.zcontent.Main.LOGGER;
 import static com.zcontent.capability.EnergyCapabilityItemStack.NBTENERGY;
 import static com.zcontent.init.ModEnchantments.resurrectionCooldownKey;
 
@@ -42,6 +47,19 @@ import com.zcontent.config.Config;
 
 @EventBusSubscriber
 public class EventHandler {
+
+    @SubscribeEvent
+    public static void rightClick(PlayerInteractEvent.RightClickBlock event) {
+        ItemStack stack = event.getItemStack();
+        int level = EnchantmentHelper.getEnchantmentLevel(ModEnchantments.FERTILIZER, stack);
+        if (!event.getEntityPlayer().isSneaking() && level > 0 && ItemDye.applyBonemeal(stack.copy(), event.getWorld(), event.getPos(), event.getEntityPlayer(), event.getHand())) {
+            // stack.damageItem(6 - level, event.getEntityPlayer());
+            event.setCanceled(true);
+            event.setCancellationResult(EnumActionResult.SUCCESS);
+        }
+    }
+
+
     @SubscribeEvent
     public static void onBlockBreak(BlockEvent.BreakEvent event) {
         final Set<Item> VALID_WANDS = new HashSet<>(Arrays.asList(ModItems.excavation_wand, ModItems.wand_1, ModItems.wand_2, ModItems.wand_3, ModItems.wand_4));
@@ -115,16 +133,7 @@ public class EventHandler {
     }
 
 
-    @SubscribeEvent
-    public static void rightClick(PlayerInteractEvent.RightClickBlock event) {
-        ItemStack stack = event.getItemStack();
-        int level = EnchantmentHelper.getEnchantmentLevel(ModEnchantments.FERTILIZER, stack);
-        if (!event.getEntityPlayer().isSneaking() && level > 0 && ItemDye.applyBonemeal(stack.copy(), event.getWorld(), event.getPos(), event.getEntityPlayer(), event.getHand())) {
-            stack.damageItem(6 - level, event.getEntityPlayer());
-            event.setCanceled(true);
-            event.setCancellationResult(EnumActionResult.SUCCESS);
-        }
-    }
+
 
     @SubscribeEvent
     public static void onPlayerDeathAttempt(LivingDeathEvent event) {
@@ -219,6 +228,32 @@ public class EventHandler {
     @SubscribeEvent
     public static void effectFunction(TickEvent.PlayerTickEvent event) {
         applyEffects(event.player);
+        flightEnchantment(event.player);
+    }
+
+    private static void flightEnchantment(EntityPlayer player) {
+        ItemStack mainhand = player.getHeldItemMainhand();
+        ItemStack offhand = player.getHeldItemOffhand();
+        ItemStack chest = player.getItemStackFromSlot(EntityEquipmentSlot.CHEST);
+        ItemStack feet = player.getItemStackFromSlot(EntityEquipmentSlot.FEET);
+        ItemStack head = player.getItemStackFromSlot(EntityEquipmentSlot.HEAD);
+        ItemStack legs = player.getItemStackFromSlot(EntityEquipmentSlot.LEGS);
+
+        int level = 0;
+
+        level += EnchantmentHelper.getEnchantmentLevel(ModEnchantments.FLIGHT, mainhand);
+        level += EnchantmentHelper.getEnchantmentLevel(ModEnchantments.FLIGHT, offhand);
+        level += EnchantmentHelper.getEnchantmentLevel(ModEnchantments.FLIGHT, chest);
+        level += EnchantmentHelper.getEnchantmentLevel(ModEnchantments.FLIGHT, feet);
+        level += EnchantmentHelper.getEnchantmentLevel(ModEnchantments.FLIGHT, head);
+        level += EnchantmentHelper.getEnchantmentLevel(ModEnchantments.FLIGHT, legs);
+
+        if ((player.capabilities.isCreativeMode) || (player.isSpectator()) || level > 0) {
+            player.capabilities.allowFlying = true;
+        } else {
+            player.capabilities.allowFlying = false;
+            player.capabilities.isFlying = false;
+        }
     }
 
     private static void applyEffects(EntityPlayer player) {

@@ -157,6 +157,7 @@ public class Config {
     private static final JsonObject EnchAttributeSwimSpeed = JsonHelper.getJsonObject(Enchantments, "AttributeSwimSpeed");
     private static final JsonObject EnchAttributeRange = JsonHelper.getJsonObject(Enchantments, "AttributeRange");
     private static final JsonObject EnchResurrection = JsonHelper.getJsonObject(Enchantments, "Resurrection");
+    private static final JsonObject EnchInstantKill = JsonHelper.getJsonObject(Enchantments, "InstantKill");
 
     public static final int EnchLevitationDuration = JsonHelper.getJsonPrimitiveAsInt(EnchLevitation, "duration");
     public static final int EnchSpeedDuration = JsonHelper.getJsonPrimitiveAsInt(EnchSpeed, "duration");
@@ -246,4 +247,5 @@ public class Config {
     public static final int EnchAttributeRangeOperator = JsonHelper.getJsonPrimitiveAsInt(EnchAttributeRange, "operator");
 
     public static final long EnchResurrectionCooldown = JsonHelper.getJsonPrimitiveAsLong(EnchResurrection, "cooldown");
+    public static final boolean EnchInstantKillNoDrops = JsonHelper.getJsonPrimitiveAsBoolean(EnchInstantKill, "noDrops");
 }
