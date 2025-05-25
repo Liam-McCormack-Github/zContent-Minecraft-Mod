@@ -9,13 +9,14 @@ import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.IAttribute;
 import net.minecraft.entity.ai.attributes.IAttributeInstance;
 import net.minecraft.entity.item.EntityItem;
+import net.minecraft.entity.monster.EntityCreeper;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Items;
 import net.minecraft.init.MobEffects;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
@@ -26,10 +27,10 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextFormatting;
+import net.minecraft.world.World;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
-import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
@@ -38,7 +39,6 @@ import net.minecraftforge.fml.common.gameevent.TickEvent;
 
 import java.util.*;
 
-import static com.zcontent.Main.LOGGER;
 import static com.zcontent.capability.EnergyCapabilityItemStack.NBTENERGY;
 import static com.zcontent.init.ModEnchantments.resurrectionCooldownKey;
 
@@ -47,13 +47,11 @@ import com.zcontent.config.Config;
 
 @EventBusSubscriber
 public class EventHandler {
-
     @SubscribeEvent
     public static void rightClick(PlayerInteractEvent.RightClickBlock event) {
         ItemStack stack = event.getItemStack();
         int level = EnchantmentHelper.getEnchantmentLevel(ModEnchantments.FERTILIZER, stack);
         if (!event.getEntityPlayer().isSneaking() && level > 0 && ItemDye.applyBonemeal(stack.copy(), event.getWorld(), event.getPos(), event.getEntityPlayer(), event.getHand())) {
-            // stack.damageItem(6 - level, event.getEntityPlayer());
             event.setCanceled(true);
             event.setCancellationResult(EnumActionResult.SUCCESS);
         }
@@ -159,9 +157,8 @@ public class EventHandler {
                 double remainingSeconds = remainingTicks / 20.0;
                 player.sendMessage(new TextComponentString(TextFormatting.YELLOW + "Resurrection enchantment is on cooldown for " +
                         String.format("%.1f", remainingSeconds) + " seconds."));
-                return; // Exit, protection cannot be used yet
+                return;
             } else {
-                // Cooldown has expired, remove the tag to keep NBT clean (optional but good practice)
                 playerData.removeTag(resurrectionCooldownKey);
             }
         }
@@ -221,6 +218,39 @@ public class EventHandler {
             player.sendMessage(new TextComponentString(TextFormatting.GREEN + "Your Resurrection enchantment protected you! It is now on cooldown for " +
                     String.format("%.1f", cooldownSeconds) + " seconds."));
 
+        }
+    }
+
+
+    @SubscribeEvent
+    public static void onLivingDrops(LivingDropsEvent event) {
+        if (event.getEntityLiving() instanceof EntityCreeper) {
+            EntityCreeper creeper = (EntityCreeper) event.getEntityLiving();
+            World world = creeper.getEntityWorld();
+
+            if (creeper.getPowered()) {
+                int gunpowderAmount = 0;
+                Iterator<EntityItem> iterator = event.getDrops().iterator();
+                while (iterator.hasNext()) {
+                    EntityItem droppedEntityItem = iterator.next();
+                    ItemStack droppedItemStack = droppedEntityItem.getItem();
+
+                    if (droppedItemStack.getItem() == Items.GUNPOWDER) {
+                        gunpowderAmount += droppedItemStack.getCount();
+                        iterator.remove();
+                    }
+                }
+
+                if (gunpowderAmount > 0) {
+                    double x = creeper.posX;
+                    double y = creeper.posY;
+                    double z = creeper.posZ;
+
+                    ItemStack chargedGunpowderDrop = new ItemStack(ModItems.charged_gunpowder, gunpowderAmount);
+
+                    event.getDrops().add(new EntityItem(world, x, y, z, chargedGunpowderDrop));
+                }
+            }
         }
     }
 

@@ -4,18 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43ac629e-869a-46c5-b1ff-8a235a075bd2" name="Changes" comment="New Resurrection Enchantment">
-      <change afterPath="$PROJECT_DIR$/1.12.2-14.23.5.2860_mapped_stable_39-1.12.lnk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentFlight.java" afterDir="false" />
+    <list default="true" id="43ac629e-869a-46c5-b1ff-8a235a075bd2" name="Changes" comment="New Flight Enchantment">
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/config/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentInstantKill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentInstantKill.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModEnchantments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModEnchantments.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWandBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWandBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModOreDictItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModOreDictItems.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/util/handlers/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/util/handlers/EventHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/lang/en_us.lang" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/zcontent/lang/en_us.lang" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/zcontent_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/zcontent/zcontent_config.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -381,7 +374,8 @@
       <workItem from="1747071281635" duration="69000" />
       <workItem from="1747159470551" duration="7586000" />
       <workItem from="1747332613050" duration="895000" />
-      <workItem from="1748110069742" duration="4663000" />
+      <workItem from="1748110069742" duration="4863000" />
+      <workItem from="1748187551609" duration="5626000" />
     </task>
     <task id="LOCAL-00001" summary="23rd May">
       <option name="closed" value="true" />
@@ -455,7 +449,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747164425652</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="New Flight Enchantment">
+      <option name="closed" value="true" />
+      <created>1748114811768</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1748114811768</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -481,7 +483,8 @@
     <MESSAGE value="12th May 2025" />
     <MESSAGE value="Updated to use object rather than list" />
     <MESSAGE value="New Resurrection Enchantment" />
-    <option name="LAST_COMMIT_MESSAGE" value="New Resurrection Enchantment" />
+    <MESSAGE value="New Flight Enchantment" />
+    <option name="LAST_COMMIT_MESSAGE" value="New Flight Enchantment" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

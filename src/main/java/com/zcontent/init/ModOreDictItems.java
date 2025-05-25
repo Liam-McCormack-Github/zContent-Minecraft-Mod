@@ -66,5 +66,6 @@ public class ModOreDictItems {
         OreDictionary.registerOre("dustMeteor", new ItemStack(ModItems.meteor_dust));
         OreDictionary.registerOre("crystalSulfuric", new ItemStack(ModItems.sulfur_crystal));
         OreDictionary.registerOre("boneWithered", new ItemStack(ModItems.wither_bone));
+        OreDictionary.registerOre("gunpowder", new ItemStack(ModItems.charged_gunpowder));
     }
 }
