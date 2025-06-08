@@ -68,20 +68,20 @@
   },
   "armor": {
     "quantum_helmet": {
-      "energyCapacity": 25000,
-      "energyCost": 100
+      "energyCapacity": 2500000,
+      "energyCost": 1000
     },
     "quantum_chestplate": {
-      "energyCapacity": 25000,
-      "energyCost": 100
+      "energyCapacity": 2500000,
+      "energyCost": 1000
     },
     "quantum_leggings": {
-      "energyCapacity": 25000,
-      "energyCost": 100
+      "energyCapacity": 2500000,
+      "energyCost": 1000
     },
     "quantum_boots": {
-      "energyCapacity": 25000,
-      "energyCost": 100
+      "energyCapacity": 2500000,
+      "energyCost": 1000
     }
   },
   "tools": {
@@ -138,6 +138,11 @@
       "rangeBoostMainHand": 5,
       "rangeBoostOffHand": 0
     },
+    "blink_wand": {
+      "distanceInterval": 6,
+      "maxDistance": 24,
+      "cooldown": 5
+    },
     "wand_1": {
       "rangeBoostMainHand": 10,
       "rangeBoostOffHand": 5
@@ -167,7 +172,7 @@
       "duration": 180
     },
     "JumpBoost": {
-      "base": 2,
+      "base": 0,
       "multiplier": 1,
       "duration": 180
     },
@@ -178,12 +183,12 @@
     },
     "InstantHealth": {
       "base": 0,
-      "multiplier": 10,
+      "multiplier": 1,
       "duration": 180
     },
     "Haste": {
       "base": 0,
-      "multiplier": 10,
+      "multiplier": 1,
       "duration": 180
     },
     "Glowing": {
@@ -192,12 +197,12 @@
       "duration": 180
     },
     "Absorption": {
-      "base": 10,
+      "base": 0,
       "multiplier": 1,
       "duration": 180
     },
     "Strength": {
-      "base": 10,
+      "base": 0,
       "multiplier": 1,
       "duration": 180
     },

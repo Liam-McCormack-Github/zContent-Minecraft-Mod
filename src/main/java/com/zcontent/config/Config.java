@@ -21,7 +21,12 @@ public class Config {
     private static final JsonObject WandExcavation = JsonHelper.getJsonObject(Wands, "excavation_wand");
     public static final int WandExcavationRangeBoostMainHand = JsonHelper.getJsonPrimitiveAsInt(WandExcavation, "rangeBoostMainHand");
     public static final int WandExcavationRangeBoostOffHand = JsonHelper.getJsonPrimitiveAsInt(WandExcavation, "rangeBoostOffHand");
-    
+
+    private static final JsonObject WandBlink = JsonHelper.getJsonObject(Wands, "blink_wand");
+    public static final int WandBlinkDistanceInterval= JsonHelper.getJsonPrimitiveAsInt(WandBlink, "distanceInterval");
+    public static final int WandBlinkMaxDistance = JsonHelper.getJsonPrimitiveAsInt(WandBlink, "maxDistance");
+    public static final int WandBlinkCooldown = JsonHelper.getJsonPrimitiveAsInt(WandBlink, "cooldown");
+
     private static final JsonObject Wand1 = JsonHelper.getJsonObject(Wands, "wand_1");
     public static final int Wand1RangeBoostMainHand = JsonHelper.getJsonPrimitiveAsInt(Wand1, "rangeBoostMainHand");
     public static final int Wand1RangeBoostOffHand = JsonHelper.getJsonPrimitiveAsInt(Wand1, "rangeBoostOffHand");

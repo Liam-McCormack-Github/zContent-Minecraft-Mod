@@ -200,7 +200,7 @@ tile.iridium_ore.name=Iridium Ore
 tile.mithril_ore.name=Mana Infused Ore
 
 item.excavation_wand.name=§6Excavatinator
-item.excavation_other_wand.name=§6Excavatinator (Limited)
+item.blink_wand.name=§6Blink Wand
 
 item.woodenhalberd.name=Wooden Halberd
 item.icecore.name=Ice Core

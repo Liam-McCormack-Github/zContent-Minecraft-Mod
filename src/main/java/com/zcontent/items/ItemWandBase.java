@@ -29,11 +29,8 @@ public class ItemWandBase extends ItemBase implements IHasModel {
 
 
     public ItemWandBase(String name, CreativeTabs creativeTab, int _rangeMainHand, int _rangeOffHand) {
-
         super(name, creativeTab);
-
         setMaxStackSize(1);
-
         this.rangeMainHand = _rangeMainHand;
         this.rangeOffHand = _rangeOffHand;
     }

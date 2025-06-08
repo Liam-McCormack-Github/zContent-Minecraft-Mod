@@ -27,6 +27,21 @@ public class NbtHelper {
         }
     }
 
+    public static void setBoolean(ItemStack stack, String key, boolean  value) {
+        validateCompound(stack);
+        assert stack.getTagCompound() != null;
+        stack.getTagCompound().setBoolean(key, value);
+    }
+
+    public static boolean getBoolean(ItemStack stack, String  key) {
+        if (stack.hasTagCompound()) {
+            assert stack.getTagCompound() != null;
+            return stack.getTagCompound().getBoolean(key);
+        } else {
+            return false;
+        }
+    }
+
     public static void validateCompound(ItemStack stack) {
         if (!stack.hasTagCompound()) {
             NBTTagCompound tag = new NBTTagCompound();

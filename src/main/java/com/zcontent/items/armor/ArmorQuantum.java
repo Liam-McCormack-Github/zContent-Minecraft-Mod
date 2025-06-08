@@ -46,8 +46,7 @@ public class ArmorQuantum extends ArmorBase implements IHasModel, ISpecialArmor 
         this.energyCost = energyCost;
     }
 
-    protected int getenergyCost(ItemStack stack) {
-
+    protected int getEnergyCost(ItemStack stack) {
         int unbreakingLevel = MathHelper.clamp(EnchantmentHelper.getEnchantmentLevel(Enchantments.UNBREAKING, stack), 0, 256);
         return energyCost * (5 - unbreakingLevel) / 5;
     }
@@ -85,7 +84,7 @@ public class ArmorQuantum extends ArmorBase implements IHasModel, ISpecialArmor 
         Multimap<String, AttributeModifier> modifiers = super.getAttributeModifiers(equipmentSlot, stack);
 
         IEnergyStorage energy = stack.getCapability(CapabilityEnergy.ENERGY, null);
-        if (energy.getEnergyStored() >= getenergyCost(stack)) {
+        if (energy.getEnergyStored() >= getEnergyCost(stack)) {
             //  (equipmentSlot == EntityEquipmentSlot.LEGS && stack.getItem() instanceof ArmorQuantum)
             if (stack.getItem() == ModItems.quantum_leggings && equipmentSlot == EntityEquipmentSlot.LEGS) {
                 modifiers.put(SharedMonsterAttributes.MOVEMENT_SPEED.getName(), new AttributeModifier(UUID.nameUUIDFromBytes("QuantumMovementSpeed".getBytes()), "Speed boost", 0.8, 1));
@@ -102,7 +101,7 @@ public class ArmorQuantum extends ArmorBase implements IHasModel, ISpecialArmor 
     public void onArmorTick(World world, EntityPlayer player, ItemStack stack) {
         if (world.isRemote) return;
         IEnergyStorage energy = stack.getCapability(CapabilityEnergy.ENERGY, null);
-        if (energy.getEnergyStored() >= getenergyCost(stack)) {
+        if (energy.getEnergyStored() >= getEnergyCost(stack)) {
             if (stack.getItem() == ModItems.quantum_boots) {
                 player.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, 260, 3, true, false));
             }
@@ -153,24 +152,21 @@ public class ArmorQuantum extends ArmorBase implements IHasModel, ISpecialArmor 
 
     @Override
     public ArmorProperties getProperties(EntityLivingBase player, @Nonnull ItemStack stack, DamageSource source, double damage, int slot) {
-
         IEnergyStorage energy = stack.getCapability(CapabilityEnergy.ENERGY, null);
-
         if ("quantum".equals(source.damageType)) {
             return QUANTUM;
         } else if (source.isUnblockable()) {
-            int absorbMax = getenergyCost(stack) > 0 ? 25 * energy.getEnergyStored() / getenergyCost(stack) : 0;
+            int absorbMax = getEnergyCost(stack) > 0 ? 25 * energy.getEnergyStored() / getEnergyCost(stack) : 0;
             return new ArmorProperties(0, absorbRatio * 3 * 0.025, absorbMax);
         }
-        int absorbMax = getenergyCost(stack) > 0 ? 25 * energy.getEnergyStored() / getenergyCost(stack) : 0;
+        int absorbMax = getEnergyCost(stack) > 0 ? 25 * energy.getEnergyStored() / getEnergyCost(stack) : 0;
         return new ArmorProperties(0, absorbRatio * 3 * 0.05, absorbMax);
     }
 
     @Override
     public int getArmorDisplay(EntityPlayer player, @Nonnull ItemStack stack, int slot) {
         IEnergyStorage energy = stack.getCapability(CapabilityEnergy.ENERGY, null);
-
-        if (energy.getEnergyStored() >= getenergyCost(stack)) {
+        if (energy.getEnergyStored() >= getEnergyCost(stack)) {
             return Math.min(getBaseAbsorption(), 20) * getAbsorptionRatio() / 100;
         }
         return 0;
@@ -182,17 +178,12 @@ public class ArmorQuantum extends ArmorBase implements IHasModel, ISpecialArmor 
         if (source.isFireDamage() || source.damageType.equals("darkness")) {
             return;
         }
-
         IEnergyStorage energy = stack.getCapability(CapabilityEnergy.ENERGY, null);
-
-
         if (source.damageType.equals("quantum")) {
             boolean p = source.getTrueSource() == null;
-
-            energy.receiveEnergy(damage * (p ? energyCost / 2 : getenergyCost(stack)), false);
-
+            energy.receiveEnergy(damage * (p ? energyCost / 2 : getEnergyCost(stack)), false);
         } else {
-            energy.extractEnergy(damage * getenergyCost(stack), false);
+            energy.extractEnergy(damage * getEnergyCost(stack), false);
         }
     }
 }

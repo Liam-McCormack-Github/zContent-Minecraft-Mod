@@ -4,11 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43ac629e-869a-46c5-b1ff-8a235a075bd2" name="Changes" comment="New Flight Enchantment">
+    <list default="true" id="43ac629e-869a-46c5-b1ff-8a235a075bd2" name="Changes" comment="Charged gunpowder">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemStructureCompass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWandBlink.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/zcontent/models/item/blink_wand.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/runClient.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/runServer.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModOreDictItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModOreDictItems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/util/handlers/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/util/handlers/EventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/config/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWandBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWandBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/armor/ArmorQuantum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/armor/ArmorQuantum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/util/NbtHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/util/NbtHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/lang/en_us.lang" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/zcontent/lang/en_us.lang" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/textures/blocks/excavation_other_wand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/zcontent_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/zcontent/zcontent_config.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,35 +49,6 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="zContent-Minecraft-Mod" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="zContent-Minecraft-Mod" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="zContent-Minecraft-Mod" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="zContent-Minecraft-Mod" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build setup" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="zContent-Minecraft-Mod" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="documentation" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="zContent-Minecraft-Mod" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="forgegradle runs" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -154,9 +139,9 @@
       <recent name="C:\GitHub\Minecraft Modding\my-mods\zContent-Minecraft-Mod\src\main\resources\assets\zcontent\models\item" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.zcontent.items" />
       <recent name="com.zcontent.enchantment" />
       <recent name="com.zcontent.recipes" />
-      <recent name="com.zcontent.items" />
       <recent name="com.zcontent.util" />
       <recent name="com.zcontent.items.armor" />
     </key>
@@ -375,7 +360,13 @@
       <workItem from="1747159470551" duration="7586000" />
       <workItem from="1747332613050" duration="895000" />
       <workItem from="1748110069742" duration="4863000" />
-      <workItem from="1748187551609" duration="5626000" />
+      <workItem from="1748187551609" duration="7511000" />
+      <workItem from="1749376626638" duration="994000" />
+      <workItem from="1749381988770" duration="11879000" />
+      <workItem from="1749400221921" duration="8682000" />
+      <workItem from="1749418451879" duration="36000" />
+      <workItem from="1749418497669" duration="88000" />
+      <workItem from="1749418597580" duration="239000" />
     </task>
     <task id="LOCAL-00001" summary="23rd May">
       <option name="closed" value="true" />
@@ -457,7 +448,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748114811768</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Charged gunpowder">
+      <option name="closed" value="true" />
+      <created>1748200203340</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1748200203340</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -484,7 +483,8 @@
     <MESSAGE value="Updated to use object rather than list" />
     <MESSAGE value="New Resurrection Enchantment" />
     <MESSAGE value="New Flight Enchantment" />
-    <option name="LAST_COMMIT_MESSAGE" value="New Flight Enchantment" />
+    <MESSAGE value="Charged gunpowder" />
+    <option name="LAST_COMMIT_MESSAGE" value="Charged gunpowder" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
