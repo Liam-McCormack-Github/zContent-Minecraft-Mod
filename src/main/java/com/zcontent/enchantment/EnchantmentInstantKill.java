@@ -1,8 +1,6 @@
 package com.zcontent.enchantment;
 
-import com.zcontent.Main;
 import com.zcontent.config.Config;
-import com.zcontent.init.ModBlocks;
 import com.zcontent.init.ModEnchantments;
 import com.zcontent.items.ItemWandEnchantable;
 import com.zcontent.util.Reference;

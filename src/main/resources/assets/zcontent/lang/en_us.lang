@@ -101,10 +101,6 @@ item.mold_proc.name=Metal Press Mold: Printed Base
 item.angel_wing.name=§6Angel Wing
 item.bat_wing.name=§6Bat Wing
 item.gold_feather.name=§6Golden Feather
-item.wand_1.name=§6Basic Wand
-item.wand_2.name=§6Advanced Wand
-item.wand_3.name=§6Elite Wand
-item.wand_4.name=§6Ultimate Wand
 item.substrate.name=Substrate
 item.polyethylene.name=Polyethylene
 item.redstone_ball.name=Redstone Ball
@@ -147,6 +143,7 @@ item.pill_antidote.name=§5Antidote
 item.collector_star.name=Star Photomatter
 item.collector_dark.name=Dark Photomatter
 item.collector_red.name=Red Photomatter
+item.structure_compass.name=Structure Compass
 
 item.stainless_steel_axe.name=Stainless Steel Axe
 item.stainless_steel_pick.name=Stainless Steel Pickaxe
@@ -199,68 +196,32 @@ tile.platinum_ore.name=Platinum Ore
 tile.iridium_ore.name=Iridium Ore
 tile.mithril_ore.name=Mana Infused Ore
 
-item.excavation_wand.name=§6Excavatinator
-item.blink_wand.name=§6Blink Wand
 
-item.woodenhalberd.name=Wooden Halberd
-item.icecore.name=Ice Core
-item.stonelongsword.name=Stone Longsword
-item.firerod.name=Fire Rod
-item.shuriken.name=Shuriken
-item.steel.name=Steel
-item.ironhalberd.name=Iron Halberd
-item.woodengreatsword.name=Wooden Greatsword
 item.firesword.name=Fire Sword
-item.diamondlongsword.name=Diamond Longsword
-item.ironkatana.name=Iron Katana
-item.lightningcore.name=Lightning Core
-item.diamondhalberd.name=Diamond Halberd
-item.stonegreatsword.name=Stone Greatsword
-item.icerod.name=Ice Rod
-item.stonespear.name=Stone Spear
-item.firestick.name=Fire Stick
-item.secretburger.name=Secret Burger
 item.icesword.name=Ice Sword
-item.stonehalberd.name=Stone Halberd
 item.masterswordblade.name=§6Master Sword Blade
-item.lightningrod.name=Lightning Rod
-item.ironlongsword.name=Iron Longsword
-item.warhammer.name=Warhammer
-item.irongreatsword.name=Iron Greatsword
-item.goldenhalberd.name=Golden Halberd
-item.lightningsword.name=Lightning Sword
-item.woodenspear.name=Wooden Spear
 item.masterswordgrip.name=§6Master Sword Grip
-item.mastersword2.name=§6Master Sword
-item.firecore.name=Fire Core
-item.goldenlongsword.name=Golden Longsword
-item.mastersword3.name=§4Master Sword
-item.diamondkatana.name=Diamond Katana
-item.icestick.name=Ice Stick
-item.diamondgreatsword.name=Diamond Greatsword
-item.stonekatana.name=Stone Katana
-item.goldenspear.name=Golden Spear
-item.woodenkatana.name=Wooden Katana
-item.ironspear.name=Iron Spear
-item.dynamite.name=Dynamite
 item.masterswordcore.name=§6Master Sword Core
-item.lightningstick.name=Lightning Stick
-item.woodenlongsword.name=Wooden Longsword
-item.goldengreatsword.name=Golden Greatsword
-item.goldenkatana.name=Golden Katana
 item.mastersword1.name=Master Sword (Fragile)
-item.diamondspear.name=Diamond Spear
-item.magicstabilizer.name=Magic Stabilizer
+item.mastersword2.name=§6Master Sword
 item.magic.name=§dMagic Remnant
-
 item.enricheduranium.name=§2Enriched Uranium
-
 
 //item.wand_1.name=§7Iron§r §6Wand§r
 //item.wand_2.name=§eGold§r §6Wand§r
 //item.wand_3.name=§bDiamond§r §6Wand§r
 //item.wand_4.name=§aEmerald§r §6Wand§r
 
+
+
+item.excavation_wand.name=§6Excavatinator
+item.blink_wand.name=§6Blink Wand
+item.displace_wand.name=§6Displacement Wand
+
+item.enchantable_wand_1.name=§6Basic Wand
+item.enchantable_wand_2.name=§6Advanced Wand
+item.enchantable_wand_3.name=§6Elite Wand
+item.enchantable_wand_4.name=§6Ultimate Wand
 
 item.wand_tome.name=§6Wand Tome§r
 

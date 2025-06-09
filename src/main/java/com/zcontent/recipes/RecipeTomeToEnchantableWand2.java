@@ -14,9 +14,9 @@ import net.minecraftforge.registries.IForgeRegistryEntry;
 import java.util.HashMap;
 import java.util.Map;
 
-public class RecipeTomeToWand1 extends IForgeRegistryEntry.Impl<IRecipe> implements IRecipe {
+public class RecipeTomeToEnchantableWand2 extends IForgeRegistryEntry.Impl<IRecipe> implements IRecipe {
 
-    private static final Item thisWand = ModItems.wand_1;
+    private static final Item thisWand = ModItems.enchantable_wand_2;
 
     @Override
     public boolean matches(InventoryCrafting inv, World worldIn) {
@@ -32,9 +32,9 @@ public class RecipeTomeToWand1 extends IForgeRegistryEntry.Impl<IRecipe> impleme
                     if (!hasTome) {
                         Map<String, Integer> tomeMagics = NbtHelper.getMagicCounts(stack);
                         if (!tomeMagics.isEmpty()) { // Or check specifically for the NBT tag existence
-                           hasTome = true;
+                            hasTome = true;
                         } else {
-                           return false; // Tome doesn't have expected NBT
+                            return false; // Tome doesn't have expected NBT
                         }
                     } else {
                         return false; // Found a second tome
@@ -69,7 +69,7 @@ public class RecipeTomeToWand1 extends IForgeRegistryEntry.Impl<IRecipe> impleme
                     combinedMagics.merge(entry.getKey(), entry.getValue(), Integer::sum);
                 }
 
-                if(stack.getItem().equals(thisWand)) {
+                if (stack.getItem().equals(thisWand)) {
                     wandInput = stack;
                 }
             }

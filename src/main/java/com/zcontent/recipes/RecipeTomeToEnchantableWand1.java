@@ -14,9 +14,9 @@ import net.minecraftforge.registries.IForgeRegistryEntry;
 import java.util.HashMap;
 import java.util.Map;
 
-public class RecipeTomeToWand2 extends IForgeRegistryEntry.Impl<IRecipe> implements IRecipe {
+public class RecipeTomeToEnchantableWand1 extends IForgeRegistryEntry.Impl<IRecipe> implements IRecipe {
 
-    private static final Item thisWand = ModItems.wand_2;
+    private static final Item thisWand = ModItems.enchantable_wand_1;
 
     @Override
     public boolean matches(InventoryCrafting inv, World worldIn) {
@@ -69,7 +69,7 @@ public class RecipeTomeToWand2 extends IForgeRegistryEntry.Impl<IRecipe> impleme
                     combinedMagics.merge(entry.getKey(), entry.getValue(), Integer::sum);
                 }
 
-                if(stack.getItem().equals(thisWand)) {
+                if (stack.getItem().equals(thisWand)) {
                     wandInput = stack;
                 }
             }

@@ -23,22 +23,25 @@ public class ModBlocks {
         ender_block = new BlockBase("ender_block", Material.IRON, SoundType.METAL).setHardness(5.0F).setResistance(6.0F).setLightLevel(1.0F);
         ender_block.setHarvestLevel("pickaxe", 2);
 
-        iron_stone = new BlockBase("iron_stone", Material.ANVIL, SoundType.STONE).setHardness(4.0F).setResistance(5.0F);;
+        iron_stone = new BlockBase("iron_stone", Material.ANVIL, SoundType.STONE).setHardness(4.0F).setResistance(5.0F);
         iron_stone.setHarvestLevel("pickaxe", 1);
 
-        flint_block = new BlockBase("flint_block", Material.ROCK, SoundType.STONE).setHardness(4.0F).setResistance(5.0F);;
+        flint_block = new BlockBase("flint_block", Material.ROCK, SoundType.STONE).setHardness(4.0F).setResistance(5.0F);
         flint_block.setHarvestLevel("pickaxe", 1);
 
-        wither_bone_block = new BlockBase("wither_bone_block", Material.GOURD, SoundType.STONE).setHardness(4.0F).setResistance(5.0F);;
+        wither_bone_block = new BlockBase("wither_bone_block", Material.GOURD, SoundType.STONE).setHardness(4.0F).setResistance(5.0F);
+
         wither_bone_block.setHarvestLevel("pickaxe", 1);
 
-        bone_block = new BlockBase("bone_block", Material.GOURD, SoundType.STONE).setHardness(4.0F).setResistance(5.0F);;
+        bone_block = new BlockBase("bone_block", Material.GOURD, SoundType.STONE).setHardness(4.0F).setResistance(5.0F);
+
         bone_block.setHarvestLevel("pickaxe", 1);
 
-        gunpowder_block = new BlockBase("gunpowder_block", Material.CLOTH, SoundType.STONE).setHardness(4.0F).setResistance(5.0F);;
+        gunpowder_block = new BlockBase("gunpowder_block", Material.CLOTH, SoundType.STONE).setHardness(4.0F).setResistance(5.0F);
+
         gunpowder_block.setHarvestLevel("pickaxe", 1);
 
-        rotten_flesh_block = new BlockBase("rotten_flesh_block", Material.CLOTH, SoundType.CLOTH).setHardness(4.0F).setResistance(5.0F);;
+        rotten_flesh_block = new BlockBase("rotten_flesh_block", Material.CLOTH, SoundType.CLOTH).setHardness(4.0F).setResistance(5.0F);
         rotten_flesh_block.setHarvestLevel("pickaxe", 1);
 
         ardite_ore = new BlockBase("ardite_ore", Material.ROCK, SoundType.STONE).setHardness(5.0F).setResistance(1200.0F);
@@ -47,13 +50,13 @@ public class ModBlocks {
         cobalt_ore = new BlockBase("cobalt_ore", Material.ROCK, SoundType.STONE).setHardness(5.0F).setResistance(1200.0F);
         cobalt_ore.setHarvestLevel("pickaxe", 4);
 
-        aluminum_ore = new BlockBase("aluminum_ore", Material.ROCK, SoundType.STONE).setHardness(4.0F).setResistance(5.0F);;
+        aluminum_ore = new BlockBase("aluminum_ore", Material.ROCK, SoundType.STONE).setHardness(4.0F).setResistance(5.0F);
         aluminum_ore.setHarvestLevel("pickaxe", 1);
 
-        copper_ore = new BlockBase("copper_ore", Material.ROCK, SoundType.STONE).setHardness(4.0F).setResistance(5.0F);;
+        copper_ore = new BlockBase("copper_ore", Material.ROCK, SoundType.STONE).setHardness(4.0F).setResistance(5.0F);
         copper_ore.setHarvestLevel("pickaxe", 1);
 
-        tin_ore = new BlockBase("tin_ore", Material.ROCK, SoundType.STONE).setHardness(4.0F).setResistance(5.0F);;
+        tin_ore = new BlockBase("tin_ore", Material.ROCK, SoundType.STONE).setHardness(4.0F).setResistance(5.0F);
         tin_ore.setHarvestLevel("pickaxe", 1);
 
         lead_ore = new BlockBase("lead_ore", Material.ROCK, SoundType.STONE).setHardness(3.0F).setResistance(1.0F);

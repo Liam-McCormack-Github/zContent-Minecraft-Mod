@@ -35,12 +35,6 @@ public class ItemWandBase extends ItemBase implements IHasModel {
         this.rangeOffHand = _rangeOffHand;
     }
 
-    private static void changeMode(ItemStack stack, String key) {
-        int currentMode = NbtHelper.getInt(stack, key);
-        int nextMode = (currentMode + 1) % Config.NumberOfModes;
-        NbtHelper.setInt(stack, key, nextMode);
-    }
-
     @Override
     public Multimap<String, AttributeModifier> getItemAttributeModifiers(EntityEquipmentSlot equipmentSlot) {
         Multimap<String, AttributeModifier> multimap = super.getItemAttributeModifiers(equipmentSlot);
@@ -54,6 +48,12 @@ public class ItemWandBase extends ItemBase implements IHasModel {
         }
 
         return multimap;
+    }
+
+    private static void changeMode(ItemStack stack, String key) {
+        int currentMode = NbtHelper.getInt(stack, key);
+        int nextMode = (currentMode + 1) % Config.NumberOfModes;
+        NbtHelper.setInt(stack, key, nextMode);
     }
 
     @SideOnly(Side.CLIENT)

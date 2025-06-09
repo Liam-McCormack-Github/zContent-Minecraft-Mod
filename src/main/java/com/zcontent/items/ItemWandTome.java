@@ -1,12 +1,10 @@
 package com.zcontent.items;
 
-import com.zcontent.init.ModEnchantments;
 import com.zcontent.util.IHasModel;
 import com.zcontent.util.NbtHelper;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagList;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;

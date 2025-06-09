@@ -7,41 +7,49 @@ import com.zcontent.util.JsonHelper;
 public class Config {
 
     private static final JsonObject Config = ConfigLoader.getConfig();
-    
+
     private static final JsonObject Materials = JsonHelper.getJsonObject(Config, "materials");
     private static final JsonObject Fuels = JsonHelper.getJsonObject(Config, "fuels");
     private static final JsonObject Armor = JsonHelper.getJsonObject(Config, "armor");
     private static final JsonObject Tools = JsonHelper.getJsonObject(Config, "tools");
     private static final JsonObject Enchantments = JsonHelper.getJsonObject(Config, "enchantments");
     private static final JsonObject Wands = JsonHelper.getJsonObject(Config, "wands");
-    
+
     public static final JsonArray WandModes = Wands.getAsJsonArray("modes");
     public static final int NumberOfModes = WandModes.size();
-    
-    private static final JsonObject WandExcavation = JsonHelper.getJsonObject(Wands, "excavation_wand");
-    public static final int WandExcavationRangeBoostMainHand = JsonHelper.getJsonPrimitiveAsInt(WandExcavation, "rangeBoostMainHand");
-    public static final int WandExcavationRangeBoostOffHand = JsonHelper.getJsonPrimitiveAsInt(WandExcavation, "rangeBoostOffHand");
 
-    private static final JsonObject WandBlink = JsonHelper.getJsonObject(Wands, "blink_wand");
-    public static final int WandBlinkDistanceInterval= JsonHelper.getJsonPrimitiveAsInt(WandBlink, "distanceInterval");
-    public static final int WandBlinkMaxDistance = JsonHelper.getJsonPrimitiveAsInt(WandBlink, "maxDistance");
-    public static final int WandBlinkCooldown = JsonHelper.getJsonPrimitiveAsInt(WandBlink, "cooldown");
+    private static final JsonObject ExcavationWand = JsonHelper.getJsonObject(Wands, "excavation_wand");
+    public static final int ExcavationWandRangeBoostMainHand = JsonHelper.getJsonPrimitiveAsInt(ExcavationWand, "rangeBoostMainHand");
+    public static final int ExcavationWandRangeBoostOffHand = JsonHelper.getJsonPrimitiveAsInt(ExcavationWand, "rangeBoostOffHand");
 
-    private static final JsonObject Wand1 = JsonHelper.getJsonObject(Wands, "wand_1");
-    public static final int Wand1RangeBoostMainHand = JsonHelper.getJsonPrimitiveAsInt(Wand1, "rangeBoostMainHand");
-    public static final int Wand1RangeBoostOffHand = JsonHelper.getJsonPrimitiveAsInt(Wand1, "rangeBoostOffHand");
-    
-    private static final JsonObject Wand2 = JsonHelper.getJsonObject(Wands, "wand_2");
-    public static final int Wand2RangeBoostMainHand = JsonHelper.getJsonPrimitiveAsInt(Wand2, "rangeBoostMainHand");
-    public static final int Wand2RangeBoostOffHand = JsonHelper.getJsonPrimitiveAsInt(Wand2, "rangeBoostOffHand");
-    
-    private static final JsonObject Wand3 = JsonHelper.getJsonObject(Wands, "wand_3");
-    public static final int Wand3RangeBoostMainHand = JsonHelper.getJsonPrimitiveAsInt(Wand3, "rangeBoostMainHand");
-    public static final int Wand3RangeBoostOffHand = JsonHelper.getJsonPrimitiveAsInt(Wand3, "rangeBoostOffHand");
-    
-    private static final JsonObject Wand4 = JsonHelper.getJsonObject(Wands, "wand_4");
-    public static final int Wand4RangeBoostMainHand = JsonHelper.getJsonPrimitiveAsInt(Wand4, "rangeBoostMainHand");
-    public static final int Wand4RangeBoostOffHand = JsonHelper.getJsonPrimitiveAsInt(Wand4, "rangeBoostOffHand");
+    private static final JsonObject BlinkWand = JsonHelper.getJsonObject(Wands, "blink_wand");
+    public static final int BlinkWandRangeBoostMainHand = JsonHelper.getJsonPrimitiveAsInt(BlinkWand, "rangeBoostMainHand");
+    public static final int BlinkWandRangeBoostOffHand = JsonHelper.getJsonPrimitiveAsInt(BlinkWand, "rangeBoostOffHand");
+    public static final int BlinkWandDistanceInterval = JsonHelper.getJsonPrimitiveAsInt(BlinkWand, "distanceInterval");
+    public static final int BlinkWandMaxDistance = JsonHelper.getJsonPrimitiveAsInt(BlinkWand, "maxDistance");
+    public static final int BlinkWandCooldown = JsonHelper.getJsonPrimitiveAsInt(BlinkWand, "cooldown");
+
+
+    private static final JsonObject DisplaceWand = JsonHelper.getJsonObject(Wands, "displace_wand");
+    public static final int DisplaceWandRangeBoostMainHand = JsonHelper.getJsonPrimitiveAsInt(DisplaceWand, "rangeBoostMainHand");
+    public static final int DisplaceWandRangeBoostOffHand = JsonHelper.getJsonPrimitiveAsInt(DisplaceWand, "rangeBoostOffHand");
+    public static final int DisplaceWandCooldown = JsonHelper.getJsonPrimitiveAsInt(DisplaceWand, "cooldown");
+
+    private static final JsonObject EnchantableWand1 = JsonHelper.getJsonObject(Wands, "enchantable_wand_1");
+    public static final int EnchantableWand1RangeBoostMainHand = JsonHelper.getJsonPrimitiveAsInt(EnchantableWand1, "rangeBoostMainHand");
+    public static final int EnchantableWand1RangeBoostOffHand = JsonHelper.getJsonPrimitiveAsInt(EnchantableWand1, "rangeBoostOffHand");
+
+    private static final JsonObject EnchantableWand2 = JsonHelper.getJsonObject(Wands, "enchantable_wand_2");
+    public static final int EnchantableWand2RangeBoostMainHand = JsonHelper.getJsonPrimitiveAsInt(EnchantableWand2, "rangeBoostMainHand");
+    public static final int EnchantableWand2RangeBoostOffHand = JsonHelper.getJsonPrimitiveAsInt(EnchantableWand2, "rangeBoostOffHand");
+
+    private static final JsonObject EnchantableWand3 = JsonHelper.getJsonObject(Wands, "enchantable_wand_3");
+    public static final int EnchantableWand3RangeBoostMainHand = JsonHelper.getJsonPrimitiveAsInt(EnchantableWand3, "rangeBoostMainHand");
+    public static final int EnchantableWand3RangeBoostOffHand = JsonHelper.getJsonPrimitiveAsInt(EnchantableWand3, "rangeBoostOffHand");
+
+    private static final JsonObject EnchantableWand4 = JsonHelper.getJsonObject(Wands, "enchantable_wand_4");
+    public static final int EnchantableWand4RangeBoostMainHand = JsonHelper.getJsonPrimitiveAsInt(EnchantableWand4, "rangeBoostMainHand");
+    public static final int EnchantableWand4RangeBoostOffHand = JsonHelper.getJsonPrimitiveAsInt(EnchantableWand4, "rangeBoostOffHand");
 
     private static final JsonObject MaterialStainless = JsonHelper.getJsonObject(Materials, "material_stainless");
     public static final int MaterialStainlessHarvestLevel = JsonHelper.getJsonPrimitiveAsInt(MaterialStainless, "harvestLevel");
@@ -56,21 +64,21 @@ public class Config {
     public static final float MaterialSilverObsidianEfficiency = JsonHelper.getJsonPrimitiveAsFloat(MaterialSilverObsidian, "efficiency");
     public static final float MaterialSilverObsidianDamage = JsonHelper.getJsonPrimitiveAsFloat(MaterialSilverObsidian, "damage");
     public static final int MaterialSilverObsidianEnchantability = JsonHelper.getJsonPrimitiveAsInt(MaterialSilverObsidian, "enchantability");
-    
+
     private static final JsonObject MaterialMaster = JsonHelper.getJsonObject(Materials, "material_master");
     public static final int MaterialMasterHarvestLevel = JsonHelper.getJsonPrimitiveAsInt(MaterialMaster, "harvestLevel");
     public static final int MaterialMasterMaxUses = JsonHelper.getJsonPrimitiveAsInt(MaterialMaster, "maxUses");
     public static final float MaterialMasterEfficiency = JsonHelper.getJsonPrimitiveAsFloat(MaterialMaster, "efficiency");
     public static final float MaterialMasterDamage = JsonHelper.getJsonPrimitiveAsFloat(MaterialMaster, "damage");
     public static final int MaterialMasterEnchantability = JsonHelper.getJsonPrimitiveAsInt(MaterialMaster, "enchantability");
-    
+
     private static final JsonObject MaterialElemental = JsonHelper.getJsonObject(Materials, "material_elemental");
     public static final int MaterialElementalHarvestLevel = JsonHelper.getJsonPrimitiveAsInt(MaterialElemental, "harvestLevel");
     public static final int MaterialElementalMaxUses = JsonHelper.getJsonPrimitiveAsInt(MaterialElemental, "maxUses");
     public static final float MaterialElementalEfficiency = JsonHelper.getJsonPrimitiveAsFloat(MaterialElemental, "efficiency");
     public static final float MaterialElementalDamage = JsonHelper.getJsonPrimitiveAsFloat(MaterialElemental, "damage");
     public static final int MaterialElementalEnchantability = JsonHelper.getJsonPrimitiveAsInt(MaterialElemental, "enchantability");
-    
+
     private static final JsonObject MaterialMasterBase = JsonHelper.getJsonObject(Materials, "material_master_base");
     public static final int MaterialMasterBaseHarvestLevel = JsonHelper.getJsonPrimitiveAsInt(MaterialMasterBase, "harvestLevel");
     public static final int MaterialMasterBaseMaxUses = JsonHelper.getJsonPrimitiveAsInt(MaterialMasterBase, "maxUses");
@@ -92,26 +100,26 @@ public class Config {
 
     private static final JsonObject TinyCoal = JsonHelper.getJsonObject(Fuels, "tinyCoal");
     public static final int TinyCoalBurnTime = JsonHelper.getJsonPrimitiveAsInt(TinyCoal, "burnTime");
-    
+
     private static final JsonObject TinyCharcoal = JsonHelper.getJsonObject(Fuels, "tinyCharcoal");
     public static final int TinyCharcoalBurnTime = JsonHelper.getJsonPrimitiveAsInt(TinyCharcoal, "burnTime");
-    
+
     private static final JsonObject QuantumHelmet = JsonHelper.getJsonObject(Armor, "quantum_helmet");
     public static final int QuantumHelmetEnergyCapacity = JsonHelper.getJsonPrimitiveAsInt(QuantumHelmet, "energyCapacity");
     public static final int QuantumHelmetEnergyCost = JsonHelper.getJsonPrimitiveAsInt(QuantumHelmet, "energyCost");
-    
+
     private static final JsonObject QuantumChestplate = JsonHelper.getJsonObject(Armor, "quantum_chestplate");
     public static final int QuantumChestplateEnergyCapacity = JsonHelper.getJsonPrimitiveAsInt(QuantumChestplate, "energyCapacity");
     public static final int QuantumChestplateEnergyCost = JsonHelper.getJsonPrimitiveAsInt(QuantumChestplate, "energyCost");
-    
+
     private static final JsonObject QuantumLeggings = JsonHelper.getJsonObject(Armor, "quantum_leggings");
     public static final int QuantumLeggingsEnergyCapacity = JsonHelper.getJsonPrimitiveAsInt(QuantumLeggings, "energyCapacity");
     public static final int QuantumLeggingsEnergyCost = JsonHelper.getJsonPrimitiveAsInt(QuantumLeggings, "energyCost");
-    
+
     private static final JsonObject QuantumBoots = JsonHelper.getJsonObject(Armor, "quantum_boots");
     public static final int QuantumBootsEnergyCapacity = JsonHelper.getJsonPrimitiveAsInt(QuantumBoots, "energyCapacity");
     public static final int QuantumBootsEnergyCost = JsonHelper.getJsonPrimitiveAsInt(QuantumBoots, "energyCost");
-    
+
     private static final JsonObject StainlessSteelSword = JsonHelper.getJsonObject(Tools, "stainless_steel_sword");
     public static final int StainlessSteelSwordRangeBoostMainHand = JsonHelper.getJsonPrimitiveAsInt(StainlessSteelSword, "rangeBoostMainHand");
     public static final int StainlessSteelSwordRangeBoostOffHand = JsonHelper.getJsonPrimitiveAsInt(StainlessSteelSword, "rangeBoostOffHand");

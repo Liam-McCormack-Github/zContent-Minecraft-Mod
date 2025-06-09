@@ -1,13 +1,13 @@
 package com.zcontent.util;
 
-import com.zcontent.init.ModItems;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.ai.attributes.IAttribute;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.fml.relauncher.FMLInjectionData;
 
 import java.io.File;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
 
 public class Reference {
 

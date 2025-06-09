@@ -21,21 +21,21 @@ public class ModRecipes {
         IRecipe magic_to_tome = new RecipeMagicToTome().setRegistryName(new ResourceLocation(MOD_ID, "magic_to_tome_out_with_modified_nbt"));
         RECIPES.add(magic_to_tome);
 
-        IRecipe tome_to_wand1 = new RecipeTomeToWand1().setRegistryName(new ResourceLocation(MOD_ID, "tome_to_wand1_out_with_modified_nbt"));
+        IRecipe tome_to_wand1 = new RecipeTomeToEnchantableWand1().setRegistryName(new ResourceLocation(MOD_ID, "tome_to_wand1_out_with_modified_nbt"));
         RECIPES.add(tome_to_wand1);
 
-        IRecipe tome_to_wand2 = new RecipeTomeToWand2().setRegistryName(new ResourceLocation(MOD_ID, "tome_to_wand2_out_with_modified_nbt"));
+        IRecipe tome_to_wand2 = new RecipeTomeToEnchantableWand2().setRegistryName(new ResourceLocation(MOD_ID, "tome_to_wand2_out_with_modified_nbt"));
         RECIPES.add(tome_to_wand2);
 
-        IRecipe tome_to_wand3 = new RecipeTomeToWand3().setRegistryName(new ResourceLocation(MOD_ID, "tome_to_wand3_out_with_modified_nbt"));
+        IRecipe tome_to_wand3 = new RecipeTomeToEnchantableWand3().setRegistryName(new ResourceLocation(MOD_ID, "tome_to_wand3_out_with_modified_nbt"));
         RECIPES.add(tome_to_wand3);
 
-        IRecipe tome_to_wand4 = new RecipeTomeToWand4().setRegistryName(new ResourceLocation(MOD_ID, "tome_to_wand4_out_with_modified_nbt"));
+        IRecipe tome_to_wand4 = new RecipeTomeToEnchantableWand4().setRegistryName(new ResourceLocation(MOD_ID, "tome_to_wand4_out_with_modified_nbt"));
         RECIPES.add(tome_to_wand4);
 
     }
 
-    public static void initSmelting(){
+    public static void initSmelting() {
         /*
         for (ItemStack ore : OreDictionary.getOres("ingotArdite")) {
             if (ore != null) {

@@ -1,6 +1,6 @@
 {
   "parent": "zcontent:custom/wand",
   "textures": {
-    "1": "zcontent:blocks/blink_wand"
+    "1": "zcontent:blocks/wands/blink_wand"
   }
 }

@@ -139,23 +139,30 @@
       "rangeBoostOffHand": 0
     },
     "blink_wand": {
+      "rangeBoostMainHand": 5,
+      "rangeBoostOffHand": 0,
       "distanceInterval": 6,
       "maxDistance": 24,
       "cooldown": 5
     },
-    "wand_1": {
+    "displace_wand": {
+      "rangeBoostMainHand": 5,
+      "rangeBoostOffHand": 0,
+      "cooldown": 1
+    },
+    "enchantable_wand_1": {
       "rangeBoostMainHand": 10,
       "rangeBoostOffHand": 5
     },
-    "wand_2": {
+    "enchantable_wand_2": {
       "rangeBoostMainHand": 15,
       "rangeBoostOffHand": 10
     },
-    "wand_3": {
+    "enchantable_wand_3": {
       "rangeBoostMainHand": 20,
       "rangeBoostOffHand": 15
     },
-    "wand_4": {
+    "enchantable_wand_4": {
       "rangeBoostMainHand": 25,
       "rangeBoostOffHand": 20
     }

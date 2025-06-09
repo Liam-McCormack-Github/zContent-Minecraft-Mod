@@ -1,10 +1,14 @@
 package com.zcontent.util.handlers;
 
+import com.zcontent.config.Config;
 import com.zcontent.config.ConfigUtils;
 import com.zcontent.init.ModEnchantments;
 import com.zcontent.init.ModItems;
 import com.zcontent.items.armor.ArmorQuantum;
-import com.zcontent.util.*;
+import com.zcontent.util.AttributeHelper;
+import com.zcontent.util.EnchHelper;
+import com.zcontent.util.NbtHelper;
+import com.zcontent.util.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.enchantment.Enchantment;
@@ -42,8 +46,6 @@ import java.util.*;
 import static com.zcontent.capability.EnergyCapabilityItemStack.NBTENERGY;
 import static com.zcontent.init.ModEnchantments.resurrectionCooldownKey;
 
-import com.zcontent.config.Config;
-
 
 @EventBusSubscriber
 public class EventHandler {
@@ -60,7 +62,7 @@ public class EventHandler {
 
     @SubscribeEvent
     public static void onBlockBreak(BlockEvent.BreakEvent event) {
-        final Set<Item> VALID_WANDS = new HashSet<>(Arrays.asList(ModItems.excavation_wand, ModItems.wand_1, ModItems.wand_2, ModItems.wand_3, ModItems.wand_4));
+        final Set<Item> VALID_WANDS = new HashSet<>(Arrays.asList(ModItems.excavation_wand, ModItems.enchantable_wand_1, ModItems.enchantable_wand_2, ModItems.enchantable_wand_3, ModItems.enchantable_wand_4));
 
         if (event.getPlayer().getHeldItemMainhand().isEmpty() && event.getPlayer().getHeldItemOffhand().isEmpty()) {
             return;
@@ -129,8 +131,6 @@ public class EventHandler {
             }
         }
     }
-
-
 
 
     @SubscribeEvent
@@ -332,7 +332,7 @@ public class EventHandler {
                         } else if (enchantment == ModEnchantments.ANTIDOTE) {
                             enchAntidoteHelper.has = true;
                             enchAntidoteHelper.level = level;
-                        }  else if (enchantment == ModEnchantments.SPEED) {
+                        } else if (enchantment == ModEnchantments.SPEED) {
                             enchSpeedHelper.has = true;
                             enchSpeedHelper.level = level;
                         } else if (enchantment == ModEnchantments.JUMPBOOST) {

@@ -1,11 +1,14 @@
 package com.zcontent.items;
 
+import com.google.common.collect.Multimap;
 import com.zcontent.config.Config;
 import com.zcontent.util.IHasModel;
 import com.zcontent.util.NbtHelper;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
+import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
@@ -20,13 +23,33 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nullable;
 import java.util.List;
+import java.util.UUID;
 
 public class ItemWandBlink extends ItemBase implements IHasModel {
+    private final int rangeMainHand;
+    private final int rangeOffHand;
     private static final String BLINK_DISTANCE_KEY = "blinkDistance";
 
-    public ItemWandBlink(String name, net.minecraft.creativetab.CreativeTabs creativeTab) {
+    public ItemWandBlink(String name, net.minecraft.creativetab.CreativeTabs creativeTab, int _rangeMainHand, int _rangeOffHand) {
         super(name, creativeTab);
         setMaxStackSize(1);
+        this.rangeMainHand = _rangeMainHand;
+        this.rangeOffHand = _rangeOffHand;
+    }
+
+    @Override
+    public Multimap<String, AttributeModifier> getItemAttributeModifiers(EntityEquipmentSlot equipmentSlot) {
+        Multimap<String, AttributeModifier> multimap = super.getItemAttributeModifiers(equipmentSlot);
+
+        if (equipmentSlot == EntityEquipmentSlot.MAINHAND && this.rangeMainHand > 0) {
+            multimap.put(EntityPlayer.REACH_DISTANCE.getName(), new AttributeModifier(UUID.nameUUIDFromBytes("RangeModifier".getBytes()), "Range Modifier", this.rangeMainHand, 0));
+        }
+
+        if (equipmentSlot == EntityEquipmentSlot.OFFHAND && this.rangeOffHand > 0) {
+            multimap.put(EntityPlayer.REACH_DISTANCE.getName(), new AttributeModifier(UUID.nameUUIDFromBytes("RangeModifier".getBytes()), "Range Modifier", this.rangeOffHand, 0));
+        }
+
+        return multimap;
     }
 
     @Override
@@ -40,7 +63,7 @@ public class ItemWandBlink extends ItemBase implements IHasModel {
             }
             int currentBlinkDistance = NbtHelper.getInt(stack, BLINK_DISTANCE_KEY);
             if (world.isRemote) {
-                int nextBlinkDistance = (currentBlinkDistance + Config.WandBlinkDistanceInterval) % Config.WandBlinkMaxDistance;
+                int nextBlinkDistance = (currentBlinkDistance + Config.BlinkWandDistanceInterval) % Config.BlinkWandMaxDistance;
                 player.sendMessage(new TextComponentString("Set wand blink distance to: " + nextBlinkDistance));
             }
             return new ActionResult<>(EnumActionResult.SUCCESS, stack);
@@ -66,7 +89,7 @@ public class ItemWandBlink extends ItemBase implements IHasModel {
                 if (isLocationSafe(world, destX, destY, destZ)) {
                     player.setPositionAndUpdate(destX, destY, destZ);
                     player.fallDistance = 0.0F;
-                    player.getCooldownTracker().setCooldown(this,  Config.WandBlinkCooldown);
+                    player.getCooldownTracker().setCooldown(this, Config.BlinkWandCooldown);
                     world.playSound(null, player.posX, player.posY, player.posZ, SoundEvents.ENTITY_ENDERMEN_TELEPORT, SoundCategory.PLAYERS, 1.0F, 1.0F);
                     return new ActionResult<>(EnumActionResult.SUCCESS, stack);
                 }
@@ -78,7 +101,7 @@ public class ItemWandBlink extends ItemBase implements IHasModel {
 
     private static void changeBlinkDistance(ItemStack stack, String key) {
         int currentBlinkDistance = NbtHelper.getInt(stack, key);
-        int nextBlinkDistance = (currentBlinkDistance + Config.WandBlinkDistanceInterval) % Config.WandBlinkMaxDistance;
+        int nextBlinkDistance = (currentBlinkDistance + Config.BlinkWandDistanceInterval) % Config.BlinkWandMaxDistance;
         NbtHelper.setInt(stack, key, nextBlinkDistance);
     }
 

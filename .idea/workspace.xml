@@ -4,24 +4,52 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43ac629e-869a-46c5-b1ff-8a235a075bd2" name="Changes" comment="Charged gunpowder">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemStructureCompass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWandBlink.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/zcontent/models/item/blink_wand.json" afterDir="false" />
+    <list default="true" id="43ac629e-869a-46c5-b1ff-8a235a075bd2" name="Changes" comment="Blink wand and Structure Compass">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWandDisplace.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/zcontent/models/item/displace_wand.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/runClient.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/runServer.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/config/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentInstantKill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/enchantment/EnchantmentInstantKill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModBlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModBlocks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModRecipes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/init/ModRecipes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemBad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemBad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemStructureCompass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemStructureCompass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWandBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWandBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/armor/ArmorQuantum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/armor/ArmorQuantum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWandBlink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWandBlink.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWandTome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/items/ItemWandTome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/recipes/RecipeTomeToWand1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/recipes/RecipeTomeToEnchantableWand1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/recipes/RecipeTomeToWand2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/recipes/RecipeTomeToEnchantableWand2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/recipes/RecipeTomeToWand3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/recipes/RecipeTomeToEnchantableWand3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/recipes/RecipeTomeToWand4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/recipes/RecipeTomeToEnchantableWand4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/util/JsonHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/util/JsonHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/util/NbtHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/util/NbtHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/util/Reference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/util/Reference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/zcontent/util/handlers/EventHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zcontent/util/handlers/EventHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/blockstates/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/blockstates/xp_block - Copy.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/lang/en_us.lang" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/zcontent/lang/en_us.lang" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/textures/blocks/excavation_other_wand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/models/block/desktop.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/models/item/blink_wand.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/zcontent/models/item/blink_wand.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/models/item/excavation_wand.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/zcontent/models/item/excavation_wand.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/models/item/wand_1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/models/item/wand_2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/models/item/wand_3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/models/item/wand_4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/textures/blocks/blink_wand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/textures/blocks/blink_wand.png.mcmeta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/textures/blocks/excavation_wand.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/textures/blocks/wand_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/textures/blocks/wand_1.png.mcmeta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/textures/blocks/wand_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/textures/blocks/wand_2.png.mcmeta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/textures/blocks/wand_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/textures/blocks/wand_3.png.mcmeta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/textures/blocks/wand_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/textures/blocks/wand_4.png.mcmeta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/textures/items/wand_world_edit.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/assets/zcontent/zcontent_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/zcontent/zcontent_config.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -366,7 +394,11 @@
       <workItem from="1749400221921" duration="8682000" />
       <workItem from="1749418451879" duration="36000" />
       <workItem from="1749418497669" duration="88000" />
-      <workItem from="1749418597580" duration="239000" />
+      <workItem from="1749418597580" duration="311000" />
+      <workItem from="1749464895004" duration="1205000" />
+      <workItem from="1749483104087" duration="5461000" />
+      <workItem from="1749488723400" duration="17000" />
+      <workItem from="1749489516273" duration="229000" />
     </task>
     <task id="LOCAL-00001" summary="23rd May">
       <option name="closed" value="true" />
@@ -456,7 +488,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748200203340</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Blink wand and Structure Compass">
+      <option name="closed" value="true" />
+      <created>1749418896689</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1749418896689</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -484,7 +524,8 @@
     <MESSAGE value="New Resurrection Enchantment" />
     <MESSAGE value="New Flight Enchantment" />
     <MESSAGE value="Charged gunpowder" />
-    <option name="LAST_COMMIT_MESSAGE" value="Charged gunpowder" />
+    <MESSAGE value="Blink wand and Structure Compass" />
+    <option name="LAST_COMMIT_MESSAGE" value="Blink wand and Structure Compass" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

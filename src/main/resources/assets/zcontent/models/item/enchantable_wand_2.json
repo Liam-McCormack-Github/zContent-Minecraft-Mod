@@ -1,6 +1,6 @@
 {
   "parent": "zcontent:custom/wand",
   "textures": {
-    "1": "zcontent:blocks/wand_4"
+    "1": "zcontent:blocks/wands/enchantable_wand_2"
   }
 }
